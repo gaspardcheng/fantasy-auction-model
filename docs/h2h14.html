@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>14-Team H2H Auction Board</title>
+<style>
+:root{--bg:#f7f7f5;--panel:#fff;--ink:#1c1c1a;--mut:#6b6b66;--line:#e3e2dd;--acc:#2f5bd3;--good:#1d7a46;--bad:#b3362c;--goodbg:#e3f2e8;--badbg:#f8e4e2;--chip:#efeee9}
+@media (prefers-color-scheme:dark){:root{--bg:#141413;--panel:#1d1d1b;--ink:#ecebe6;--mut:#9c9b95;--line:#2f2f2c;--acc:#7c9cf0;--good:#5cc28a;--bad:#ef7d72;--goodbg:#1c3326;--badbg:#3a2220;--chip:#282826}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.4 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+header{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--panel);position:sticky;top:0;z-index:5}
+h1{font-size:17px;margin:0}
+a{color:var(--acc)}
+.kpis{display:flex;gap:18px;flex-wrap:wrap}
+.kpi{font-size:12px;color:var(--mut)}.kpi b{display:block;font-size:16px;color:var(--ink)}
+main{padding:16px;max-width:1600px;margin:0 auto;display:grid;gap:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px}
+.card h2{font-size:14px;margin:0 0 10px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+input,select,button{font:inherit;color:inherit;background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:6px 8px}
+button{cursor:pointer;background:var(--chip)}button.primary{background:var(--acc);color:#fff;border-color:var(--acc)}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.tabs{display:flex;gap:4px;flex-wrap:wrap}.tabs button.on{background:var(--acc);color:#fff;border-color:var(--acc)}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+th,td{padding:5px 7px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th{font-size:12px;color:var(--mut);cursor:pointer;position:sticky;top:0;background:var(--panel)}
+th.tgt{color:var(--acc)}
+td.l,th.l{text-align:left}
+tr:hover td{background:var(--chip)}
+.pos{color:var(--mut);font-size:12px}
+.z{font-size:12px}.zp{color:var(--good)}.zn{color:var(--bad)}.off{opacity:.35}
+.tag{display:inline-block;padding:2px 8px;border-radius:99px;font-size:12px;font-weight:600}
+.tag.good{background:var(--goodbg);color:var(--good)}.tag.bad{background:var(--badbg);color:var(--bad)}.tag.mid{background:var(--chip);color:var(--mut)}
+.nom{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-top:12px}
+.big{font-size:22px;font-weight:700}
+.muted{color:var(--mut);font-size:12px}
+.teams{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:12px}
+.team{border:1px solid var(--line);border-radius:8px;padding:10px}.team.me{border-color:var(--acc)}
+.team input{width:100%;font-weight:600;margin-bottom:6px}
+.team ul{margin:6px 0 0;padding-left:18px}
+.cats{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+.cat{font-size:11px;padding:1px 6px;border-radius:4px;background:var(--chip)}
+.cat.hi{background:var(--goodbg);color:var(--good)}.cat.lo{background:var(--badbg);color:var(--bad)}
+.tgts{display:flex;flex-wrap:wrap;gap:6px}
+.tgts label{border:1px solid var(--line);border-radius:6px;padding:6px 10px;cursor:pointer;user-select:none}
+.tgts label.on{border-color:var(--acc);background:color-mix(in srgb,var(--acc) 12%,transparent)}
+.tgts input{margin:0 6px 0 0}
+.mine td{background:color-mix(in srgb,var(--acc) 10%,transparent)}
+tr.cut td{border-bottom:2px solid var(--acc)}
+@media (max-width:600px){main{padding:10px}}
+</style>
+</head>
+<body>
+<header>
+  <h1>H2H Auction Board <span class="muted">14-team H2H 9-cat · $200 · 12 spots · $1 minimum · <a href="h2h.html">12-team H2H board →</a></span></h1>
+  <div class="kpis" id="kpis"></div>
+</header>
+<main>
+  <section class="card">
+    <h2>Nominated player</h2>
+    <div class="row">
+      <input id="nomInput" list="plist" placeholder="Type a player name…" style="min-width:260px">
+      <datalist id="plist"></datalist>
+      <label class="muted">Current bid $<input id="curBid" type="number" min="1" style="width:80px"></label>
+    </div>
+    <div id="nomOut"></div>
+    <div class="row" style="margin-top:12px">
+      <span class="muted">Sold to</span><select id="soldTeam"></select>
+      <span class="muted">for $</span><input id="soldPrice" type="number" min="1" style="width:80px">
+      <button class="primary" id="soldBtn">Record sale</button>
+      <span id="msg" class="muted"></span>
+    </div>
+  </section>
+
+  <div class="tabs" id="tabs"></div>
+  <section class="card" id="view"></section>
+</main>
+
+<script src="players_h2h_14.js"></script>
+<script>
+const D = window.H2H_DATA, S = D.settings, L = D.league, CATS = S.cats;
+const STATK = ["FGM","FGA","FTM","FTA","3PM","PTS","REB","AST","STL","BLK","TO"], K = STATK.length, KI = Object.fromEntries(STATK.map((k,i)=>[k,i]));
+const NW = S.playoff_weeks[S.playoff_weeks.length-1], REG = S.reg_weeks, STRIDE = 2*K+2;   // per week: means, variances, shooting variance
+const KEY = "h2h-board-14team-v1"; // separate from the 12-team H2H board's saved sales
+const P = D.players.map((p,i)=>({...p,id:i}));
+const byName = new Map(P.map(p=>[p.name,p]));
+
+// each player's expected weekly line (team games x availability x per-game stats) and its variance
+P.forEach(p=>{
+  const a = p.avail, g = L.schedule[p.team], term = new Float64Array(STRIDE), arr = new Float64Array(NW*STRIDE);
+  STATK.forEach((k,i)=>{ const m = p[k]; term[i] = a*m; term[K+i] = a*(S.disp[k]||0)*m + a*(1-a)*m*m; });
+  const fg = p.FGA>0? p.FGM/p.FGA : 0, ft = p.FTA>0? p.FTM/p.FTA : 0;
+  term[2*K] = a*p.FGA*fg*(1-fg); term[2*K+1] = a*p.FTA*ft*(1-ft);
+  for (let w=0; w<NW; w++) for (let j=0; j<STRIDE; j++) arr[w*STRIDE+j] = g[w]*term[j];
+  p.agg = arr;
+});
+// replacement level per category (best 15 undrafted) -> "Build Z" = season z over replacement in your target categories
+const nPool = S.teams*S.roster_spots;
+const REPL = Object.fromEntries(CATS.map(c=>{ const r = P.filter(p=>p.rank>nPool && p.rank<=nPool+15); return [c, r.reduce((s,p)=>s+p["z_"+c],0)/r.length]; }));
+
+// ---------------------------------------------------------------- state
+const defaults = () => ({
+  teams: Array.from({length:S.teams},(_,i)=>({name: i===0?"My team":"Team "+(i+1)})),
+  me: 0, sales: [], targets: Object.fromEntries(CATS.map(c=>[c,true])), poWeight: 1,
+  tab:"board", posFilter:"", sortKey:"edge", sortDir:-1
+});
+let st = defaults();
+try { const s = JSON.parse(localStorage.getItem(KEY)); if (s) st = {...st, ...s}; } catch(e){}
+// saved state from a different league size: keep the first S.teams names, drop sales to removed teams
+if (st.teams.length !== S.teams){
+  st.teams = defaults().teams.map((t,i)=>st.teams[i] || t);
+  st.sales = st.sales.filter(s=>s.team < S.teams);
+  if (st.me >= S.teams) st.me = 0;
+}
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(st)); } catch(e){} };
+
+// ---------------------------------------------------------------- weekly matchup model
+let M, lastSig = "";
+function phi(x){ // standard normal CDF
+  const t=1/(1+0.2316419*Math.abs(x)), d=0.3989423*Math.exp(-x*x/2);
+  const p=d*t*(0.3193815+t*(-0.3565638+t*(1.781478+t*(-1.821256+t*1.330274))));
+  return x>0?1-p:p;
+}
+const CI = CATS.map(c=>c==="FG"?{pct:0}:c==="FT"?{pct:2}:{i:KI[c], neg:c==="TO"});
+function catP(A, B, w, ci){ // P(team A beats team B in category ci during week w)
+  const o = w*STRIDE, c = CI[ci];
+  if (c.pct!=null){ const mk=c.pct, at=mk+1, j=mk/2, a1=A[o+at], a2=B[o+at];
+    if (!(a1>0 && a2>0)) return 0.5;
+    const sd = Math.sqrt(S.shoot_k*(A[o+2*K+j]/(a1*a1) + B[o+2*K+j]/(a2*a2)));
+    return phi((A[o+mk]/a1 - B[o+mk]/a2)/sd); }
+  let d = A[o+c.i]-B[o+c.i]; if (c.neg) d = -d;
+  const v = A[o+K+c.i]+B[o+K+c.i]; return v>0 ? phi(d/Math.sqrt(v)) : 0.5;
+}
+const weekW = w => w<REG ? 1 : st.poWeight;
+function myScore(A){ // my objective: expected net category W-L in my target categories, vs the average opponent
+  const tc = CATS.map((c,i)=>st.targets[c]?i:-1).filter(i=>i>=0);
+  let tot = 0, n = 0;
+  M.opps.forEach(({agg:O, k})=>{ n += k; for (let w=0; w<NW; w++){ const ww = weekW(w); if (!ww) continue;
+    for (const ci of tc) tot += k*ww*(2*catP(A,O,w,ci)-1); } });
+  return tot/n;
+}
+function outlook(A, others){ // per-category weekly win prob vs the field, regular-season & playoff W-L, variance
+  const pc = CATS.map(()=>0); let reg = 0, po = 0, v = 0;
+  others.forEach(O=>{ for (let w=0; w<NW; w++) CATS.forEach((c,ci)=>{ const p = catP(A,O,w,ci), e = 2*p-1;
+    if (w<REG){ pc[ci]+=p; reg+=e; v+=1-e*e; } else po+=e; }); });
+  const n = others.length; return {pc: pc.map(x=>x/(n*REG)), reg: reg/n, po: po/n/(NW-REG), sd: Math.sqrt(v/n)};
+}
+const add = (A, B, f=1) => { for (let j=0; j<A.length; j++) A[j] += f*B[j]; return A; };
+const sumAgg = ps => ps.reduce((A,p)=>add(A,p.agg), new Float64Array(NW*STRIDE));
+
+// filler = what `budget` buys at market for `open` spots. Find where in the value ranking a block of `open`
+// consecutive players costs exactly `budget`, then take `open` x the average player in a wider window around
+// that block (by rank, not price, so cheap players don't drag it down; the window keeps it smooth in the budget).
+// Player j occupies [j, j+1) on the rank axis; cumulative sums make any fractional window O(1) in players.
+// `skip` = index in M.ranked of the player being evaluated (he can't also be part of the filler).
+function cum(prefix, stride, x, out, f){ // out += f * (sum of rows over [0, x))
+  const i = Math.floor(x), fr = x - i;
+  for (let j=0; j<stride; j++) out[j] += f*(prefix[i*stride+j] + (fr>0 ? fr*(prefix[(i+1)*stride+j]-prefix[i*stride+j]) : 0));
+}
+function filler(budget, open, skip=-1){
+  const Z = new Float64Array(NW*STRIDE); if (open<=0) return Z;
+  const N = M.ranked.length, n = Math.min(open, N-1), pc = M.pc, last = N-n;
+  const cost = i => pc[i+n]-pc[i];
+  let s;
+  if (budget >= cost(0)) s = 0;
+  else if (budget <= cost(last)) s = last;
+  else { let lo=0, hi=last; while (hi-lo>1){ const mid=(lo+hi)>>1; cost(mid)>=budget ? lo=mid : hi=mid; }
+    const c0 = cost(lo), c1 = cost(lo+1); s = lo + (c0>c1 ? (c0-budget)/(c0-c1) : 0); }
+  const h = n/2 + 10;                                  // half-width: the block plus 10 players either side
+  let a = s + n/2 - h, b = s + n/2 + h;
+  if (a < 0){ b -= a; a = 0; } if (b > N){ a -= b-N; b = N; } a = Math.max(a, 0);
+  cum(M.pa, NW*STRIDE, b, Z, 1); cum(M.pa, NW*STRIDE, a, Z, -1);
+  let W = b - a;
+  if (skip>=0){ const ov = Math.max(0, Math.min(b, skip+1) - Math.max(a, skip));   // remove the evaluated player
+    if (ov>0){ add(Z, M.ranked[skip].agg, -ov); W -= ov; } }
+  for (let j=0; j<Z.length; j++) Z[j] *= n/W;
+  return Z;
+}
+
+function rebuild(){
+  const sold = new Map(st.sales.map(s=>[s.pid,s]));
+  const avail = P.filter(p=>!sold.has(p.id));
+  const teams = st.teams.map((t,i)=>({...t, i, roster:[], spent:0}));
+  st.sales.forEach(s=>{ const t=teams[s.team]; t.roster.push({p:P[s.pid],price:s.price}); t.spent+=s.price; });
+  teams.forEach(t=>{ t.left = S.budget-t.spent; t.open = S.roster_spots-t.roster.length; t.maxBid = t.open>0 ? t.left-(t.open-1) : 0; });
+  const money = teams.reduce((s,t)=>s+(t.open>0?t.left:0),0), slots = teams.reduce((s,t)=>s+t.open,0);
+  // live market price: $1 per open spot + the rest of the money split by value over replacement (all 9 categories)
+  const ranked = [...avail].sort((a,b)=>b.value-a.value), top = ranked.slice(0,slots);
+  const V = top.reduce((s,p)=>s+Math.max(p.value,0),0), extra = Math.max(money-top.length,0);
+  P.forEach(p=>{ p.live=0; p.cost=1; });
+  top.forEach(p=>{ p.live = 1 + (V>0 ? Math.max(p.value,0)/V*extra : 0); p.cost = p.live; });
+  const baseLeft = top.reduce((s,p)=>s+p.base_price,0);
+  // prefix sums (prices and weekly lines) over the ranked list, for the filler
+  const SZ = NW*STRIDE, pc = new Float64Array(ranked.length+1), pa = new Float64Array((ranked.length+1)*SZ);
+  ranked.forEach((p,i)=>{ pc[i+1]=pc[i]+p.cost; p.ri=i; for (let j=0;j<SZ;j++) pa[(i+1)*SZ+j]=pa[i*SZ+j]+p.agg[j]; });
+  M = {avail, ranked, teams, money, slots, sold, pc, pa, inflation: baseLeft>0 ? money/baseLeft : 1};
+  teams.forEach(t=>{ t.agg = add(sumAgg(t.roster.map(r=>r.p)), filler(t.left, t.open)); });
+  teams.forEach(t=>{ t.out = outlook(t.agg, teams.filter(o=>o!==t).map(o=>o.agg)); });
+  playoffOdds(teams);
+  // opponents with the same roster and budget are identical: score each group once
+  const me = teams[st.me], groups = new Map();
+  teams.filter(o=>o!==me).forEach(o=>{ const key = o.left+"/"+o.open+"/"+o.roster.map(r=>r.p.id).sort().join(",");
+    const g = groups.get(key); g ? g.k++ : groups.set(key, {agg:o.agg, k:1}); });
+  M.opps = [...groups.values()]; M.myScore = myScore(me.agg);
+  M.myRoster = sumAgg(me.roster.map(r=>r.p));
+  M.need = lineup(me.roster.map(r=>r.p)).missing;
+  avail.forEach(p=>{
+    p.bz = CATS.reduce((s,c)=>s + (st.targets[c] ? (p["z_"+c]-REPL[c]) : 0), 0) * p.reg_games/62;
+    p.dme = deltaMe(p, Math.max(1, Math.round(p.live)));
+    p.mymax = maxBid(p); p.edge = p.mymax>0 && p.live>0 ? p.mymax - p.live : null;
+  });
+}
+function playoffOdds(teams){ // simulate final W-L (normal around expectation) and count top-8 finishes
+  const n = 3000; teams.forEach(t=>t.po=0);
+  for (let s=0; s<n; s++){
+    const r = teams.map(t=>{ const u=1-Math.random(), v=Math.random(); return {t, x: t.out.reg + t.out.sd*Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v)}; });
+    r.sort((a,b)=>b.x-a.x).slice(0,S.playoff_teams).forEach(o=>o.t.po++);
+  }
+  teams.forEach(t=>t.po/=n);
+}
+// change in my objective if I buy p at `price`; the rest of my money buys a market-priced filler block
+function deltaMe(p, price){
+  const me = M.teams[st.me]; if (me.open<=0 || price>me.maxBid) return null;
+  const A = add(add(filler(me.left-price, me.open-1, p.ri), M.myRoster), p.agg);
+  return myScore(A) - M.myScore;
+}
+function maxBid(p){ // highest price at which buying p still beats spending that money at market
+  const me = M.teams[st.me]; if (me.open<=0) return 0;
+  let lo=1, hi=me.maxBid; if ((deltaMe(p,1)??-1) <= 0) return 0;
+  if ((deltaMe(p,hi)??-1) > 0) return hi;
+  for (let i=0;i<9;i++){ const mid=(lo+hi)/2; (deltaMe(p,mid) > 0) ? lo=mid : hi=mid; }
+  return Math.floor(lo);
+}
+
+// ---------------------------------------------------------------- lineup slots (PG SG G SF PF F C C UTIL UTIL BN BN)
+const ELIG = {PG:["PG"], SG:["SG"], G:["PG","SG"], SF:["SF"], PF:["PF"], F:["SF","PF"], C:["C"]};
+const fits = (p, slot) => !ELIG[slot] || p.pos.split(",").some(x=>ELIG[slot].includes(x));
+function lineup(ps){ // max matching, most restrictive slots first, so "missing" lists positions still needed
+  const order = S.slots.map((s,i)=>i).sort((a,b)=>rankSlot(S.slots[a])-rankSlot(S.slots[b]));
+  const owner = new Array(ps.length).fill(-1), filled = new Array(S.slots.length).fill(-1);
+  const tryS = (si, seen) => { for (let j=0;j<ps.length;j++){ if (seen[j] || !fits(ps[j], S.slots[si])) continue; seen[j]=true;
+    if (owner[j]<0 || tryS(owner[j], seen)){ owner[j]=si; filled[si]=j; return true; } } return false; };
+  order.forEach(si=>tryS(si, new Array(ps.length).fill(false)));
+  const missing = S.slots.filter((s,i)=>filled[i]<0 && ELIG[s]);
+  return {missing};
+}
+function rankSlot(s){ return ["PG","SG","SF","PF","C"].includes(s)?0 : ELIG[s]?1 : s==="UTIL"?2 : 3; }
+
+// ---------------------------------------------------------------- render
+const $ = id => document.getElementById(id);
+const f1 = x => x==null? "–" : (+x).toFixed(1), f0 = x => "$"+Math.round(x), pct = x => Math.round(100*x)+"%";
+const sgn = (x,d=1) => x==null? "–" : (x>=0?"+":"")+x.toFixed(d);
+const targets = () => CATS.filter(c=>st.targets[c]);
+function verdict(p, bid){
+  if (bid==null || isNaN(bid)) return "";
+  if (bid > p.mymax) return `<span class="tag bad">Stop – over your max</span>`;
+  if (bid < p.live + 0.5*(p.mymax-p.live)) return `<span class="tag good">Undervalued – keep bidding</span>`;
+  return `<span class="tag mid">Close to your max</span>`;
+}
+function fitText(p){
+  const strong = CATS.filter(c=>st.targets[c] && p["z_"+c]>=0.7), hurts = CATS.filter(c=>st.targets[c] && p["z_"+c]<=-0.7);
+  return (strong.length? `strong in <b>${strong.join(", ")}</b>` : "no standout target category") + (hurts.length? ` · hurts ${hurts.join(", ")}` : "");
+}
+function renderNom(){
+  const p = byName.get($("nomInput").value), out = $("nomOut");
+  if (!p){ out.innerHTML = `<p class="muted">Pick the player being nominated to see his live value, what he adds to your weekly matchups, and your max bid.</p>`; return; }
+  if (M.sold.has(p.id)){ const s=M.sold.get(p.id); out.innerHTML=`<p>${p.name} already sold to ${st.teams[s.team].name} for $${s.price}.</p>`; return; }
+  const me = M.teams[st.me], bid = parseFloat($("curBid").value), hasBid = !isNaN(bid);
+  const prem = x => { const d = x-p.live; return `${d>=0?"+":"−"}$${Math.abs(Math.round(d))}`+(p.live>0?` (${d>=0?"+":"−"}${Math.abs(Math.round(d/p.live*100))}%)`:""); };
+  const dBid = hasBid ? deltaMe(p, bid) : null;
+  const after = lineup([...me.roster.map(r=>r.p), p]).missing, count = (arr,s) => arr.filter(x=>x===s).length;
+  const fillsNow = [...new Set(M.need)].filter(s=>count(after,s) < count(M.need,s));
+  const steps = [...new Set([0,0.1,0.2,0.3,0.4].map(f=>Math.max(1,Math.round(p.live*(1+f)))).concat(p.mymax))].filter(x=>x>=1 && x<=me.maxBid).sort((a,b)=>a-b);
+  const ladder = p.live>0 && p.mymax>0 ? `<div class="scroll" style="margin-top:10px"><table style="width:auto"><thead><tr><th class="l">Bid</th>${steps.map(x=>`<th>$${x}</th>`).join("")}</tr></thead><tbody>
+    <tr><td class="l muted">vs live</td>${steps.map(x=>`<td class="muted">${x===p.mymax?"max":prem(x)}</td>`).join("")}</tr>
+    <tr><td class="l muted">+My W−L</td>${steps.map(x=>{const d=deltaMe(p,x);return `<td class="${d>0?"zp":"zn"}">${sgn(d)}</td>`}).join("")}</tr></tbody></table></div>` : "";
+  const sch = L.schedule[p.team];
+  out.innerHTML = `<div class="nom">
+    <div><div class="muted">${p.pos} · ${p.team} · exp GP ${f1(p.exp_gp)}</div><div class="big">${p.name}</div></div>
+    <div><div class="muted">Live market value</div><div class="big">${f0(p.live)}</div><div class="muted">start ${f0(p.base_price)}</div></div>
+    <div><div class="muted">Your max bid</div><div class="big">${f0(p.mymax)}</div><div class="muted">you can bid up to $${me.maxBid}</div></div>
+    <div><div class="muted">+My W−L at market</div><div class="big">${sgn(p.dme)}</div><div class="muted">net category wins, season</div></div>
+    <div><div class="muted">+My W−L at ${hasBid?"$"+bid:"your bid"}</div><div class="big ${dBid==null?"":dBid>0?"zp":"zn"}">${hasBid?(dBid==null?"over max":sgn(dBid)):"–"}</div><div class="muted">${hasBid?prem(bid)+" vs live":"type a bid above"}</div></div>
+    <div><div class="muted">Verdict</div><div style="margin-top:6px">${verdict(p,bid)||'<span class="muted">enter current bid</span>'}</div></div>
+  </div>${ladder}
+  <div class="muted" style="margin-top:8px">Build fit: ${fitText(p)}${fillsNow.length?` · fills your <b>${fillsNow.join("/")}</b> slot`:""} ·
+    games W1–18 ≈ ${f1(p.reg_games)} · playoff weeks 19/20/21: ${sch[18]}/${sch[19]}/${sch[20]} team games</div>
+  <div class="muted">z per game: ${CATS.map(c=>`<span class="${st.targets[c]?"":"off"}">${c} <span class="${p["z_"+c]>=0?"zp":"zn"}">${p["z_"+c].toFixed(1)}</span></span>`).join(" · ")}</div>`;
+  $("soldPrice").value = isNaN(bid)? "" : bid;
+}
+function renderKpis(){
+  const me = M.teams[st.me], rank = 1+M.teams.filter(t=>t.out.reg>me.out.reg).length;
+  $("kpis").innerHTML = [
+    ["League $ left", "$"+M.money], ["Spots left", M.slots], ["Inflation", sgn(M.inflation*100-100,0)+"%"],
+    ["My $ left", "$"+me.left], ["My spots", me.open], ["My max bid", "$"+me.maxBid],
+    ["My proj. W−L", sgn(me.out.reg,1)], ["Proj. rank", rank+" / "+S.teams], ["Playoff odds", pct(me.po)]
+  ].map(([k,v])=>`<div class="kpi">${k}<b>${v}</b></div>`).join("");
+}
+function renderTabs(){
+  const tabs = [["board","Available players"],["build","My build"],["teams","Teams & budgets"],["stand","Projected standings"],["log","Sales log"]];
+  $("tabs").innerHTML = tabs.map(([k,v])=>`<button data-tab="${k}" class="${st.tab===k?"on":""}">${v}</button>`).join("") +
+    `<span style="flex:1"></span><button id="exp">Export</button><label class="muted"><button onclick="document.getElementById('imp').click()">Import</button><input type="file" id="imp" accept=".json" hidden></label><button id="reset">Reset</button>`;
+}
+function renderBoard(){
+  const cols = [["rank","#"],["name","Player","l"],["pos","Pos","l"],["team","Team","l"],["reg_games","G 1–18"],["po_team_games","PO G"],
+    ...CATS.map(c=>["z_"+c,c,st.targets[c]?"tgt":""]),["z_pg","Z/g"],["bz","Build Z"],["base_price","Start $"],["live","Live $"],["mymax","My max"],["edge","Edge $"],["dme","+My W−L"]];
+  let rows = M.avail.filter(p=>!st.posFilter || p.pos.split(",").some(x=>(ELIG[st.posFilter]||[st.posFilter]).includes(x)));
+  const k = st.sortKey; rows.sort((a,b)=> (typeof a[k]==="string" ? a[k].localeCompare(b[k]) : ((a[k]??-999)-(b[k]??-999))) * st.sortDir);
+  $("view").innerHTML = `<div class="row" style="margin-bottom:8px"><span class="muted">Position</span>
+    <select id="posF">${["","PG","SG","G","SF","PF","F","C"].map(x=>`<option ${st.posFilter===x?"selected":""} value="${x}">${x||"All"}</option>`).join("")}</select>
+    <span class="muted">${rows.length} available · targets: <b>${targets().join(", ")}</b> · <b>Edge $</b> = My max − Live $ (biggest = most undervalued for your build) · click a row to nominate</span></div>
+    <div class="scroll"><table><thead><tr>${cols.map(([k,v,c])=>`<th class="${c||""}" data-sort="${k}">${v}${st.sortKey===k?(st.sortDir<0?" ▾":" ▴"):""}</th>`).join("")}</tr></thead><tbody>
+    ${rows.map(p=>`<tr data-name="${p.name}"><td>${p.rank}</td><td class="l">${p.name}</td><td class="l pos">${p.pos}</td><td class="l pos">${p.team}</td><td>${f1(p.reg_games)}</td><td>${p.po_team_games}</td>
+      ${CATS.map(c=>{const z=p["z_"+c];return `<td class="z ${z>=0.5?"zp":z<=-0.5?"zn":""} ${st.targets[c]?"":"off"}">${z.toFixed(1)}</td>`}).join("")}
+      <td>${p.z_pg.toFixed(1)}</td><td>${p.bz.toFixed(1)}</td><td>${f0(p.base_price)}</td><td><b>${p.live?f0(p.live):"$1"}</b></td><td>${f0(p.mymax)}</td>
+      <td class="${p.edge>0?"zp":""}">${p.edge==null?"–":sgn(p.edge,0)}</td>
+      <td class="${p.dme>0?"zp":"zn"}">${sgn(p.dme)}</td></tr>`).join("")}</tbody></table></div>`;
+}
+function catChips(out){ return `<div class="cats">${CATS.map((c,i)=>`<span class="cat ${out.pc[i]>=0.6?"hi":out.pc[i]<=0.4?"lo":""} ${st.targets[c]?"":"off"}">${c} ${pct(out.pc[i])}</span>`).join("")}</div>`; }
+function renderBuild(){
+  const me = M.teams[st.me], n = targets().length;
+  const bs = D.builds.map(b=>`<tr><td class="l">${b.build}</td><td>${sgn(b.wl_week,2)}</td><td>${sgn(b.wl_week*REG,0)}</td><td>${sgn(b.wl_playoff_week,2)}</td><td>${b.cats_won_week.toFixed(1)}</td>
+    <td class="l muted" style="white-space:normal;min-width:280px">${b.players.join(", ")}</td><td><button data-build="${b.build}">Use</button></td></tr>`).join("");
+  $("view").innerHTML = `<p class="muted">Choose the categories you want to win every week. <b>+My W−L</b>, <b>My max</b> and <b>Build Z</b> then count only these; the market price (Live $) still values all 9.
+    ${n<5?`<b class="zn">Fewer than 5 targets: you can't win a week on targets alone.</b>`:""}</p>
+  <div class="tgts">${CATS.map(c=>`<label class="${st.targets[c]?"on":""}"><input type="checkbox" data-tgt="${c}" ${st.targets[c]?"checked":""}>${c}</label>`).join("")}</div>
+  <p class="row" style="margin-top:12px"><label>Playoff weeks 19–21 count <b id="pov">${st.poWeight}</b>× a regular week
+    <input type="range" min="0" max="3" step="0.5" value="${st.poWeight}" data-po style="vertical-align:middle"></label></p>
+  <h2 style="margin-top:16px">My weekly outlook now</h2>
+  <div class="muted">Chance to win each category in an average week vs the field (empty spots filled with what your money buys at market).</div>
+  ${catChips(me.out)}
+  <h2 style="margin-top:20px">Builds tested before the auction</h2>
+  <p class="muted">Each build: the best 12-player roster for $200 at start prices, maximising season z over replacement in its target categories, scored vs a league-average team.
+    Top 25 builds plus a balanced build for comparison. Other GMs will bid on the same players, so prices will move.</p>
+  <div class="scroll"><table><thead><tr><th class="l">Build</th><th>W−L / week</th><th>W−L season</th><th>Playoff W−L / wk</th><th>Cats won / wk</th><th class="l">Roster</th><th></th></tr></thead><tbody>${bs}</tbody></table></div>`;
+}
+function renderTeams(){
+  $("view").innerHTML = `<p class="muted">Rename teams here. Click "Set as me" on your team. W−L is the expected regular-season net category record vs the field; empty spots assume each team's money buys market-priced players.</p><div class="teams">${M.teams.map(t=>{
+    const need = lineup(t.roster.map(r=>r.p)).missing;
+    return `<div class="team ${t.i===st.me?"me":""}"><input data-team="${t.i}" value="${t.name.replace(/"/g,"&quot;")}">
+    <div class="row muted"><span>$${t.left} left</span><span>${t.open} spots</span><span>max bid $${t.maxBid}</span><span>W−L ${sgn(t.out.reg)}</span><span>playoffs ${pct(t.po)}</span></div>
+    ${t.i===st.me?'<span class="tag good">You</span>':`<button data-me="${t.i}">Set as me</button>`}
+    ${catChips(t.out)}
+    <ul>${t.roster.map(r=>`<li>${r.p.name} <span class="pos">${r.p.pos}</span> – $${r.price}</li>`).join("")}</ul>
+    <div class="muted">${t.roster.length ? (need.length? "Still need: "+need.join(", ") : "All position slots covered") : ""}</div></div>`; }).join("")}</div>`;
+}
+function renderStand(){
+  const ts = [...M.teams].sort((a,b)=>b.out.reg-a.out.reg);
+  $("view").innerHTML = `<p class="muted">Chance of winning each category in an average regular-season week vs the field, expected net category W−L over weeks 1–${REG}, and odds of a top-${S.playoff_teams} finish. The line marks the playoff cut.</p>
+  <div class="scroll"><table><thead><tr><th class="l">Team</th>${CATS.map(c=>`<th>${c}</th>`).join("")}<th>W−L 1–${REG}</th><th>Playoff W−L/wk</th><th>Playoffs</th></tr></thead><tbody>
+  ${ts.map((t,r)=>`<tr class="${t.i===st.me?"mine":""} ${r===S.playoff_teams-1?"cut":""}"><td class="l">${t.name}</td>${CATS.map((c,i)=>{const v=t.out.pc[i];return `<td class="${v>=0.6?"zp":v<=0.4?"zn":""}">${pct(v)}</td>`}).join("")}
+    <td><b>${sgn(t.out.reg)}</b></td><td>${sgn(t.out.po,2)}</td><td>${pct(t.po)}</td></tr>`).join("")}
+  </tbody></table></div>`;
+}
+function renderLog(){
+  $("view").innerHTML = st.sales.length ? `<table><thead><tr><th class="l">#</th><th class="l">Player</th><th class="l">Team</th><th>Price</th><th>Start $</th><th></th></tr></thead><tbody>
+  ${st.sales.map((s,i)=>({s,i})).reverse().map(({s,i})=>`<tr><td class="l">${i+1}</td><td class="l">${P[s.pid].name}</td><td class="l">${st.teams[s.team].name}</td><td>$${s.price}</td><td>${f0(P[s.pid].base_price)}</td><td><button data-undo="${i}">Remove</button></td></tr>`).join("")}</tbody></table>`
+  : `<p class="muted">No sales yet.</p>`;
+}
+function render(){
+  const sig = JSON.stringify([st.sales, st.me, st.targets, st.poWeight]);
+  if (sig!==lastSig){ rebuild(); lastSig = sig; }
+  renderKpis(); renderTabs(); renderNom();
+  $("soldTeam").innerHTML = st.teams.map((t,i)=>`<option value="${i}">${t.name}</option>`).join("");
+  $("plist").innerHTML = M.avail.map(p=>`<option value="${p.name}">`).join("");
+  ({board:renderBoard,build:renderBuild,teams:renderTeams,stand:renderStand,log:renderLog})[st.tab]();
+  save();
+}
+
+// ---------------------------------------------------------------- events
+document.addEventListener("click", e=>{
+  const t = e.target;
+  if (t.dataset.tab){ st.tab=t.dataset.tab; render(); }
+  else if (t.dataset.sort){ st.sortDir = st.sortKey===t.dataset.sort ? -st.sortDir : -1; st.sortKey=t.dataset.sort; render(); }
+  else if (t.dataset.me){ st.me=+t.dataset.me; render(); }
+  else if (t.dataset.undo){ st.sales.splice(+t.dataset.undo,1); render(); }
+  else if (t.dataset.build){ const punt = t.dataset.build.startsWith("Punt ") ? t.dataset.build.slice(5).split(", ") : [];
+    st.targets = Object.fromEntries(CATS.map(c=>[c,!punt.includes(c)])); render(); }
+  else if (t.id==="reset"){ if (prompt('Type RESET to clear all sales and teams')==="RESET"){ st=defaults(); render(); } }
+  else if (t.id==="exp"){ const a=document.createElement("a"); a.href=URL.createObjectURL(new Blob([JSON.stringify(st,null,1)],{type:"application/json"})); a.download="h2h-auction-state.json"; a.click(); }
+  else if (t.closest("tr[data-name]")){ $("nomInput").value=t.closest("tr").dataset.name; $("curBid").value=""; renderNom(); window.scrollTo({top:0,behavior:"smooth"}); }
+});
+document.addEventListener("change", e=>{
+  const t=e.target;
+  if (t.id==="posF"){ st.posFilter=t.value; render(); }
+  else if (t.dataset.team){ st.teams[+t.dataset.team].name=t.value; render(); }
+  else if (t.dataset.tgt){ st.targets[t.dataset.tgt]=t.checked; render(); }
+  else if (t.dataset.po!=null){ st.poWeight=+t.value; render(); }
+  else if (t.id==="imp" && t.files[0]){ t.files[0].text().then(x=>{ st={...defaults(),...JSON.parse(x)}; render(); }); }
+});
+document.addEventListener("input", e=>{ if (e.target.dataset.po!=null) $("pov").textContent=e.target.value; });
+$("nomInput").addEventListener("input", renderNom);
+$("curBid").addEventListener("input", renderNom);
+$("soldBtn").addEventListener("click", ()=>{
+  const p = byName.get($("nomInput").value), team=+$("soldTeam").value, price=Math.round(+$("soldPrice").value);
+  if (!p || M.sold.has(p.id)) return $("msg").textContent="Pick an available player first.";
+  const t = M.teams[team];
+  if (t.open<=0) return $("msg").textContent=t.name+" has no open spots.";
+  if (!(price>=1) || price>t.maxBid) return $("msg").textContent=`Price must be between $1 and $${t.maxBid} (keeps $1 for each other open spot).`;
+  st.sales.push({pid:p.id, team, price}); $("msg").textContent=`${p.name} → ${t.name} $${price}`;
+  $("nomInput").value=""; $("curBid").value=""; $("soldPrice").value=""; render();
+});
+render();
+</script>
+</body>
+</html>

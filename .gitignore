@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+~$*
+# raw injury-report PDFs (~70 MB) and the sentence-embedding cache: rebuilt by the scripts
+data/injury_reports/
+data/reason_embeddings.csv

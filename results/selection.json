@@ -1,0 +1,13 @@
+{
+ "selected_model": "Ensemble Ridge+RF + injury-type games",
+ "finalists": [
+  "Naive (last season)",
+  "Marcel (weighted avg)",
+  "Ensemble Ridge+RF + injury-type games",
+  "GBM lr=0.03 leaves=7",
+  "RandomForest leaf=30",
+  "Ridge a=10",
+  "Ensemble Ridge+RF",
+  "Ensemble Ridge+RF + injury-text NN games"
+ ]
+}

@@ -1,0 +1,10 @@
+pandas>=1.5
+numpy
+openpyxl
+scikit-learn>=1.2
+scipy
+matplotlib
+requests
+torch
+sentence-transformers
+pdfplumber

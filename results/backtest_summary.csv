@@ -1,0 +1,6 @@
+method,points,points_sd,win,top3,avg_rank,gain_vs_Naive,share_sims_better_than_Naive,gain_vs_Marcel,share_sims_better_than_Marcel,gain_vs_Our,share_sims_better_than_Our
+Naive (last season),73.936,10.02329139406664,0.108,0.385,5.252,,,,,,
+Marcel (weighted avg),68.018,11.9314934746886,0.064,0.222,7.175,,,,,,
+Our model (no injury text),74.627,10.906251295349712,0.15,0.419,5.143,,,,,,
+Our model,74.421,10.687374746820607,0.14,0.409,5.22,0.485,0.499,6.403,0.699,-0.206,0.32
+Perfect foresight,93.3095,7.574155238544927,0.821,0.962,1.349,,,,,,

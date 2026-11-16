@@ -1,0 +1,90 @@
+region,type,episodes,median,mean,p90
+Achilles,Tear / rupture,8,87.5,80.625,138.6
+Achilles,Surgery,8,69.5,60.5,110.5
+Hamstring / thigh,Tear / rupture,3,56.0,46.333333333333336,57.6
+Lower leg,Surgery,2,50.0,50.0,63.6
+Knee,Tear / rupture,19,50.0,60.578947368421055,119.2
+Hip / groin,Fracture,3,49.0,43.666666666666664,73.8
+Back / core,Surgery,7,49.0,59.0,107.4
+Knee,Surgery,72,44.0,56.916666666666664,131.2
+Foot / toe,Surgery,31,44.0,43.0,96.0
+Shoulder / arm,Surgery,19,41.0,44.73684210526316,88.8
+Shoulder / arm,Tear / rupture,7,39.0,35.57142857142857,60.6
+Ankle,Fracture,7,37.0,35.714285714285715,58.400000000000006
+Back / core,Tear / rupture,3,36.0,40.666666666666664,52.0
+Ankle,Surgery,23,36.0,49.82608695652174,104.4
+Hip / groin,Surgery,5,34.0,35.6,43.6
+Lower leg,Fracture,18,32.5,47.05555555555556,101.40000000000002
+Hand / wrist,Surgery,34,27.5,29.823529411764707,53.0
+Foot / toe,Fracture,24,25.0,34.333333333333336,81.19999999999997
+Lower leg,Sprain,4,20.0,25.5,48.400000000000006
+Hamstring / thigh,Sprain,1,20.0,20.0,20.0
+Hand / wrist,Tear / rupture,13,19.0,26.46153846153846,51.20000000000002
+Back / core,Fracture,13,19.0,28.76923076923077,70.20000000000002
+Hand / wrist,Fracture,52,17.5,18.96153846153846,34.9
+Knee,Fracture,5,17.0,27.6,59.400000000000006
+Shoulder / arm,Fracture,1,13.0,13.0,13.0
+Knee,Sprain,113,11.0,15.141592920353983,35.8
+Lower leg,Strain,112,11.0,13.125,27.700000000000017
+Hand / wrist,Management,4,9.5,9.5,16.8
+Hamstring / thigh,Strain,167,8.0,12.970059880239521,31.0
+Head / face,Surgery,9,8.0,8.88888888888889,15.600000000000005
+Hip / groin,Sprain,8,7.5,16.625,45.3
+Shoulder / arm,Sprain,57,7.0,10.701754385964913,33.0
+Foot / toe,Strain,33,7.0,10.878787878787879,24.8
+Knee,Strain,12,7.0,8.5,17.700000000000003
+Head / face,Fracture,24,7.0,10.0,21.799999999999997
+Ankle,Contusion,6,6.5,7.0,12.5
+Foot / toe,Sprain,95,6.0,10.105263157894736,27.400000000000034
+Hip / groin,Strain,148,5.0,7.486486486486487,15.300000000000011
+Back / core,Strain,70,5.0,7.742857142857143,18.1
+Ankle,Sprain,643,4.0,7.23950233281493,16.800000000000068
+Knee,Contusion,115,3.0,7.721739130434782,17.60000000000001
+Head / face,Unspecified,35,3.0,3.942857142857143,7.600000000000001
+Head / face,Sprain,1,3.0,3.0,3.0
+Head / face,Management,50,3.0,4.32,8.100000000000001
+Foot / toe,Contusion,34,3.0,7.529411764705882,20.7
+Hand / wrist,Sprain,112,3.0,6.723214285714286,18.900000000000006
+Shoulder / arm,Soreness / tendinitis,72,2.0,8.291666666666666,23.9
+Ankle,Soreness / tendinitis,148,2.0,3.304054054054054,8.0
+Knee,Unspecified,3,2.0,6.333333333333333,13.200000000000001
+Achilles,Soreness / tendinitis,52,2.0,6.538461538461538,13.599999999999994
+Foot / toe,Management,29,2.0,11.931034482758621,37.2
+Foot / toe,Soreness / tendinitis,153,2.0,6.0130718954248366,16.0
+Back / core,Sprain,23,2.0,7.0,19.200000000000003
+Knee,Soreness / tendinitis,342,2.0,5.321637426900585,14.0
+Knee,Management,102,2.0,11.852941176470589,37.10000000000005
+Shoulder / arm,Strain,16,2.0,4.5,10.0
+Hamstring / thigh,Contusion,64,2.0,4.421875,10.400000000000006
+Ankle,Management,31,2.0,6.903225806451613,9.0
+Hand / wrist,Contusion,23,2.0,2.9130434782608696,4.800000000000001
+Hamstring / thigh,Soreness / tendinitis,95,2.0,3.3473684210526318,9.0
+Hip / groin,Soreness / tendinitis,144,2.0,4.597222222222222,11.400000000000034
+Hip / groin,Management,10,2.0,2.7,5.399999999999999
+Back / core,Soreness / tendinitis,262,2.0,5.290076335877862,11.0
+Back / core,Management,139,2.0,3.597122302158273,6.0
+Shoulder / arm,Management,7,2.0,11.571428571428571,29.000000000000007
+Hand / wrist,Soreness / tendinitis,32,2.0,2.6875,5.800000000000004
+Back / core,Contusion,46,2.0,6.065217391304348,10.5
+Achilles,Management,4,2.0,2.0,3.0
+Lower leg,Soreness / tendinitis,68,1.5,2.838235294117647,7.300000000000004
+Lower leg,Management,6,1.5,4.333333333333333,10.5
+Head / face,Soreness / tendinitis,14,1.5,3.142857142857143,6.400000000000002
+Lower leg,Contusion,54,1.5,4.037037037037037,9.100000000000009
+Lower leg,Unspecified,3,1.0,1.0,1.0
+Shoulder / arm,Contusion,26,1.0,2.730769230769231,6.0
+Achilles,Contusion,1,1.0,1.0,1.0
+Illness,Illness,523,1.0,2.1548757170172084,4.0
+Hip / groin,Unspecified,1,1.0,1.0,1.0
+Hip / groin,Contusion,64,1.0,2.75,5.700000000000003
+Head / face,Illness,11,1.0,1.7272727272727273,3.0
+Head / face,Contusion,13,1.0,2.769230769230769,6.600000000000001
+Hand / wrist,Unspecified,1,1.0,1.0,1.0
+Hand / wrist,Strain,5,1.0,3.4,8.200000000000001
+Hamstring / thigh,Unspecified,2,1.0,1.0,1.0
+Hamstring / thigh,Management,14,1.0,3.4285714285714284,5.700000000000001
+Foot / toe,Unspecified,2,1.0,1.0,1.0
+Foot / toe,Tear / rupture,4,1.0,13.75,36.70000000000001
+Ankle,Strain,6,1.0,1.1666666666666667,1.5
+Achilles,Sprain,1,1.0,1.0,1.0
+Shoulder / arm,Unspecified,3,1.0,1.0,1.0
