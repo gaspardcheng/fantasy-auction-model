@@ -24,12 +24,13 @@ import pandas as pd
 import torch
 from torch import nn
 
-from data import load_injury_reports
+from data import injury_known, load_injury_reports
 
 ROOT = Path(__file__).resolve().parents[1]
 EMB_CACHE = ROOT / "data" / "reason_embeddings.csv"
 ENCODER = "sentence-transformers/all-MiniLM-L6-v2"
-REG_SEASON_END = {"2021-22": "2022-04-10", "2022-23": "2023-04-09", "2023-24": "2024-04-14",
+REG_SEASON_END = {"2018-19": "2019-04-10", "2019-20": "2020-08-14", "2020-21": "2021-05-16",
+                  "2021-22": "2022-04-10", "2022-23": "2023-04-09", "2023-24": "2024-04-14",
                   "2024-25": "2025-04-13", "2025-26": "2026-04-12"}
 STATUS_W = {"Out": 1.0, "Doubtful": 1.0, "Questionable": 0.5, "Probable": 0.1, "Available": 0.1}
 POOLS = ["all", "late"]
@@ -136,7 +137,9 @@ def nn_games(train, test, counts=True, text="anchors", k=8, hidden=32, dropout=0
     "learned" (a k-dim projection trained end to end with the network)."""
     Etr, Ctr = text_inputs(train)
     Ete, Cte = text_inputs(test)
-    Xtr, Xte = train[TAB].to_numpy(np.float32), test[TAB].to_numpy(np.float32)
+    known = lambda d: np.column_stack([injury_known(d["target_s"], lag) for lag in (1, 2)])
+    Xtr = np.hstack([train[TAB].to_numpy(np.float32), known(train)])   # text is missing (zeros) where not known
+    Xte = np.hstack([test[TAB].to_numpy(np.float32), known(test)])
     if counts:
         Xtr, Xte = np.hstack([Xtr, Ctr]), np.hstack([Xte, Cte])
     if text in ("anchors", "pca"):

@@ -24,7 +24,7 @@ import numpy as np
 import pandas as pd
 
 import fantasy as F
-from data import SEASONS, build_panel, load_injury_reports
+from data import TEST_SEASON, build_panel, injury_known, load_injury_reports
 from models import eligible
 from text_model import REG_SEASON_END, clean_reason, embed
 
@@ -138,6 +138,7 @@ def injury_flags(df: pd.DataFrame) -> pd.DataFrame:
     """Season t-1 injury features for panel rows: the injury types that predicted fewer games next season."""
     m = main_injuries().reindex(list(zip(df["PLAYER_ID"], df["target_s"] - 1)))
     out = df.copy()
+    out["inj_known"] = injury_known(df["target_s"]).astype(int)   # flags below are 0 where unknown
     out["inj_knee"] = (m["region"] == "Knee").to_numpy(int)
     out["inj_achilles"] = (m["region"] == "Achilles").to_numpy(int)
     out["inj_major"] = m["type"].isin(["Tear / rupture", "Surgery"]).to_numpy(int)
@@ -155,8 +156,11 @@ def season_z(h_rows):
 
 
 def next_season_effects(panel):
-    """Main injury of season t-1 vs outcomes in season t, relative to same-age players without injury."""
-    rows = eligible(panel).copy()
+    """Main injury of season t-1 vs outcomes in season t, relative to same-age players without injury.
+    Uses only seasons with a full year of injury reports, and never the hold-out season, so the injury
+    flags used by the models (knee, Achilles, major, chronic) are chosen on training seasons only."""
+    rows = eligible(panel)
+    rows = rows[injury_known(rows["target_s"]) & (rows["season"] != TEST_SEASON)].copy()
     rows["s_prev"] = rows["target_s"] - 1
     main = main_injuries()
     key = list(zip(rows["PLAYER_ID"], rows["s_prev"]))

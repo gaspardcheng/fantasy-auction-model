@@ -37,9 +37,11 @@ def bars(ax, names, vals, colors, fmt, title):
 
 def main():
     FIG.mkdir(parents=True, exist_ok=True)
-    sel = json.load(open(RES / "selection.json"))["selected_model"]
+    selection = json.load(open(RES / "selection.json"))
+    sel, folds = selection["selected_model"], selection["validation_folds"]
     # ---------------- business backtest
-    b = pd.read_csv(RES / "backtest_summary.csv").set_index("method")
+    b = pd.read_csv(RES / "backtest_summary.csv")
+    b = b[b["room"] == "Marcel"].set_index("method")          # headline room: every rival on Marcel
     names = list(b.index)
     col = [OURS if n == "Our model" else (LIGHT if n == "Perfect foresight" else BASE) for n in names]
     fig, ax = plt.subplots(1, 2, figsize=(15, 4.4))
@@ -107,9 +109,9 @@ def main():
     ax.scatter(v["Z_MAE"], v.index, s=90, color=colors, edgecolor="white", linewidth=1.5, zorder=3)
     for i, val in enumerate(v["Z_MAE"]):
         ax.text(val + 0.006, i, f"{val:.3f}", va="center", fontsize=9, color=INK)
-    ax.set_xlim(1.44, v["Z_MAE"].max() + 0.04)
+    ax.set_xlim(v["Z_MAE"].min() - 0.02, v["Z_MAE"].max() + 0.04)
     ax.yaxis.grid(True, color=GRID, linewidth=0.6)
-    ax.set_title("Model selection: value per game MAE\n(avg of 2023-24 and 2024-25 folds, lower is better)", loc="left",
+    ax.set_title(f"Model selection: value per game MAE\n(avg of {len(folds)} folds, {folds[0]} to {folds[-1]}, lower is better)", loc="left",
                  fontsize=12, color=INK, fontweight="bold")
     ax.xaxis.grid(True, color=GRID); ax.set_axisbelow(True); ax.tick_params(axis="y", length=0, labelsize=9)
     fig.savefig(FIG / "validation.png"); plt.close(fig)

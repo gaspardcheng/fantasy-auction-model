@@ -6,3 +6,9 @@ __pycache__/
 # raw injury-report PDFs (~70 MB) and the sentence-embedding cache: rebuilt by the scripts
 data/injury_reports/
 data/reason_embeddings.csv
+
+# extended NBA data (Project1_data_package): not redistributed until NBA data terms are confirmed
+data/Data 1 extended.csv
+data/player_season_extra.csv
+data/injury_reports_pre2021.csv
+Project1_data_package/data/

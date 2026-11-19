@@ -1,13 +1,27 @@
 {
- "selected_model": "Ensemble Ridge+RF + injury-type games",
+ "selected_model": "Ridge a=10",
  "finalists": [
   "Naive (last season)",
   "Marcel (weighted avg)",
-  "Ensemble Ridge+RF + injury-type games",
+  "Ensemble Ridge+RF + injury-text NN games",
   "GBM lr=0.03 leaves=7",
   "RandomForest leaf=30",
   "Ridge a=10",
   "Ensemble Ridge+RF",
-  "Ensemble Ridge+RF + injury-text NN games"
- ]
+  "Ensemble Ridge+RF + injury-type games"
+ ],
+ "train_seasons": null,
+ "validation_folds": [
+  "2015-16",
+  "2016-17",
+  "2017-18",
+  "2018-19",
+  "2019-20",
+  "2020-21",
+  "2021-22",
+  "2022-23",
+  "2023-24",
+  "2024-25"
+ ],
+ "test_season": "2025-26"
 }

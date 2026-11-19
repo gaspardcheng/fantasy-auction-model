@@ -16,6 +16,14 @@ def eligible(df):
     return df[(df["GP_l1"] >= 20) & (df["MIN_l1"] >= 12)]
 
 
+def window(panel, season, n_seasons):
+    """Training rows for target `season`: the `n_seasons` target seasons just before it (None = all)."""
+    s = panel.loc[panel["season"] == season, "target_s"]
+    t = s.iloc[0] if len(s) else panel["target_s"].max() + 1
+    lo = -np.inf if n_seasons is None else t - n_seasons
+    return panel[(panel["target_s"] < t) & (panel["target_s"] >= lo)]
+
+
 # ------------------------------------------------------------------ benchmarks
 def naive(train, test):
     """Business rule 1: 'last season repeats' (what most casual GMs do)."""

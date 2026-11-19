@@ -1,6 +1,16 @@
-method,points,points_sd,win,top3,avg_rank,gain_vs_Naive,share_sims_better_than_Naive,gain_vs_Marcel,share_sims_better_than_Marcel,gain_vs_Our,share_sims_better_than_Our
-Naive (last season),73.936,10.02329139406664,0.108,0.385,5.252,,,,,,
-Marcel (weighted avg),68.018,11.9314934746886,0.064,0.222,7.175,,,,,,
-Our model (no injury text),74.627,10.906251295349712,0.15,0.419,5.143,,,,,,
-Our model,74.421,10.687374746820607,0.14,0.409,5.22,0.485,0.499,6.403,0.699,-0.206,0.32
-Perfect foresight,93.3095,7.574155238544927,0.821,0.962,1.349,,,,,,
+room,method,points,points_sd,win,top3,avg_rank,roster,gain_vs_Naive,gain_vs_Naive_se,share_sims_better_than_Naive,gain_vs_Marcel,gain_vs_Marcel_se,share_sims_better_than_Marcel,gain_vs_Our,gain_vs_Our_se,share_sims_better_than_Our
+Marcel,Naive (last season),74.237,10.076202700465135,0.123,0.38,5.182,10.0,,,,,,,,,
+Marcel,Marcel (weighted avg),66.891,13.109289548731173,0.082,0.22,7.511,10.0,,,,,,,,,
+Marcel,Our model (no injury text),77.109,10.263062381640745,0.211,0.504,4.362,10.0,,,,,,,,,
+Marcel,Our model,75.6065,12.084243322884834,0.203,0.486,4.812,10.0,1.3695,0.41737623635357185,0.549,8.7155,0.4479452697760238,0.713,-1.5025,0.3608205027228708,0.448
+Marcel,Perfect foresight,96.9025,5.879907913145159,0.919,0.996,1.108,10.0,,,,,,,,,
+Naive,Naive (last season),66.7755,12.432816441767109,0.062,0.22,7.514,10.0,,,,,,,,,
+Naive,Marcel (weighted avg),71.69,13.843086037117262,0.195,0.372,6.086,10.0,,,,,,,,,
+Naive,Our model (no injury text),77.6225,13.143953258333555,0.3,0.534,4.42,10.0,,,,,,,,,
+Naive,Our model,76.343,13.731474953711427,0.274,0.521,4.829,10.0,9.5675,0.4835566365698757,0.745,4.653,0.467412093409087,0.63,-1.2795,0.40640841224997737,0.46
+Naive,Perfect foresight,98.429,5.889112041780206,0.956,0.997,1.057,10.0,,,,,,,,,
+Mixed,Naive (last season),67.7305,11.06309232365715,0.061,0.209,7.305,10.0,,,,,,,,,
+Mixed,Marcel (weighted avg),65.814,13.099542053140711,0.065,0.219,7.859,10.0,,,,,,,,,
+Mixed,Our model (no injury text),75.552,11.447132078945925,0.207,0.456,4.825,10.0,,,,,,,,,
+Mixed,Our model,73.641,12.74205552408947,0.19,0.419,5.491,10.0,5.9105,0.45446592724760904,0.643,7.827,0.4667841668892149,0.69,-1.911,0.391090821972379,0.436
+Mixed,Perfect foresight,96.953,5.807108877360019,0.942,0.999,1.067,10.0,,,,,,,,,
