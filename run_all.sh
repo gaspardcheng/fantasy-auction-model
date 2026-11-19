@@ -8,6 +8,7 @@ set -euo pipefail
 cd "$(dirname "$0")/src"
 python3 injury_types.py
 python3 train_evaluate.py
+python3 bootstrap_by_player.py
 python3 backtest.py
 python3 make_figures.py
 python3 predict_2026.py

@@ -1,9 +1,9 @@
 text,region_rule,region_encoder,region,type_rule,type_encoder,type,source
 """ ""; "" """,,Illness,Illness,,Illness,Illness,encoder
-""" ""; Appendectomy",,Illness,Illness,,Surgery,Illness,encoder
+""" ""; Appendectomy",Back / core,Back / core,Back / core,Surgery,Surgery,Surgery,rules
 """ ""; Concussion Protocol",Head / face,Head / face,Head / face,,Management,Management,encoder
 """ ""; Congestion",,Illness,Illness,,Soreness / tendinitis,Illness,encoder
-""" ""; Dental Procedure",,Head / face,Head / face,,Surgery,Surgery,encoder
+""" ""; Dental Procedure",,Head / face,Head / face,Surgery,Surgery,Surgery,encoder
 """ ""; Flu-like symptoms",Illness,Illness,Illness,Illness,Illness,Illness,rules
 """ ""; Gastroenteritis",Illness,Illness,Illness,,Illness,Illness,encoder
 """ ""; Illness",Illness,Illness,Illness,Illness,Illness,Illness,rules
@@ -43,7 +43,7 @@ Abdominal Strain; Injury Management,Back / core,Back / core,Back / core,Strain,S
 Abdominal muscle; Strain,Back / core,Back / core,Back / core,Strain,Strain,Strain,rules
 Abdominal soreness,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Abdominal strain,Back / core,Back / core,Back / core,Strain,Strain,Strain,rules
-Abdominal; Appendectomy,Back / core,Back / core,Back / core,,Surgery,Surgery,encoder
+Abdominal; Appendectomy,Back / core,Back / core,Back / core,Surgery,Surgery,Surgery,rules
 Abdominal; Contusion,Back / core,Back / core,Back / core,Contusion,Contusion,Contusion,rules
 Abdominal; Hernia,Back / core,Back / core,Back / core,,Soreness / tendinitis,Soreness / tendinitis,encoder
 Abdominal; Muscle Strain,Back / core,Back / core,Back / core,Strain,Strain,Strain,rules
@@ -71,7 +71,7 @@ Ankle surgery - left,Ankle,Ankle,Ankle,Surgery,Surgery,Surgery,rules
 Ankle; Injury Management,Ankle,Ankle,Ankle,Management,Management,Management,rules
 Ankle; sprained,Ankle,Ankle,Ankle,Sprain,Sprain,Sprain,rules
 Anterior Triangle; Contusion,,Back / core,Back / core,Contusion,Contusion,Contusion,encoder
-Appendectomy,,Back / core,Back / core,,Surgery,Unspecified,encoder
+Appendectomy,Back / core,Back / core,Back / core,Surgery,Surgery,Surgery,rules
 Asthma; Symptoms,,Illness,Illness,,Soreness / tendinitis,Illness,encoder
 "Avulsion fracture, left middle finger",Hand / wrist,Hand / wrist,Hand / wrist,Fracture,Fracture,Fracture,rules
 Back Contusion,Back / core,Back / core,Back / core,Contusion,Contusion,Contusion,rules
@@ -119,7 +119,7 @@ Back; Lower - soreness,Back / core,Back / core,Back / core,Soreness / tendinitis
 Back; Lower - spasms,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Back; Lower - strain,Back / core,Back / core,Back / core,Strain,Strain,Strain,rules
 Back; Lower - strain - injury management,Back / core,Back / core,Back / core,Strain,Strain,Strain,rules
-Back; Lower Back Procedure Recovery,Back / core,Back / core,Back / core,Management,Management,Management,rules
+Back; Lower Back Procedure Recovery,Back / core,Back / core,Back / core,Surgery,Surgery,Surgery,rules
 Back; Lower Back Soreness,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Back; Lower Back Tightness,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Back; Lower back,Back / core,Back / core,Back / core,,Soreness / tendinitis,Soreness / tendinitis,encoder
@@ -164,7 +164,7 @@ Back; Sore lower,Back / core,Back / core,Back / core,Soreness / tendinitis,Soren
 Back; Soreness,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Back; Soreness - lower,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Back; Soreness; lower,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
-Back; Spams,Back / core,Back / core,Back / core,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Back; Spams,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Back; Spasm,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Back; Spasms,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Back; Spasms; lower,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
@@ -184,7 +184,7 @@ Back; Thoracic tightness,Back / core,Back / core,Back / core,Soreness / tendinit
 Back; Tightness,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Back; Vertebral Fracture,Back / core,Back / core,Back / core,Fracture,Fracture,Fracture,rules
 Back; Vertebral fracture,Back / core,Back / core,Back / core,Fracture,Fracture,Fracture,rules
-Back; Vertebral frature,Back / core,Back / core,Back / core,,Contusion,Contusion,encoder
+Back; Vertebral frature,Back / core,Back / core,Back / core,Fracture,Fracture,Fracture,rules
 Back; lower - spasms,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Back; lower - tightness,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Back; lower back soreness,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
@@ -222,7 +222,7 @@ Bilateral Calf; Strain,Lower leg,Lower leg,Lower leg,Strain,Strain,Strain,rules
 Bilateral Cervical Spine; Strain,Back / core,Back / core,Back / core,Strain,Strain,Strain,rules
 Bilateral Eye;,Head / face,Head / face,Head / face,,Soreness / tendinitis,Unspecified,encoder
 Bilateral Eye; Bi-lateral epidemic keratoconjunctivitis,Head / face,Head / face,Head / face,,Illness,Illness,encoder
-Bilateral Eye; Procedure,Head / face,Head / face,Head / face,,Surgery,Surgery,encoder
+Bilateral Eye; Procedure,Head / face,Head / face,Head / face,Surgery,Surgery,Surgery,rules
 "Bilateral Fibula; Soreness, G League Assignment",Lower leg,Lower leg,Lower leg,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Bilateral Fibula; Soreness; G League Assignment,Lower leg,Lower leg,Lower leg,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Bilateral Foot; Injury Management,Foot / toe,Foot / toe,Foot / toe,Management,Management,Management,rules
@@ -257,7 +257,7 @@ Bilateral Leg; Muscle cramp,Lower leg,Lower leg,Lower leg,,Soreness / tendinitis
 Bilateral Leg; Muscle cramps,Lower leg,Lower leg,Lower leg,,Soreness / tendinitis,Soreness / tendinitis,encoder
 Bilateral Low Back; Contusion,Back / core,Back / core,Back / core,Contusion,Contusion,Contusion,rules
 Bilateral Low Back; Soreness,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
-Bilateral Low Back; Spams,Back / core,Back / core,Back / core,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Bilateral Low Back; Spams,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Bilateral Low Back; Spasm,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Bilateral Low Back; Spasms,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Bilateral Low Back; Strain,Back / core,Back / core,Back / core,Strain,Strain,Strain,rules
@@ -315,15 +315,15 @@ Calf strain - right,Lower leg,Lower leg,Lower leg,Strain,Strain,Strain,rules
 Calf; Sore lower,Lower leg,Lower leg,Lower leg,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 "Cartilage injury, left knee",Knee,Knee,Knee,,Management,Unspecified,encoder
 Cervical Spine; Strain,Back / core,Back / core,Back / core,Strain,Strain,Strain,rules
-Cervical Strain,,Back / core,Back / core,Strain,Strain,Strain,encoder
+Cervical Strain,Back / core,Back / core,Back / core,Strain,Strain,Strain,rules
 Cervical and Lumbar; Soreness,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Cervical/Lumbar; Contusion,Back / core,Back / core,Back / core,Contusion,Contusion,Contusion,rules
 Cervical/lumbar; Contusion,Back / core,Back / core,Back / core,Contusion,Contusion,Contusion,rules
 Cervical/lumbar; Contusion; Post Traumatic Headache,Back / core,Back / core,Back / core,Contusion,Contusion,Contusion,rules
-Cervical; Soreness,,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,encoder
-Cervical; Strain,,Back / core,Back / core,Strain,Strain,Strain,encoder
-Cervical; Tightness,,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,encoder
-Cervical; Whiplash,,Back / core,Back / core,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Cervical; Soreness,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
+Cervical; Strain,Back / core,Back / core,Back / core,Strain,Strain,Strain,rules
+Cervical; Tightness,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
+Cervical; Whiplash,Back / core,Back / core,Back / core,,Soreness / tendinitis,Soreness / tendinitis,encoder
 Cervicothoracic; Strain,,Back / core,Back / core,Strain,Strain,Strain,encoder
 Chest; Contusion,Back / core,Back / core,Back / core,Contusion,Contusion,Contusion,rules
 Chest; Discomfort,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
@@ -366,12 +366,12 @@ Custom; Facemask,Head / face,Head / face,Head / face,,Surgery,Surgery,encoder
 "DVT, right arm",Shoulder / arm,Shoulder / arm,Shoulder / arm,,Contusion,Unspecified,encoder
 Dental Work,,Head / face,Head / face,,Surgery,Unspecified,encoder
 Dental Work; Dental Work,,Head / face,Head / face,,Surgery,Surgery,encoder
-Dental procedure,,Head / face,Head / face,,Surgery,Unspecified,encoder
+Dental procedure,,Head / face,Head / face,Surgery,Surgery,Surgery,encoder
 Dental; Fracture,,Head / face,Head / face,Fracture,Fracture,Fracture,encoder
 Dental; Pain,,Head / face,Head / face,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,encoder
-Dental; Procedure,,Head / face,Head / face,,Surgery,Surgery,encoder
+Dental; Procedure,,Head / face,Head / face,Surgery,Surgery,Surgery,encoder
 Disc; Herniation,,Back / core,Back / core,,Soreness / tendinitis,Soreness / tendinitis,encoder
-Disc; Irritation,,Illness,Illness,Soreness / tendinitis,Soreness / tendinitis,Illness,encoder
+Disc; Irritation,,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,encoder
 Ear; Injury,Head / face,Head / face,Head / face,,Fracture,Unspecified,encoder
 Elbow injury - right,Shoulder / arm,Shoulder / arm,Shoulder / arm,,Management,Unspecified,encoder
 Elbow sprain/strain - right,Shoulder / arm,Shoulder / arm,Shoulder / arm,Sprain,Sprain,Sprain,rules
@@ -384,7 +384,7 @@ Face; Contusion,Head / face,Head / face,Head / face,Contusion,Contusion,Contusio
 Face; Face Mask,Head / face,Head / face,Head / face,,Illness,Illness,encoder
 Face; Facial Injury,Head / face,Head / face,Head / face,,Fracture,Fracture,encoder
 Face; Laceration,Head / face,Head / face,Head / face,,Surgery,Surgery,encoder
-Face; Mask,Head / face,Head / face,Head / face,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Face; Mask,Head / face,Head / face,Head / face,,Illness,Illness,encoder
 Facial Fracture; Face,Head / face,Head / face,Head / face,Fracture,Fracture,Fracture,rules
 Facial Fracture; Face Mask,Head / face,Head / face,Head / face,Fracture,Fracture,Fracture,rules
 Facial; Contusion,Head / face,Head / face,Head / face,Contusion,Contusion,Contusion,rules
@@ -411,12 +411,12 @@ GI Illness,Illness,Illness,Illness,Illness,Illness,Illness,rules
 GI; Illness,Illness,Illness,Illness,Illness,Illness,Illness,rules
 Gastroenteritis,Illness,Illness,Illness,,Illness,Illness,encoder
 Gastrointestinal,Illness,Illness,Illness,,Illness,Illness,encoder
-General soreness,,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,encoder
+General soreness,,Hip / groin,Hip / groin,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,encoder
 General; Illness,Illness,Illness,Illness,Illness,Illness,Illness,rules
 General; Illness Management,Illness,Illness,Illness,Management,Management,Illness,rules
 General; Illness Management / Right Knee Soreness,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 General; Influenza,,Illness,Illness,,Illness,Illness,encoder
-General; Neuropathy,,Back / core,Back / core,,Illness,Illness,encoder
+General; Neuropathy,,Foot / toe,Foot / toe,,Illness,Illness,encoder
 Gluteus Maximus; Contusion,Hip / groin,Hip / groin,Hip / groin,Contusion,Contusion,Contusion,rules
 Gluteus Maximus; Gluteus Maximus contusion,Hip / groin,Hip / groin,Hip / groin,Contusion,Contusion,Contusion,rules
 Gluteus Maximus; gluteus maximus contusion,Hip / groin,Hip / groin,Hip / groin,Contusion,Contusion,Contusion,rules
@@ -569,11 +569,11 @@ L Ankle; R Wrist; Sprain,Ankle,Ankle,Ankle,Sprain,Sprain,Sprain,rules
 Leff knee,Knee,Knee,Knee,,Soreness / tendinitis,Unspecified,encoder
 Left 1st MTP; Sprain,,Knee,Knee,Sprain,Sprain,Sprain,encoder
 Left 1st Mtp; Sprain,,Knee,Knee,Sprain,Sprain,Sprain,encoder
-Left 2nd Metacarpal; Injury Management,,Foot / toe,Foot / toe,Management,Management,Management,encoder
+Left 2nd Metacarpal; Injury Management,,Back / core,Back / core,Management,Management,Management,encoder
 Left 3rd Finger; Fracture,Hand / wrist,Hand / wrist,Hand / wrist,Fracture,Fracture,Fracture,rules
 Left 3rd Mallet; Finger,Hand / wrist,Hand / wrist,Hand / wrist,,Soreness / tendinitis,Soreness / tendinitis,encoder
-Left 4th Metacarpal; Fracture,,Foot / toe,Foot / toe,Fracture,Fracture,Fracture,encoder
-Left 4th metacarpal; Fracture,,Foot / toe,Foot / toe,Fracture,Fracture,Fracture,encoder
+Left 4th Metacarpal; Fracture,,Back / core,Back / core,Fracture,Fracture,Fracture,encoder
+Left 4th metacarpal; Fracture,,Back / core,Back / core,Fracture,Fracture,Fracture,encoder
 Left 5th Finger; Soreness,Hand / wrist,Hand / wrist,Hand / wrist,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left 5th Finger; Sprain,Hand / wrist,Hand / wrist,Hand / wrist,Sprain,Sprain,Sprain,rules
 Left 5th Finger; Tendon Repair,Hand / wrist,Hand / wrist,Hand / wrist,Surgery,Surgery,Surgery,rules
@@ -581,9 +581,9 @@ Left 5th Metatarsal; Bone Bruise,Foot / toe,Foot / toe,Foot / toe,Contusion,Cont
 Left 5th Toe; Soreness,Foot / toe,Foot / toe,Foot / toe,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left AC Joint; Sprain,Shoulder / arm,Shoulder / arm,Shoulder / arm,Sprain,Sprain,Sprain,rules
 "Left AC; Sprain, Grade 1",,Ankle,Ankle,Sprain,Sprain,Sprain,encoder
-Left ACL Rehabilitation,Knee,Knee,Knee,,Management,Unspecified,encoder
+Left ACL Rehabilitation,Knee,Knee,Knee,Management,Management,Management,rules
 Left ACL; Injury,Knee,Knee,Knee,,Management,Unspecified,encoder
-Left ACL; Rehabilitation,Knee,Knee,Knee,,Management,Management,encoder
+Left ACL; Rehabilitation,Knee,Knee,Knee,Management,Management,Management,rules
 Left ACL; Sprain,Knee,Knee,Knee,Sprain,Sprain,Sprain,rules
 Left ACL; Surgery,Knee,Knee,Knee,Surgery,Surgery,Surgery,rules
 Left ACL; Tear,Knee,Knee,Knee,Tear / rupture,Tear / rupture,Tear / rupture,rules
@@ -598,7 +598,7 @@ Left Abdominal; Contusion,Back / core,Back / core,Back / core,Contusion,Contusio
 Left Abdominal; Left Lateral Strain,Back / core,Back / core,Back / core,Strain,Strain,Strain,rules
 Left Abdominal; Soreness,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Ac Joint; Sprain,Shoulder / arm,Shoulder / arm,Shoulder / arm,Sprain,Sprain,Sprain,rules
-Left Achilles Rehab,Achilles,Achilles,Achilles,,Management,Unspecified,encoder
+Left Achilles Rehab,Achilles,Achilles,Achilles,Management,Management,Management,rules
 Left Achilles Soreness,Achilles,Achilles,Achilles,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Achilles Surgery,Achilles,Achilles,Achilles,Surgery,Surgery,Surgery,rules
 Left Achilles Tendon Soreness,Achilles,Achilles,Achilles,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
@@ -610,7 +610,7 @@ Left Achilles Tendon; Injury recovery,Achilles,Achilles,Achilles,Soreness / tend
 Left Achilles Tendon; Rupture,Achilles,Achilles,Achilles,Tear / rupture,Tear / rupture,Tear / rupture,rules
 Left Achilles Tendon; Soreness,Achilles,Achilles,Achilles,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Achilles Tendon; Tear,Achilles,Achilles,Achilles,Tear / rupture,Tear / rupture,Tear / rupture,rules
-Left Achilles rehab,Achilles,Achilles,Achilles,,Management,Unspecified,encoder
+Left Achilles rehab,Achilles,Achilles,Achilles,Management,Management,Management,rules
 Left Achilles soreness,Achilles,Achilles,Achilles,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Achilles surgery,Achilles,Achilles,Achilles,Surgery,Surgery,Surgery,rules
 Left Achilles tendon; Rupture,Achilles,Achilles,Achilles,Tear / rupture,Tear / rupture,Tear / rupture,rules
@@ -620,8 +620,8 @@ Left Achilles; Inflammation,Achilles,Achilles,Achilles,Soreness / tendinitis,Sor
 Left Achilles; Injury Maintenance,Achilles,Achilles,Achilles,Management,Management,Management,rules
 Left Achilles; Injury Management,Achilles,Achilles,Achilles,Management,Management,Management,rules
 Left Achilles; Injury Recovery,Achilles,Achilles,Achilles,Management,Management,Management,rules
-Left Achilles; Left Achilles Rehab,Achilles,Achilles,Achilles,,Management,Management,encoder
-Left Achilles; Left Achilles rehab,Achilles,Achilles,Achilles,,Management,Management,encoder
+Left Achilles; Left Achilles Rehab,Achilles,Achilles,Achilles,Management,Management,Management,rules
+Left Achilles; Left Achilles rehab,Achilles,Achilles,Achilles,Management,Management,Management,rules
 Left Achilles; Left Achilles soreness,Achilles,Achilles,Achilles,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Achilles; Left Achilles strain,Achilles,Achilles,Achilles,Strain,Strain,Strain,rules
 Left Achilles; Pain,Achilles,Achilles,Achilles,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
@@ -644,7 +644,7 @@ Left Achilles’ tendon tear,Achilles,Achilles,Achilles,Tear / rupture,Tear / ru
 Left Achillies; Sore,Achilles,Achilles,Achilles,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Achillies; Tendinopathy,Achilles,Achilles,Achilles,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Acl; Injury,Knee,Knee,Knee,,Management,Unspecified,encoder
-Left Acl; Rehabilitation,Knee,Knee,Knee,,Management,Management,encoder
+Left Acl; Rehabilitation,Knee,Knee,Knee,Management,Management,Management,rules
 Left Acl; Sprain,Knee,Knee,Knee,Sprain,Sprain,Sprain,rules
 Left Acl; Surgery,Knee,Knee,Knee,Surgery,Surgery,Surgery,rules
 Left Acl; Tear,Knee,Knee,Knee,Tear / rupture,Tear / rupture,Tear / rupture,rules
@@ -677,7 +677,7 @@ Left Adductor; Torn/Surgery,Hip / groin,Hip / groin,Hip / groin,Surgery,Surgery,
 Left Adductor; Torn/adductor,Hip / groin,Hip / groin,Hip / groin,Tear / rupture,Tear / rupture,Tear / rupture,rules
 Left Adductor; Torn/surgery,Hip / groin,Hip / groin,Hip / groin,Surgery,Surgery,Surgery,rules
 Left Adductor; Torn; Surgery,Hip / groin,Hip / groin,Hip / groin,Surgery,Surgery,Surgery,rules
-Left Anke; Sprain,,Knee,Knee,Sprain,Sprain,Sprain,encoder
+Left Anke; Sprain,Ankle,Ankle,Ankle,Sprain,Sprain,Sprain,rules
 Left Ankle,Ankle,Ankle,Ankle,,Management,Unspecified,encoder
 Left Ankle And Elbow; Surgery Recovery,Ankle,Ankle,Ankle,Surgery,Surgery,Surgery,rules
 Left Ankle Contusion,Ankle,Ankle,Ankle,Contusion,Contusion,Contusion,rules
@@ -699,7 +699,7 @@ Left Ankle; - Injury Management,Ankle,Ankle,Ankle,Management,Management,Manageme
 Left Ankle; ; Foot; Sprain,Ankle,Ankle,Ankle,Sprain,Sprain,Sprain,rules
 Left Ankle; Achilles Soreness,Achilles,Achilles,Achilles,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Ankle; Ankle Surgery,Ankle,Ankle,Ankle,Surgery,Surgery,Surgery,rules
-Left Ankle; Bone,Ankle,Ankle,Ankle,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Left Ankle; Bone,Ankle,Ankle,Ankle,,Fracture,Fracture,encoder
 Left Ankle; Bone Bruise,Ankle,Ankle,Ankle,Contusion,Contusion,Contusion,rules
 Left Ankle; Contusion,Ankle,Ankle,Ankle,Contusion,Contusion,Contusion,rules
 Left Ankle; Discomfort,Ankle,Ankle,Ankle,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
@@ -723,7 +723,7 @@ Left Ankle; Injury management,Ankle,Ankle,Ankle,Management,Management,Management
 Left Ankle; Injury recovery,Ankle,Ankle,Ankle,Management,Management,Management,rules
 Left Ankle; Injury recovery; Health & safety protocols,Ankle,Ankle,Ankle,Management,Management,Management,rules
 Left Ankle; Irritation,Ankle,Ankle,Ankle,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
-Left Ankle; Left Ankle,Ankle,Ankle,Ankle,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Left Ankle; Left Ankle,Ankle,Ankle,Ankle,,Sprain,Sprain,encoder
 Left Ankle; Left Ankle Injury,Ankle,Ankle,Ankle,,Management,Management,encoder
 Left Ankle; Left Ankle Injury Management,Ankle,Ankle,Ankle,Management,Management,Management,rules
 Left Ankle; Left Ankle Injury Management and Core Muscle Injury,Ankle,Ankle,Ankle,Management,Management,Management,rules
@@ -731,7 +731,7 @@ Left Ankle; Left Ankle Management,Ankle,Ankle,Ankle,Management,Management,Manage
 Left Ankle; Left Ankle Sprain,Ankle,Ankle,Ankle,Sprain,Sprain,Sprain,rules
 Left Ankle; Left Ankle Surgery,Ankle,Ankle,Ankle,Surgery,Surgery,Surgery,rules
 Left Ankle; Left Ankle injury Management,Ankle,Ankle,Ankle,Management,Management,Management,rules
-Left Ankle; Left ankle,Ankle,Ankle,Ankle,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Left Ankle; Left ankle,Ankle,Ankle,Ankle,,Sprain,Sprain,encoder
 Left Ankle; Left ankle contusion,Ankle,Ankle,Ankle,Contusion,Contusion,Contusion,rules
 Left Ankle; Left ankle soreness,Ankle,Ankle,Ankle,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Ankle; Left ankle sprain,Ankle,Ankle,Ankle,Sprain,Sprain,Sprain,rules
@@ -858,21 +858,21 @@ Left Calf; Strain Injury Management,Lower leg,Lower leg,Lower leg,Strain,Strain,
 Left Calf; Strain/Contusion,Lower leg,Lower leg,Lower leg,Strain,Strain,Strain,rules
 Left Calf; Strain; Injury Management,Lower leg,Lower leg,Lower leg,Strain,Strain,Strain,rules
 Left Calf; Strained,Lower leg,Lower leg,Lower leg,Strain,Strain,Strain,rules
-Left Calf; Strsin,Lower leg,Lower leg,Lower leg,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Left Calf; Strsin,Lower leg,Lower leg,Lower leg,Strain,Strain,Strain,rules
 Left Calf; Tear,Lower leg,Lower leg,Lower leg,Tear / rupture,Tear / rupture,Tear / rupture,rules
 Left Calf; Tightness,Lower leg,Lower leg,Lower leg,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Calf; Tightness; Congestion,Lower leg,Lower leg,Lower leg,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Calf; inflammation,Lower leg,Lower leg,Lower leg,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Calf; strain,Lower leg,Lower leg,Lower leg,Strain,Strain,Strain,rules
-Left Cervical Nerve; Irritation,,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,encoder
-Left Cervical/Thoracic; Tightness,,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,encoder
-Left Cervical; Disc Injury,,Back / core,Back / core,,Management,Management,encoder
-Left Cervical; Pain,,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,encoder
-Left Cervical; Stinger,,Back / core,Back / core,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Left Cervical Nerve; Irritation,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
+Left Cervical/Thoracic; Tightness,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
+Left Cervical; Disc Injury,Back / core,Back / core,Back / core,,Management,Management,encoder
+Left Cervical; Pain,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
+Left Cervical; Stinger,Back / core,Back / core,Back / core,,Soreness / tendinitis,Soreness / tendinitis,encoder
 Left Clavicle; Contusion,Shoulder / arm,Shoulder / arm,Shoulder / arm,Contusion,Contusion,Contusion,rules
 Left Core; Muscle Soreness,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Corneal; Abrasion,,Head / face,Head / face,,Soreness / tendinitis,Soreness / tendinitis,encoder
-Left Costal Cartilage; Fracture,,Foot / toe,Foot / toe,Fracture,Fracture,Fracture,encoder
+Left Costal Cartilage; Fracture,Back / core,Back / core,Back / core,Fracture,Fracture,Fracture,rules
 Left Cuboid; Injury,,Hand / wrist,Hand / wrist,,Management,Unspecified,encoder
 Left Cuneiform Fracture,,Head / face,Head / face,Fracture,Fracture,Fracture,encoder
 Left Cuneiform; Fracture,,Head / face,Head / face,Fracture,Fracture,Fracture,encoder
@@ -914,7 +914,7 @@ Left Eye; Inflammation,Head / face,Head / face,Head / face,Soreness / tendinitis
 Left Eye; Iritis,Head / face,Head / face,Head / face,,Soreness / tendinitis,Soreness / tendinitis,encoder
 Left Eye; Laceration,Head / face,Head / face,Head / face,,Surgery,Surgery,encoder
 Left Eye; Left Eye Contusion,Head / face,Head / face,Head / face,Contusion,Contusion,Contusion,rules
-Left Eye; Procedure,Head / face,Head / face,Head / face,,Surgery,Surgery,encoder
+Left Eye; Procedure,Head / face,Head / face,Head / face,Surgery,Surgery,Surgery,rules
 Left Eye; Retinal Repair,Head / face,Head / face,Head / face,Surgery,Surgery,Surgery,rules
 Left Eye; Retinal repair,Head / face,Head / face,Head / face,Surgery,Surgery,Surgery,rules
 Left Eye; Soreness,Head / face,Head / face,Head / face,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
@@ -922,7 +922,7 @@ Left Eye; corneal abrasion,Head / face,Head / face,Head / face,,Soreness / tendi
 Left Facet; Syndrome,Head / face,Head / face,Head / face,,Soreness / tendinitis,Soreness / tendinitis,encoder
 Left Femoral Head Impaction; Fracture,Head / face,Head / face,Head / face,Fracture,Fracture,Fracture,rules
 Left Fibula; Fracture,Lower leg,Lower leg,Lower leg,Fracture,Fracture,Fracture,rules
-Left Fibula; Frature,Lower leg,Lower leg,Lower leg,,Fracture,Fracture,encoder
+Left Fibula; Frature,Lower leg,Lower leg,Lower leg,Fracture,Fracture,Fracture,rules
 Left Fibula; Non-Displaced Head Fracture,Lower leg,Lower leg,Lower leg,Fracture,Fracture,Fracture,rules
 Left Fibula; Non-displaced Head Fracture,Lower leg,Lower leg,Lower leg,Fracture,Fracture,Fracture,rules
 Left Fibula; Non-displaced head fracture,Lower leg,Lower leg,Lower leg,Fracture,Fracture,Fracture,rules
@@ -930,7 +930,7 @@ Left Fibula; Stress Reaction,Lower leg,Lower leg,Lower leg,Fracture,Fracture,Fra
 Left Fibula; Stress reaction,Lower leg,Lower leg,Lower leg,Fracture,Fracture,Fracture,rules
 Left Fibular Head; Contusion,Lower leg,Head / face,Lower leg,Contusion,Contusion,Contusion,rules
 Left Fifth Finger;,Hand / wrist,Hand / wrist,Hand / wrist,,Soreness / tendinitis,Unspecified,encoder
-Left Fifth Finger; Cut,Hand / wrist,Hand / wrist,Hand / wrist,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Left Fifth Finger; Cut,Hand / wrist,Hand / wrist,Hand / wrist,,Fracture,Fracture,encoder
 Left Fifth Finger; Extensor Tendon Surgery,Hand / wrist,Hand / wrist,Hand / wrist,Surgery,Surgery,Surgery,rules
 Left Fifth Finger; Extensor Tendon Surgey,Hand / wrist,Hand / wrist,Hand / wrist,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Fifth Finger; Extensor Tendor Surgery,Hand / wrist,Hand / wrist,Hand / wrist,Surgery,Surgery,Surgery,rules
@@ -980,7 +980,7 @@ Left First Mtp; Sprain,,Knee,Knee,Sprain,Sprain,Sprain,encoder
 Left Foot - Rest,Foot / toe,Foot / toe,Foot / toe,Management,Management,Management,rules
 Left Foot Contusion,Foot / toe,Foot / toe,Foot / toe,Contusion,Contusion,Contusion,rules
 Left Foot Inflammation,Foot / toe,Foot / toe,Foot / toe,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
-Left Foot Inflmmation,Foot / toe,Foot / toe,Foot / toe,,Surgery,Unspecified,encoder
+Left Foot Inflmmation,Foot / toe,Foot / toe,Foot / toe,,Fracture,Unspecified,encoder
 Left Foot Joint Arthritis; & Right Sciatica,Foot / toe,Foot / toe,Foot / toe,,Soreness / tendinitis,Soreness / tendinitis,encoder
 Left Foot Joint Arthritis; and Right Sciatica,Foot / toe,Foot / toe,Foot / toe,,Soreness / tendinitis,Soreness / tendinitis,encoder
 Left Foot Soreness,Foot / toe,Foot / toe,Foot / toe,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
@@ -993,7 +993,7 @@ Left Foot; Abductor Hallucis Strain,Foot / toe,Foot / toe,Foot / toe,Strain,Stra
 Left Foot; Arthritis,Foot / toe,Foot / toe,Foot / toe,,Soreness / tendinitis,Soreness / tendinitis,encoder
 Left Foot; Big Toe - Hyperextended,Foot / toe,Foot / toe,Foot / toe,,Soreness / tendinitis,Soreness / tendinitis,encoder
 Left Foot; Big toe hyperextension,Foot / toe,Foot / toe,Foot / toe,,Soreness / tendinitis,Soreness / tendinitis,encoder
-Left Foot; Bone,Foot / toe,Foot / toe,Foot / toe,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Left Foot; Bone,Foot / toe,Foot / toe,Foot / toe,,Fracture,Fracture,encoder
 Left Foot; Bone Bruise,Foot / toe,Foot / toe,Foot / toe,Contusion,Contusion,Contusion,rules
 Left Foot; Bone Contusion,Foot / toe,Foot / toe,Foot / toe,Contusion,Contusion,Contusion,rules
 Left Foot; Bone bruise,Foot / toe,Foot / toe,Foot / toe,Contusion,Contusion,Contusion,rules
@@ -1020,7 +1020,7 @@ Left Foot; Inflammation,Foot / toe,Foot / toe,Foot / toe,Soreness / tendinitis,S
 Left Foot; Injury,Foot / toe,Foot / toe,Foot / toe,,Management,Unspecified,encoder
 Left Foot; Injury Maintenance,Foot / toe,Foot / toe,Foot / toe,Management,Management,Management,rules
 Left Foot; Injury Management,Foot / toe,Foot / toe,Foot / toe,Management,Management,Management,rules
-Left Foot; Injury Mangement,Foot / toe,Foot / toe,Foot / toe,,Management,Management,encoder
+Left Foot; Injury Mangement,Foot / toe,Foot / toe,Foot / toe,Management,Management,Management,rules
 Left Foot; Injury Recovery,Foot / toe,Foot / toe,Foot / toe,Management,Management,Management,rules
 Left Foot; Injury management,Foot / toe,Foot / toe,Foot / toe,Management,Management,Management,rules
 Left Foot; Laceration,Foot / toe,Foot / toe,Foot / toe,,Surgery,Surgery,encoder
@@ -1080,8 +1080,8 @@ Left Foot; Tendon; Injury Management,Foot / toe,Foot / toe,Foot / toe,Soreness /
 Left Foot; Tenosynovitis / Bursitis,Foot / toe,Foot / toe,Foot / toe,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Foot; Torn Plantar Fascia,Foot / toe,Foot / toe,Foot / toe,Tear / rupture,Tear / rupture,Tear / rupture,rules
 Left Foot; Torn plantar fascia,Foot / toe,Foot / toe,Foot / toe,Tear / rupture,Tear / rupture,Tear / rupture,rules
-Left Foot; Turf Toe,Foot / toe,Foot / toe,Foot / toe,,Management,Management,encoder
-Left Foot; Turf toe,Foot / toe,Foot / toe,Foot / toe,,Management,Management,encoder
+Left Foot; Turf Toe,Foot / toe,Foot / toe,Foot / toe,,Sprain,Sprain,encoder
+Left Foot; Turf toe,Foot / toe,Foot / toe,Foot / toe,,Sprain,Sprain,encoder
 Left Foot; big toe - hyperextension,Foot / toe,Foot / toe,Foot / toe,,Soreness / tendinitis,Soreness / tendinitis,encoder
 Left Foot; fourth metatarsal stress reaction,Foot / toe,Foot / toe,Foot / toe,Fracture,Fracture,Fracture,rules
 Left Foot; hyperextended big toe,Foot / toe,Foot / toe,Foot / toe,,Soreness / tendinitis,Soreness / tendinitis,encoder
@@ -1095,20 +1095,20 @@ Left Forearm; Contustion,Shoulder / arm,Shoulder / arm,Shoulder / arm,,Contusion
 Left Forearm; Strain,Shoulder / arm,Shoulder / arm,Shoulder / arm,Strain,Strain,Strain,rules
 Left Fourth,,Hand / wrist,Hand / wrist,,Soreness / tendinitis,Unspecified,encoder
 Left Fourth Finger DIP; Avulsion Fracture,Hand / wrist,Hand / wrist,Hand / wrist,Fracture,Fracture,Fracture,rules
-Left Fourth Finger Dip;,Hand / wrist,Hand / wrist,Hand / wrist,,Soreness / tendinitis,Unspecified,encoder
+Left Fourth Finger Dip;,Hand / wrist,Hand / wrist,Hand / wrist,,Fracture,Unspecified,encoder
 Left Fourth Finger Dip; Avulsion Fracture,Hand / wrist,Hand / wrist,Hand / wrist,Fracture,Fracture,Fracture,rules
 Left Fourth Finger Dip; Avulsion fracture,Hand / wrist,Hand / wrist,Hand / wrist,Fracture,Fracture,Fracture,rules
 Left Fourth Finger; DIP Avulsion Fracture,Hand / wrist,Hand / wrist,Hand / wrist,Fracture,Fracture,Fracture,rules
 Left Fourth Finger; DIP avulsion fracture,Hand / wrist,Hand / wrist,Hand / wrist,Fracture,Fracture,Fracture,rules
 Left Fourth Finger; Extensor Tendon Tear,Hand / wrist,Hand / wrist,Hand / wrist,Tear / rupture,Tear / rupture,Tear / rupture,rules
-Left Fourth Metacarpal Fracture,,Foot / toe,Foot / toe,Fracture,Fracture,Fracture,encoder
-Left Fourth Metacarpal; Fracture,,Foot / toe,Foot / toe,Fracture,Fracture,Fracture,encoder
+Left Fourth Metacarpal Fracture,,Back / core,Back / core,Fracture,Fracture,Fracture,encoder
+Left Fourth Metacarpal; Fracture,,Back / core,Back / core,Fracture,Fracture,Fracture,encoder
 Left Fourth Metacarpal; Ligament Injury,,Knee,Knee,,Management,Management,encoder
 Left Fourth Metacarpal; Ligament Sprain,,Knee,Knee,Sprain,Sprain,Sprain,encoder
 Left Fourth Metacarpal; Sprain,,Foot / toe,Foot / toe,Sprain,Sprain,Sprain,encoder
 Left Fourth finger DIP; Avulsion fracture,Hand / wrist,Hand / wrist,Hand / wrist,Fracture,Fracture,Fracture,rules
 Left Fourth finger; Extensor tendon tear,Hand / wrist,Hand / wrist,Hand / wrist,Tear / rupture,Tear / rupture,Tear / rupture,rules
-Left Glut; Contusion,,Hip / groin,Hip / groin,Contusion,Contusion,Contusion,encoder
+Left Glut; Contusion,Hip / groin,Hip / groin,Hip / groin,Contusion,Contusion,Contusion,rules
 Left Glute; Contusion,Hip / groin,Hip / groin,Hip / groin,Contusion,Contusion,Contusion,rules
 Left Glute; Injury Management,Hip / groin,Hip / groin,Hip / groin,Management,Management,Management,rules
 Left Glute; Soreness,Hip / groin,Hip / groin,Hip / groin,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
@@ -1128,7 +1128,7 @@ Left Great Toe; Injury Recovery,Foot / toe,Foot / toe,Foot / toe,Management,Mana
 Left Great Toe; Irritation,Foot / toe,Foot / toe,Foot / toe,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Great Toe; Soreness,Foot / toe,Foot / toe,Foot / toe,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Great Toe; Sprain,Foot / toe,Foot / toe,Foot / toe,Sprain,Sprain,Sprain,rules
-Left Great Toe; Sprian,Foot / toe,Foot / toe,Foot / toe,,Sprain,Sprain,encoder
+Left Great Toe; Sprian,Foot / toe,Foot / toe,Foot / toe,Sprain,Sprain,Sprain,rules
 Left Great Toe; Strain,Foot / toe,Foot / toe,Foot / toe,Strain,Strain,Strain,rules
 Left Great Toe; Surgery,Foot / toe,Foot / toe,Foot / toe,Surgery,Surgery,Surgery,rules
 Left Great Toe; Surgery Recovery,Foot / toe,Foot / toe,Foot / toe,Surgery,Surgery,Surgery,rules
@@ -1191,7 +1191,7 @@ Left Hamstring; Sore Left Hamstring,Hamstring / thigh,Hamstring / thigh,Hamstrin
 Left Hamstring; Sore; strained right big toe,Foot / toe,Foot / toe,Foot / toe,Strain,Strain,Strain,rules
 Left Hamstring; Soreness,Hamstring / thigh,Hamstring / thigh,Hamstring / thigh,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Hamstring; Spasm,Hamstring / thigh,Hamstring / thigh,Hamstring / thigh,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
-Left Hamstring; Steain,Hamstring / thigh,Hamstring / thigh,Hamstring / thigh,,Strain,Strain,encoder
+Left Hamstring; Steain,Hamstring / thigh,Hamstring / thigh,Hamstring / thigh,Strain,Strain,Strain,rules
 Left Hamstring; Strain,Hamstring / thigh,Hamstring / thigh,Hamstring / thigh,Strain,Strain,Strain,rules
 Left Hamstring; Strain Injury Management,Hamstring / thigh,Hamstring / thigh,Hamstring / thigh,Strain,Strain,Strain,rules
 Left Hamstring; Strain Injury Management and Low Back Spasms,Hamstring / thigh,Hamstring / thigh,Hamstring / thigh,Strain,Strain,Strain,rules
@@ -1217,7 +1217,7 @@ Left Hamstring; strained,Hamstring / thigh,Hamstring / thigh,Hamstring / thigh,S
 Left Hamstring; tightness,Hamstring / thigh,Hamstring / thigh,Hamstring / thigh,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Hand Fracture,Hand / wrist,Hand / wrist,Hand / wrist,Fracture,Fracture,Fracture,rules
 Left Hand; 4th Finger - Fracture,Hand / wrist,Hand / wrist,Hand / wrist,Fracture,Fracture,Fracture,rules
-Left Hand; Bone,Hand / wrist,Hand / wrist,Hand / wrist,,Contusion,Contusion,encoder
+Left Hand; Bone,Hand / wrist,Hand / wrist,Hand / wrist,,Fracture,Fracture,encoder
 Left Hand; Bone Contusion,Hand / wrist,Hand / wrist,Hand / wrist,Contusion,Contusion,Contusion,rules
 Left Hand; Contusion,Hand / wrist,Hand / wrist,Hand / wrist,Contusion,Contusion,Contusion,rules
 Left Hand; Discomfort,Hand / wrist,Hand / wrist,Hand / wrist,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
@@ -1321,8 +1321,8 @@ Left Hip; Bursitis,Hip / groin,Hip / groin,Hip / groin,Soreness / tendinitis,Sor
 Left Hip; Contusion,Hip / groin,Hip / groin,Hip / groin,Contusion,Contusion,Contusion,rules
 Left Hip; Contusion; illness,Hip / groin,Hip / groin,Hip / groin,Contusion,Contusion,Contusion,rules
 Left Hip; Discomfort,Hip / groin,Hip / groin,Hip / groin,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
-Left Hip; Displacement,Hip / groin,Hip / groin,Hip / groin,,Management,Management,encoder
-Left Hip; Feature,Hip / groin,Hip / groin,Hip / groin,,Management,Management,encoder
+Left Hip; Displacement,Hip / groin,Hip / groin,Hip / groin,,Fracture,Fracture,encoder
+Left Hip; Feature,Hip / groin,Hip / groin,Hip / groin,Fracture,Soreness / tendinitis,Fracture,rules
 Left Hip; Flexor,Hip / groin,Hip / groin,Hip / groin,,Soreness / tendinitis,Soreness / tendinitis,encoder
 Left Hip; Flexor - injury recovery,Hip / groin,Hip / groin,Hip / groin,Management,Management,Management,rules
 Left Hip; Flexor - strain,Hip / groin,Hip / groin,Hip / groin,Strain,Strain,Strain,rules
@@ -1367,7 +1367,7 @@ Left Hip; Strain - Injury Management,Hip / groin,Hip / groin,Hip / groin,Strain,
 Left Hip; Strained,Hip / groin,Hip / groin,Hip / groin,Strain,Strain,Strain,rules
 Left Hip; Tightness,Hip / groin,Hip / groin,Hip / groin,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Hip; contusion,Hip / groin,Hip / groin,Hip / groin,Contusion,Contusion,Contusion,rules
-Left Hip; displacement,Hip / groin,Hip / groin,Hip / groin,,Management,Management,encoder
+Left Hip; displacement,Hip / groin,Hip / groin,Hip / groin,,Fracture,Fracture,encoder
 Left Hip; pointer,Hip / groin,Hip / groin,Hip / groin,,Soreness / tendinitis,Soreness / tendinitis,encoder
 Left Hip; sore,Hip / groin,Hip / groin,Hip / groin,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Index Finger Fracture,Hand / wrist,Hand / wrist,Hand / wrist,Fracture,Fracture,Fracture,rules
@@ -1405,7 +1405,7 @@ Left Knee/ankle; Sprain,Knee,Knee,Knee,Sprain,Sprain,Sprain,rules
 Left Knee/back; Soreness,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Knee;,Knee,Knee,Knee,,Soreness / tendinitis,Unspecified,encoder
 Left Knee; ACL Injury,Knee,Knee,Knee,,Management,Management,encoder
-Left Knee; ACL Rehabilitation,Knee,Knee,Knee,,Management,Management,encoder
+Left Knee; ACL Rehabilitation,Knee,Knee,Knee,Management,Management,Management,rules
 Left Knee; ACL Repair,Knee,Knee,Knee,Surgery,Surgery,Surgery,rules
 Left Knee; ACL SURGERY,Knee,Knee,Knee,Surgery,Surgery,Surgery,rules
 Left Knee; ACL Surgery,Knee,Knee,Knee,Surgery,Surgery,Surgery,rules
@@ -1469,7 +1469,7 @@ Left Knee; Injury Management; Illness,Knee,Knee,Knee,Management,Management,Manag
 Left Knee; Injury Management; Left Adductor Soreness,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Knee; Injury Management; Left Groin Soreness,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Knee; Injury Management; Right Ankle Soreness,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
-Left Knee; Injury Recover,Knee,Knee,Knee,,Management,Management,encoder
+Left Knee; Injury Recover,Knee,Knee,Knee,Management,Management,Management,rules
 Left Knee; Injury Recovery,Knee,Knee,Knee,Management,Management,Management,rules
 Left Knee; Injury Recovery - Brace,Knee,Knee,Knee,Management,Management,Management,rules
 Left Knee; Injury Recovery / Health and Safety Protocols,Knee,Knee,Knee,Management,Management,Management,rules
@@ -1480,7 +1480,7 @@ Left Knee; Injury Recovery; Health & Safety Protocols,Knee,Knee,Knee,Management,
 Left Knee; Injury Recovery; Left Knee,Knee,Knee,Knee,Management,Management,Management,rules
 Left Knee; Injury Recovery; Lower Back Tightness,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Knee; Injury Recovery; Right Knee Injury Recovery,Knee,Knee,Knee,Management,Management,Management,rules
-Left Knee; Injury Rehabilitation,Knee,Knee,Knee,,Management,Management,encoder
+Left Knee; Injury Rehabilitation,Knee,Knee,Knee,Management,Management,Management,rules
 Left Knee; Injury maintenance,Knee,Knee,Knee,Management,Management,Management,rules
 Left Knee; Injury management,Knee,Knee,Knee,Management,Management,Management,rules
 Left Knee; Injury recovery,Knee,Knee,Knee,Management,Management,Management,rules
@@ -1498,7 +1498,7 @@ Left Knee; Left ACL injury recovery,Knee,Knee,Knee,Management,Management,Managem
 Left Knee; Left Knee Bone Bruise,Knee,Knee,Knee,Contusion,Contusion,Contusion,rules
 Left Knee; Left Knee Contusion,Knee,Knee,Knee,Contusion,Contusion,Contusion,rules
 Left Knee; Left Knee Injury Management,Knee,Knee,Knee,Management,Management,Management,rules
-Left Knee; Left Knee Procedure,Knee,Knee,Knee,,Surgery,Surgery,encoder
+Left Knee; Left Knee Procedure,Knee,Knee,Knee,Surgery,Surgery,Surgery,rules
 Left Knee; Left knee contusion,Knee,Knee,Knee,Contusion,Contusion,Contusion,rules
 Left Knee; Left knee soreness,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Knee; Left knee sprain,Knee,Knee,Knee,Sprain,Sprain,Sprain,rules
@@ -1515,14 +1515,14 @@ Left Knee; Meniscal Tear,Knee,Knee,Knee,Tear / rupture,Tear / rupture,Tear / rup
 Left Knee; Meniscectomy,Knee,Knee,Knee,,Surgery,Surgery,encoder
 Left Knee; Meniscus,Knee,Knee,Knee,,Soreness / tendinitis,Soreness / tendinitis,encoder
 Left Knee; Meniscus Injury,Knee,Knee,Knee,,Tear / rupture,Tear / rupture,encoder
-Left Knee; Meniscus Procedure,Knee,Knee,Knee,,Surgery,Surgery,encoder
+Left Knee; Meniscus Procedure,Knee,Knee,Knee,Surgery,Surgery,Surgery,rules
 Left Knee; Meniscus Repair,Knee,Knee,Knee,Surgery,Surgery,Surgery,rules
-Left Knee; Meniscus Surgerg,Knee,Knee,Knee,,Surgery,Surgery,encoder
+Left Knee; Meniscus Surgerg,Knee,Knee,Knee,Surgery,Surgery,Surgery,rules
 Left Knee; Meniscus Surgery,Knee,Knee,Knee,Surgery,Surgery,Surgery,rules
 Left Knee; Meniscus Surgery Recovery,Knee,Knee,Knee,Surgery,Surgery,Surgery,rules
 Left Knee; Meniscus Surgey,Knee,Knee,Knee,,Surgery,Surgery,encoder
 Left Knee; Meniscus Tear,Knee,Knee,Knee,Tear / rupture,Tear / rupture,Tear / rupture,rules
-Left Knee; Meniscus procedure,Knee,Knee,Knee,,Surgery,Surgery,encoder
+Left Knee; Meniscus procedure,Knee,Knee,Knee,Surgery,Surgery,Surgery,rules
 Left Knee; Meniscus repair,Knee,Knee,Knee,Surgery,Surgery,Surgery,rules
 Left Knee; Meniscus surgery,Knee,Knee,Knee,Surgery,Surgery,Surgery,rules
 Left Knee; Meniscus surgery recovery,Knee,Knee,Knee,Surgery,Surgery,Surgery,rules
@@ -1535,7 +1535,7 @@ Left Knee; Partial meniscus tear,Knee,Knee,Knee,Tear / rupture,Tear / rupture,Te
 Left Knee; Patella Femoral Discomfort,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Knee; Patella Femoral Syndrome,Knee,Knee,Knee,,Soreness / tendinitis,Soreness / tendinitis,encoder
 Left Knee; Patella Tendinopathy,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
-Left Knee; Patella subluxation,Knee,Knee,Knee,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Left Knee; Patella subluxation,Knee,Knee,Knee,Tear / rupture,Tear / rupture,Tear / rupture,rules
 Left Knee; Patella tendinitis,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Knee; Patellar,Knee,Knee,Knee,,Soreness / tendinitis,Soreness / tendinitis,encoder
 Left Knee; Patellar Tendinitis,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
@@ -1549,11 +1549,11 @@ Left Knee; Patellofemoral inflammation,Knee,Knee,Knee,Soreness / tendinitis,Sore
 Left Knee; Posterior Lateral Corner/Medial Bone Contusion,Knee,Knee,Knee,Contusion,Contusion,Contusion,rules
 "Left Knee; Posterior lateral corner injury, medial bone contusion",Knee,Knee,Knee,Contusion,Contusion,Contusion,rules
 Left Knee; Posterior lateral corner/media bone contusion,Knee,Knee,Knee,Contusion,Contusion,Contusion,rules
-Left Knee; Procedure,Knee,Knee,Knee,,Surgery,Surgery,encoder
+Left Knee; Procedure,Knee,Knee,Knee,Surgery,Surgery,Surgery,rules
 Left Knee; RTN from Injury Management,Knee,Knee,Knee,Management,Management,Management,rules
 Left Knee; Recovery,Knee,Knee,Knee,Management,Management,Management,rules
-Left Knee; Rehab,Knee,Knee,Knee,,Management,Management,encoder
-Left Knee; Rehabilitation,Knee,Knee,Knee,,Management,Management,encoder
+Left Knee; Rehab,Knee,Knee,Knee,Management,Management,Management,rules
+Left Knee; Rehabilitation,Knee,Knee,Knee,Management,Management,Management,rules
 Left Knee; Rtn from Injury Management,Knee,Knee,Knee,Management,Management,Management,rules
 Left Knee; Rtn from Injury Management (LT Knee Surgery),Knee,Knee,Knee,Surgery,Surgery,Surgery,rules
 Left Knee; SCL Surgery,Knee,Knee,Knee,Surgery,Surgery,Surgery,rules
@@ -1576,7 +1576,7 @@ Left Knee; Sprain/ACL tear,Knee,Knee,Knee,Tear / rupture,Tear / rupture,Tear / r
 Left Knee; Sprain/left ACL tear,Knee,Knee,Knee,Tear / rupture,Tear / rupture,Tear / rupture,rules
 Left Knee; Sprained,Knee,Knee,Knee,Sprain,Sprain,Sprain,rules
 Left Knee; Sprained MCL; bone bruise,Knee,Knee,Knee,Sprain,Sprain,Sprain,rules
-Left Knee; Spreness,Knee,Knee,Knee,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Left Knee; Spreness,Knee,Knee,Knee,,Sprain,Sprain,encoder
 Left Knee; Stiffness,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Knee; Strain,Knee,Knee,Knee,Strain,Strain,Strain,rules
 Left Knee; Strengthening,Knee,Knee,Knee,,Management,Management,encoder
@@ -1603,7 +1603,7 @@ Left Knee; Torn ACL,Knee,Knee,Knee,Tear / rupture,Tear / rupture,Tear / rupture,
 Left Knee; Torn Left ACL,Knee,Knee,Knee,Tear / rupture,Tear / rupture,Tear / rupture,rules
 Left Knee; Trochlea,Knee,Knee,Knee,,Surgery,Surgery,encoder
 Left Knee; Trochlea Cartilage Tear,Knee,Knee,Knee,Tear / rupture,Tear / rupture,Tear / rupture,rules
-Left Knee; Trochlea cartilage injury,Knee,Knee,Knee,,Surgery,Surgery,encoder
+Left Knee; Trochlea cartilage injury,Knee,Knee,Knee,,Tear / rupture,Tear / rupture,encoder
 Left Knee; Trochlea cartilage tear,Knee,Knee,Knee,Tear / rupture,Tear / rupture,Tear / rupture,rules
 Left Knee; Trochlea ligament tear,Knee,Knee,Knee,Tear / rupture,Tear / rupture,Tear / rupture,rules
 Left Knee; bone contusion,Knee,Knee,Knee,Contusion,Contusion,Contusion,rules
@@ -1622,16 +1622,16 @@ Left Knee; soreness,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,S
 Left Knee; surgery,Knee,Knee,Knee,Surgery,Surgery,Surgery,rules
 Left Knee; surgery recovery,Knee,Knee,Knee,Surgery,Surgery,Surgery,rules
 Left Knee; swelling,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
-Left L5-S1; Disc,,Illness,Illness,,Management,Illness,encoder
+Left L5-S1; Disc,,Illness,Illness,,Fracture,Illness,encoder
 Left L5-S1; Disc & Illness,Illness,Illness,Illness,Illness,Illness,Illness,rules
 Left L5-S1; Disc - Injury Recovery,,Back / core,Back / core,Management,Management,Management,encoder
 Left L5-S1; Disc; General Illness,Illness,Illness,Illness,Illness,Illness,Illness,rules
-Left L5-s1; Disc,,Illness,Illness,,Management,Illness,encoder
+Left L5-s1; Disc,,Illness,Illness,,Fracture,Illness,encoder
 Left L5-s1; Disc - Injury Recovery,,Back / core,Back / core,Management,Management,Management,encoder
 Left L5-s1; Disk - Injury Recovery,,Back / core,Back / core,Management,Management,Management,encoder
 Left Lateral,,Foot / toe,Foot / toe,,Soreness / tendinitis,Unspecified,encoder
 Left Lateral Abdominal; Strain,Back / core,Back / core,Back / core,Strain,Strain,Strain,rules
-Left Lateral Lower Leg;,Lower leg,Lower leg,Lower leg,,Soreness / tendinitis,Unspecified,encoder
+Left Lateral Lower Leg;,Lower leg,Lower leg,Lower leg,,Management,Unspecified,encoder
 Left Left Fourth Finger; Extensor Tendon Tear,Hand / wrist,Hand / wrist,Hand / wrist,Tear / rupture,Tear / rupture,Tear / rupture,rules
 Left Left Knee; Sprain,Knee,Knee,Knee,Sprain,Sprain,Sprain,rules
 Left Leg; Contused,Lower leg,Lower leg,Lower leg,,Contusion,Contusion,encoder
@@ -1707,7 +1707,7 @@ Left Medial Ankle; Impingement,Ankle,Ankle,Ankle,Soreness / tendinitis,Soreness 
 Left Meniscus; Surgery,Knee,Knee,Knee,Surgery,Surgery,Surgery,rules
 Left Meniscus; Tear,Knee,Knee,Knee,Tear / rupture,Tear / rupture,Tear / rupture,rules
 Left Metacarpal;,,Illness,Illness,,Soreness / tendinitis,Illness,encoder
-Left Metacarpal; Fracture,,Foot / toe,Foot / toe,Fracture,Fracture,Fracture,encoder
+Left Metacarpal; Fracture,,Back / core,Back / core,Fracture,Fracture,Fracture,encoder
 Left Mid Back; Spasm,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Mid Foot; Sprain,Foot / toe,Foot / toe,Foot / toe,Sprain,Sprain,Sprain,rules
 Left Mid-Foot; Sprain,Foot / toe,Foot / toe,Foot / toe,Sprain,Sprain,Sprain,rules
@@ -1719,7 +1719,7 @@ Left Middle Finger; Fracture-distal phalax,Hand / wrist,Hand / wrist,Hand / wris
 Left Middle Finger; Laceration,Hand / wrist,Hand / wrist,Hand / wrist,,Surgery,Surgery,encoder
 Left Middle Finger; Sprain,Hand / wrist,Hand / wrist,Hand / wrist,Sprain,Sprain,Sprain,rules
 Left Middle finger; Distal phalanx fracture,Hand / wrist,Hand / wrist,Hand / wrist,Fracture,Fracture,Fracture,rules
-Left Midfoot; Bone,Foot / toe,Foot / toe,Foot / toe,,Contusion,Contusion,encoder
+Left Midfoot; Bone,Foot / toe,Foot / toe,Foot / toe,,Fracture,Fracture,encoder
 Left Midfoot; Bone Edema,Foot / toe,Foot / toe,Foot / toe,,Soreness / tendinitis,Soreness / tendinitis,encoder
 Left Midfoot; Edema,Foot / toe,Foot / toe,Foot / toe,,Soreness / tendinitis,Soreness / tendinitis,encoder
 Left Midfoot; Injury Management,Foot / toe,Foot / toe,Foot / toe,Management,Management,Management,rules
@@ -1727,7 +1727,7 @@ Left Midfoot; Soreness,Foot / toe,Foot / toe,Foot / toe,Soreness / tendinitis,So
 Left Midfoot; Soreness; Injury Management,Foot / toe,Foot / toe,Foot / toe,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Midfoot; Sprain,Foot / toe,Foot / toe,Foot / toe,Sprain,Sprain,Sprain,rules
 Left Midfoot; Surgery,Foot / toe,Foot / toe,Foot / toe,Surgery,Surgery,Surgery,rules
-Left Midfront; Sprain,,Back / core,Back / core,Sprain,Sprain,Sprain,encoder
+Left Midfront; Sprain,Foot / toe,Foot / toe,Foot / toe,Sprain,Sprain,Sprain,rules
 Left N/a; Fibula Stress,Lower leg,Lower leg,Lower leg,,Fracture,Fracture,encoder
 Left N/a; Foot contusion,Foot / toe,Foot / toe,Foot / toe,Contusion,Contusion,Contusion,rules
 Left N/a; Foot soreness,Foot / toe,Foot / toe,Foot / toe,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
@@ -1754,14 +1754,14 @@ Left Oblique; Strain,Back / core,Back / core,Back / core,Strain,Strain,Strain,ru
 Left Oblique; Strained,Back / core,Back / core,Back / core,Strain,Strain,Strain,rules
 Left Oblique; strained,Back / core,Back / core,Back / core,Strain,Strain,Strain,rules
 Left Oral; Surgery,,Head / face,Head / face,Surgery,Surgery,Surgery,encoder
-Left Over Eye; Stitches,Head / face,Head / face,Head / face,,Tear / rupture,Tear / rupture,encoder
-Left Over eye; Stitches,Head / face,Head / face,Head / face,,Tear / rupture,Tear / rupture,encoder
+Left Over Eye; Stitches,Head / face,Head / face,Head / face,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Left Over eye; Stitches,Head / face,Head / face,Head / face,,Soreness / tendinitis,Soreness / tendinitis,encoder
 Left Patella Tendon; Tendinitis,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Patella Tendon; Tendonitis,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Patella; Contusion,Knee,Knee,Knee,Contusion,Contusion,Contusion,rules
 Left Patella; Non-Displaced Fracture,Knee,Knee,Knee,Fracture,Fracture,Fracture,rules
 Left Patella; Non-displaced fracture,Knee,Knee,Knee,Fracture,Fracture,Fracture,rules
-Left Patella; Subluxation,Knee,Knee,Knee,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Left Patella; Subluxation,Knee,Knee,Knee,Tear / rupture,Tear / rupture,Tear / rupture,rules
 Left Patella; Tendinopathy,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Patellar Tendon,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Patellar Tendon;,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
@@ -1784,8 +1784,8 @@ Left Pectoral Surgery,,Back / core,Back / core,Surgery,Surgery,Surgery,encoder
 Left Pectoral; Strain,,Back / core,Back / core,Strain,Strain,Strain,encoder
 Left Pelvic Soreness,Hip / groin,Hip / groin,Hip / groin,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Pelvic; Contusion,Hip / groin,Hip / groin,Hip / groin,Contusion,Contusion,Contusion,rules
-Left Perilunate; Subluxation,,Back / core,Back / core,,Soreness / tendinitis,Soreness / tendinitis,encoder
-Left Peroneal; Strain,,Hip / groin,Hip / groin,Strain,Strain,Strain,encoder
+Left Perilunate; Subluxation,,Back / core,Back / core,Tear / rupture,Tear / rupture,Tear / rupture,encoder
+Left Peroneal; Strain,,Back / core,Back / core,Strain,Strain,Strain,encoder
 Left Pinkie Finger; Volar Plate Fracture,Hand / wrist,Hand / wrist,Hand / wrist,Fracture,Fracture,Fracture,rules
 Left Pinkie Finger; Volar plate fracture,Hand / wrist,Hand / wrist,Hand / wrist,Fracture,Fracture,Fracture,rules
 Left Pinkie Finger; volar plate fracture,Hand / wrist,Hand / wrist,Hand / wrist,Fracture,Fracture,Fracture,rules
@@ -1809,8 +1809,8 @@ Left Posterior Tibialis Tendon; Return,Lower leg,Lower leg,Lower leg,Soreness / 
 Left Posterior Tibialis Tendon; Surgery Rehabilitation,Lower leg,Lower leg,Lower leg,Surgery,Surgery,Surgery,rules
 Left Posterior Tibialis; Dislocation,Lower leg,Lower leg,Lower leg,Tear / rupture,Tear / rupture,Tear / rupture,rules
 Left Posterior Tibialis; Strain,Lower leg,Lower leg,Lower leg,Strain,Strain,Strain,rules
-Left Pubic Bone; Stress Fracture,,Lower leg,Lower leg,Fracture,Fracture,Fracture,encoder
-Left Pubic Bone; Stress fracture,,Lower leg,Lower leg,Fracture,Fracture,Fracture,encoder
+Left Pubic Bone; Stress Fracture,,Back / core,Back / core,Fracture,Fracture,Fracture,encoder
+Left Pubic Bone; Stress fracture,,Back / core,Back / core,Fracture,Fracture,Fracture,encoder
 Left Quad Contusion,Hamstring / thigh,Hamstring / thigh,Hamstring / thigh,Contusion,Contusion,Contusion,rules
 Left Quad Contustion,Hamstring / thigh,Hamstring / thigh,Hamstring / thigh,,Contusion,Unspecified,encoder
 Left Quad Tendon; Soreness,Hamstring / thigh,Hamstring / thigh,Hamstring / thigh,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
@@ -1855,13 +1855,13 @@ Left Ribs; Contusion,Back / core,Back / core,Back / core,Contusion,Contusion,Con
 Left Rotator Cuff; Soreness,,Shoulder / arm,Shoulder / arm,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,encoder
 Left Rotator Cuff; Strain,,Shoulder / arm,Shoulder / arm,Strain,Strain,Strain,encoder
 Left SI Joint; Irritation,,Hip / groin,Hip / groin,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,encoder
-Left SI; Inflammation,,Illness,Illness,Soreness / tendinitis,Soreness / tendinitis,Illness,encoder
+Left SI; Inflammation,,Hip / groin,Hip / groin,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,encoder
 Left SI; Pain,,Hand / wrist,Hand / wrist,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,encoder
 Left Sacroiliac Joint;,,Hip / groin,Hip / groin,,Soreness / tendinitis,Unspecified,encoder
-Left Sacroiliac Joint; Dysfucntion,,Hip / groin,Hip / groin,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Left Sacroiliac Joint; Dysfucntion,,Hip / groin,Hip / groin,,Tear / rupture,Tear / rupture,encoder
 Left Sacroiliac Joint; Dysfunction,,Hip / groin,Hip / groin,,Soreness / tendinitis,Soreness / tendinitis,encoder
-Left Sacroiliac Joint; Sprain,,Knee,Knee,Sprain,Sprain,Sprain,encoder
-Left Sacroiliac joint; Sprain,,Knee,Knee,Sprain,Sprain,Sprain,encoder
+Left Sacroiliac Joint; Sprain,,Shoulder / arm,Shoulder / arm,Sprain,Sprain,Sprain,encoder
+Left Sacroiliac joint; Sprain,,Shoulder / arm,Shoulder / arm,Sprain,Sprain,Sprain,encoder
 Left Scaphoid; Fracture,,Head / face,Head / face,Fracture,Fracture,Fracture,encoder
 Left Scapholunate; Ligament Surgery,,Shoulder / arm,Shoulder / arm,Surgery,Surgery,Surgery,encoder
 Left Scapholunate; Ligament Tear,,Shoulder / arm,Shoulder / arm,Tear / rupture,Tear / rupture,Tear / rupture,encoder
@@ -1925,7 +1925,7 @@ Left Shoulder; Sprained AC joint,Shoulder / arm,Shoulder / arm,Shoulder / arm,Sp
 Left Shoulder; Stiffness,Shoulder / arm,Shoulder / arm,Shoulder / arm,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Shoulder; Stinger,Shoulder / arm,Shoulder / arm,Shoulder / arm,,Soreness / tendinitis,Soreness / tendinitis,encoder
 Left Shoulder; Strain,Shoulder / arm,Shoulder / arm,Shoulder / arm,Strain,Strain,Strain,rules
-Left Shoulder; Subluxation,Shoulder / arm,Shoulder / arm,Shoulder / arm,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Left Shoulder; Subluxation,Shoulder / arm,Shoulder / arm,Shoulder / arm,Tear / rupture,Tear / rupture,Tear / rupture,rules
 Left Shoulder; Surgery,Shoulder / arm,Shoulder / arm,Shoulder / arm,Surgery,Surgery,Surgery,rules
 Left Shoulder; Surgery - recovery,Shoulder / arm,Shoulder / arm,Shoulder / arm,Surgery,Surgery,Surgery,rules
 Left Shoulder; Tendinopathy,Shoulder / arm,Shoulder / arm,Shoulder / arm,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
@@ -1949,8 +1949,8 @@ Left Thigh; Patella contusion,Knee,Knee,Knee,Contusion,Contusion,Contusion,rules
 Left Thigh; Soreness,Hamstring / thigh,Hamstring / thigh,Hamstring / thigh,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Thigh; Strain,Hamstring / thigh,Hamstring / thigh,Hamstring / thigh,Strain,Strain,Strain,rules
 Left Thigh; contused,Hamstring / thigh,Hamstring / thigh,Hamstring / thigh,,Contusion,Contusion,encoder
-Left Third Metacarpal; Fracture,,Foot / toe,Foot / toe,Fracture,Fracture,Fracture,encoder
-Left Third Metacarpal; Fractured,,Foot / toe,Foot / toe,Fracture,Fracture,Fracture,encoder
+Left Third Metacarpal; Fracture,,Back / core,Back / core,Fracture,Fracture,Fracture,encoder
+Left Third Metacarpal; Fractured,,Back / core,Back / core,Fracture,Fracture,Fracture,encoder
 Left Thoracic; Spasm,,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,encoder
 Left Thumb,Hand / wrist,Hand / wrist,Hand / wrist,,Soreness / tendinitis,Unspecified,encoder
 Left Thumb Dislocation,Hand / wrist,Hand / wrist,Hand / wrist,Tear / rupture,Tear / rupture,Tear / rupture,rules
@@ -1984,14 +1984,14 @@ Left Thumb; Sprained,Hand / wrist,Hand / wrist,Hand / wrist,Sprain,Sprain,Sprain
 Left Thumb; Strain,Hand / wrist,Hand / wrist,Hand / wrist,Strain,Strain,Strain,rules
 Left Thumb; Surgery,Hand / wrist,Hand / wrist,Hand / wrist,Surgery,Surgery,Surgery,rules
 Left Thumb; Surgery Recovery,Hand / wrist,Hand / wrist,Hand / wrist,Surgery,Surgery,Surgery,rules
-Left Thumb; UCL,Hand / wrist,Hand / wrist,Hand / wrist,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Left Thumb; UCL,Hand / wrist,Hand / wrist,Hand / wrist,,Tear / rupture,Tear / rupture,encoder
 Left Thumb; UCL Injury Recovery,Hand / wrist,Hand / wrist,Hand / wrist,Management,Management,Management,rules
 Left Thumb; UCL Recovery,Hand / wrist,Hand / wrist,Hand / wrist,Management,Management,Management,rules
 Left Thumb; UCL Repair,Hand / wrist,Hand / wrist,Hand / wrist,Surgery,Surgery,Surgery,rules
 Left Thumb; UCL Surgery Recovery,Hand / wrist,Hand / wrist,Hand / wrist,Surgery,Surgery,Surgery,rules
 Left Thumb; UCL Tear,Hand / wrist,Hand / wrist,Hand / wrist,Tear / rupture,Tear / rupture,Tear / rupture,rules
 Left Thumb; UCL Tear Repair,Hand / wrist,Hand / wrist,Hand / wrist,Surgery,Surgery,Surgery,rules
-Left Thunb; Fracture,,Lower leg,Lower leg,Fracture,Fracture,Fracture,encoder
+Left Thunb; Fracture,Hand / wrist,Hand / wrist,Hand / wrist,Fracture,Fracture,Fracture,rules
 Left Tibia Stress Fracture,Lower leg,Lower leg,Lower leg,Fracture,Fracture,Fracture,rules
 Left Tibia; Contusion,Lower leg,Lower leg,Lower leg,Contusion,Contusion,Contusion,rules
 Left Tibia; Fracture,Lower leg,Lower leg,Lower leg,Fracture,Fracture,Fracture,rules
@@ -2017,16 +2017,16 @@ Left Toe; Inflammation,Foot / toe,Foot / toe,Foot / toe,Soreness / tendinitis,So
 Left Toe; Injury,Foot / toe,Foot / toe,Foot / toe,,Management,Unspecified,encoder
 Left Toe; Injury Management,Foot / toe,Foot / toe,Foot / toe,Management,Management,Management,rules
 Left Toe; Injury Recovery,Foot / toe,Foot / toe,Foot / toe,Management,Management,Management,rules
-Left Toe; Left 1st toe,Foot / toe,Foot / toe,Foot / toe,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Left Toe; Left 1st toe,Foot / toe,Foot / toe,Foot / toe,,Management,Management,encoder
 Left Toe; Left 1st toe fracture,Foot / toe,Foot / toe,Foot / toe,Fracture,Fracture,Fracture,rules
 Left Toe; Left big toe sprain,Foot / toe,Foot / toe,Foot / toe,Sprain,Sprain,Sprain,rules
 Left Toe; Sore,Foot / toe,Foot / toe,Foot / toe,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left Toe; Soreness,Foot / toe,Foot / toe,Foot / toe,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
-Left Toe; Sparin,Foot / toe,Foot / toe,Foot / toe,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Left Toe; Sparin,Foot / toe,Foot / toe,Foot / toe,Sprain,Sprain,Sprain,rules
 Left Toe; Sprain,Foot / toe,Foot / toe,Foot / toe,Sprain,Sprain,Sprain,rules
 Left Toe; Strain,Foot / toe,Foot / toe,Foot / toe,Strain,Strain,Strain,rules
 Left Toe; Surgery,Foot / toe,Foot / toe,Foot / toe,Surgery,Surgery,Surgery,rules
-Left Toe; Turf Toe,Foot / toe,Foot / toe,Foot / toe,,Management,Management,encoder
+Left Toe; Turf Toe,Foot / toe,Foot / toe,Foot / toe,,Sprain,Sprain,encoder
 Left Trapezius; Contusion,,Hip / groin,Hip / groin,Contusion,Contusion,Contusion,encoder
 Left Trapezius; Tightness,,Hip / groin,Hip / groin,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,encoder
 Left Triceps; Contusion,Shoulder / arm,Shoulder / arm,Shoulder / arm,Contusion,Contusion,Contusion,rules
@@ -2043,7 +2043,7 @@ Left Wrist/Ankle; Sprain,Ankle,Ankle,Ankle,Sprain,Sprain,Sprain,rules
 Left Wrist; Bone Bruise,Hand / wrist,Hand / wrist,Hand / wrist,Contusion,Contusion,Contusion,rules
 Left Wrist; Contusion,Hand / wrist,Hand / wrist,Hand / wrist,Contusion,Contusion,Contusion,rules
 Left Wrist; Fracture,Hand / wrist,Hand / wrist,Hand / wrist,Fracture,Fracture,Fracture,rules
-Left Wrist; Fraxture,Hand / wrist,Hand / wrist,Hand / wrist,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Left Wrist; Fraxture,Hand / wrist,Hand / wrist,Hand / wrist,Fracture,Fracture,Fracture,rules
 Left Wrist; Injury,Hand / wrist,Hand / wrist,Hand / wrist,,Management,Unspecified,encoder
 Left Wrist; Left Wrist Ligament Injury,Hand / wrist,Hand / wrist,Hand / wrist,,Tear / rupture,Tear / rupture,encoder
 Left Wrist; Left Wrist Surgery,Hand / wrist,Hand / wrist,Hand / wrist,Surgery,Surgery,Surgery,rules
@@ -2069,7 +2069,7 @@ Left Wrist; Sprained,Hand / wrist,Hand / wrist,Hand / wrist,Sprain,Sprain,Sprain
 Left Wrist; Strain,Hand / wrist,Hand / wrist,Hand / wrist,Strain,Strain,Strain,rules
 Left Wrist; Surgery,Hand / wrist,Hand / wrist,Hand / wrist,Surgery,Surgery,Surgery,rules
 Left Zygomatic Arch; Fracture,,Head / face,Head / face,Fracture,Fracture,Fracture,encoder
-Left Zygomatic Arch; Left,,Head / face,Head / face,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Left Zygomatic Arch; Left,,Head / face,Head / face,,Fracture,Fracture,encoder
 Left achilles; Soreness,Achilles,Achilles,Achilles,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left adductor strain,Hip / groin,Hip / groin,Hip / groin,Strain,Strain,Strain,rules
 Left adductor; Strain,Hip / groin,Hip / groin,Hip / groin,Strain,Strain,Strain,rules
@@ -2174,7 +2174,7 @@ Left knee; injury management,Knee,Knee,Knee,Management,Management,Management,rul
 Left knee; patella sublaxation,Knee,Knee,Knee,,Surgery,Surgery,encoder
 Left knee; sore,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left left thumb; sprain,Hand / wrist,Hand / wrist,Hand / wrist,Sprain,Sprain,Sprain,rules
-Left leg,Lower leg,Lower leg,Lower leg,,Soreness / tendinitis,Unspecified,encoder
+Left leg,Lower leg,Lower leg,Lower leg,,Management,Unspecified,encoder
 Left leg; Left fibula fracture,Lower leg,Lower leg,Lower leg,Fracture,Fracture,Fracture,rules
 Left leg; Sore,Lower leg,Lower leg,Lower leg,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left leg; fracture,Lower leg,Lower leg,Lower leg,Fracture,Fracture,Fracture,rules
@@ -2192,7 +2192,7 @@ Left quadriceps soreness,Hamstring / thigh,Hamstring / thigh,Hamstring / thigh,S
 Left quadriceps; Strain,Hamstring / thigh,Hamstring / thigh,Hamstring / thigh,Strain,Strain,Strain,rules
 Left quadriceps; Tendinopathy,Hamstring / thigh,Hamstring / thigh,Hamstring / thigh,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left rectus femoris; Torn,,Lower leg,Lower leg,Tear / rupture,Tear / rupture,Tear / rupture,encoder
-Left ring finger; Injury,Hand / wrist,Hand / wrist,Hand / wrist,,Soreness / tendinitis,Unspecified,encoder
+Left ring finger; Injury,Hand / wrist,Hand / wrist,Hand / wrist,,Fracture,Unspecified,encoder
 Left rotator cuff; Strain,,Shoulder / arm,Shoulder / arm,Strain,Strain,Strain,encoder
 Left sacroiliac joint; Dysfunction,,Hip / groin,Hip / groin,,Soreness / tendinitis,Soreness / tendinitis,encoder
 Left shin contusion,Lower leg,Lower leg,Lower leg,Contusion,Contusion,Contusion,rules
@@ -2201,7 +2201,7 @@ Left shoulder dislocation,Shoulder / arm,Shoulder / arm,Shoulder / arm,Tear / ru
 Left shoulder soreness,Shoulder / arm,Shoulder / arm,Shoulder / arm,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Left shoulder sprain,Shoulder / arm,Shoulder / arm,Shoulder / arm,Sprain,Sprain,Sprain,rules
 Left shoulder strain,Shoulder / arm,Shoulder / arm,Shoulder / arm,Strain,Strain,Strain,rules
-Left shoulder subluxation,Shoulder / arm,Shoulder / arm,Shoulder / arm,,Soreness / tendinitis,Unspecified,encoder
+Left shoulder subluxation,Shoulder / arm,Shoulder / arm,Shoulder / arm,Tear / rupture,Tear / rupture,Tear / rupture,rules
 Left shoulder; Dislocation,Shoulder / arm,Shoulder / arm,Shoulder / arm,Tear / rupture,Tear / rupture,Tear / rupture,rules
 Left shoulder; Sprain,Shoulder / arm,Shoulder / arm,Shoulder / arm,Sprain,Sprain,Sprain,rules
 Left shoulder; Surgery,Shoulder / arm,Shoulder / arm,Shoulder / arm,Surgery,Surgery,Surgery,rules
@@ -2212,7 +2212,7 @@ Left thigh; Contused,Hamstring / thigh,Hamstring / thigh,Hamstring / thigh,,Cont
 Left thumb,Hand / wrist,Hand / wrist,Hand / wrist,,Soreness / tendinitis,Unspecified,encoder
 Left thumb dislocation,Hand / wrist,Hand / wrist,Hand / wrist,Tear / rupture,Tear / rupture,Tear / rupture,rules
 Left thumb injury,Hand / wrist,Hand / wrist,Hand / wrist,,Management,Unspecified,encoder
-Left thumb ligament,Hand / wrist,Hand / wrist,Hand / wrist,,Soreness / tendinitis,Unspecified,encoder
+Left thumb ligament,Hand / wrist,Hand / wrist,Hand / wrist,,Tear / rupture,Unspecified,encoder
 Left thumb ligament injury,Hand / wrist,Hand / wrist,Hand / wrist,,Tear / rupture,Unspecified,encoder
 Left thumb sprain,Hand / wrist,Hand / wrist,Hand / wrist,Sprain,Sprain,Sprain,rules
 Left thumb sprain/fracture,Hand / wrist,Hand / wrist,Hand / wrist,Fracture,Fracture,Fracture,rules
@@ -2258,7 +2258,7 @@ Low Back; Bone Contusion,Back / core,Back / core,Back / core,Contusion,Contusion
 Low Back; Bruise,Back / core,Back / core,Back / core,Contusion,Contusion,Contusion,rules
 Low Back; Contusion,Back / core,Back / core,Back / core,Contusion,Contusion,Contusion,rules
 Low Back; Disc,Back / core,Back / core,Back / core,,Soreness / tendinitis,Soreness / tendinitis,encoder
-Low Back; Disc Protrusion,Back / core,Back / core,Back / core,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Low Back; Disc Protrusion,Back / core,Back / core,Back / core,,Tear / rupture,Tear / rupture,encoder
 Low Back; Discomfort,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Low Back; Inflammation,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Low Back; Injury,Back / core,Back / core,Back / core,,Management,Unspecified,encoder
@@ -2379,7 +2379,6 @@ Lumbar; Soreness,Back / core,Back / core,Back / core,Soreness / tendinitis,Soren
 Lumbar; Sprain,Back / core,Back / core,Back / core,Sprain,Sprain,Sprain,rules
 Lumbar; Strain,Back / core,Back / core,Back / core,Strain,Strain,Strain,rules
 Lumbar; Stress Reaction,Back / core,Back / core,Back / core,Fracture,Fracture,Fracture,rules
-Medical assessment,,Illness,Illness,,Illness,Illness,encoder
 "Meniscus tear, right knee",Knee,Knee,Knee,Tear / rupture,Tear / rupture,Tear / rupture,rules
 Mid - back pain,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Mid - back strain,Back / core,Back / core,Back / core,Strain,Strain,Strain,rules
@@ -2424,11 +2423,10 @@ N/A; Facial Infection,Head / face,Head / face,Head / face,,Illness,Illness,encod
 N/A; Facial fracture / Right thumb sprain,Hand / wrist,Hand / wrist,Hand / wrist,Fracture,Fracture,Fracture,rules
 N/A; Facial fracture / concussion,Head / face,Head / face,Head / face,Fracture,Fracture,Fracture,rules
 N/A; Facial fracture / right thumb sprain,Hand / wrist,Hand / wrist,Hand / wrist,Fracture,Fracture,Fracture,rules
-N/A; Family Reasons,,Illness,Illness,,Illness,Illness,encoder
 N/A; Flu,Illness,Illness,Illness,Illness,Illness,Illness,rules
 N/A; Flu-Like Symptoms,Illness,Illness,Illness,Illness,Illness,Illness,rules
 N/A; Headache,Head / face,Head / face,Head / face,,Illness,Illness,encoder
-N/A; Illlness,,Illness,Illness,,Illness,Illness,encoder
+N/A; Illlness,Illness,Illness,Illness,Illness,Illness,Illness,rules
 N/A; Illness,Illness,Illness,Illness,Illness,Illness,Illness,rules
 N/A; Illness (G League - two way),Illness,Illness,Illness,Illness,Illness,Illness,rules
 N/A; Illness (non Covid),Illness,Illness,Illness,Illness,Illness,Illness,rules
@@ -2476,7 +2474,7 @@ N/A; non-Covid illness,Illness,Illness,Illness,Illness,Illness,Illness,rules
 N/A; non-covid illness,Illness,Illness,Illness,Illness,Illness,Illness,rules
 N/a; Abdominal Strain,Back / core,Back / core,Back / core,Strain,Strain,Strain,rules
 N/a; Abdominal Strain/ Health and Safety Protocols,Back / core,Back / core,Back / core,Strain,Strain,Strain,rules
-N/a; Appendectomy Recovery,,Back / core,Back / core,Management,Management,Management,encoder
+N/a; Appendectomy Recovery,Back / core,Back / core,Back / core,Surgery,Surgery,Surgery,rules
 N/a; Back Contusion,Back / core,Back / core,Back / core,Contusion,Contusion,Contusion,rules
 N/a; Back Soreness,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 N/a; Bronchitis,,Illness,Illness,,Illness,Illness,encoder
@@ -2487,7 +2485,7 @@ N/a; Concussion Protocol,Head / face,Head / face,Head / face,,Management,Managem
 N/a; Concussion Protocols,Head / face,Head / face,Head / face,,Management,Management,encoder
 N/a; Concussion protocol,Head / face,Head / face,Head / face,,Management,Management,encoder
 N/a; Concussion-like symptoms,Head / face,Head / face,Head / face,,Illness,Illness,encoder
-N/a; Conditioning,,Illness,Illness,,Management,Illness,encoder
+N/a; Conditioning,,Illness,Illness,,Illness,Illness,encoder
 N/a; Facemask,Head / face,Head / face,Head / face,,Illness,Illness,encoder
 N/a; Flu,Illness,Illness,Illness,Illness,Illness,Illness,rules
 N/a; Flu-Like Symptoms,Illness,Illness,Illness,Illness,Illness,Illness,rules
@@ -2537,11 +2535,10 @@ N/a; Non-Covid Illness,Illness,Illness,Illness,Illness,Illness,Illness,rules
 N/a; Non-Covid illness,Illness,Illness,Illness,Illness,Illness,Illness,rules
 N/a; Non-Covid related illness,Illness,Illness,Illness,Illness,Illness,Illness,rules
 N/a; Non-covid illness,Illness,Illness,Illness,Illness,Illness,Illness,rules
-N/a; Post Appendectomy Surgery Recovery,,Back / core,Back / core,Surgery,Surgery,Surgery,encoder
+N/a; Post Appendectomy Surgery Recovery,Back / core,Back / core,Back / core,Surgery,Surgery,Surgery,rules
 N/a; Post Health & Safety Protocol Reconditioning,,Illness,Illness,Management,Management,Illness,encoder
 N/a; Post health and safety protocols reconditioning,Illness,Illness,Illness,Management,Management,Illness,rules
 N/a; Re-conditioning,,Illness,Illness,,Management,Illness,encoder
-N/a; Rest,,Illness,Illness,Management,Management,Illness,encoder
 N/a; Return to Competition Reconditioning,,Illness,Illness,Management,Management,Illness,encoder
 N/a; Return to Competition Reconditioning/Back Soreness,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 N/a; Rib Soreness,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
@@ -2550,8 +2547,8 @@ N/a; Sports Hernia Surgery,,Hip / groin,Hip / groin,Surgery,Surgery,Surgery,enco
 N/a; Sternum Contusion,Back / core,Back / core,Back / core,Contusion,Contusion,Contusion,rules
 N/a; Stomach Illness,Illness,Illness,Illness,Illness,Illness,Illness,rules
 N/a; Strep throat,Illness,Illness,Illness,,Illness,Illness,encoder
-N/a; Surgical Recovery,,Illness,Illness,Management,Management,Illness,encoder
-N/a; Surgical recovery,,Illness,Illness,Management,Management,Illness,encoder
+N/a; Surgical Recovery,,Back / core,Back / core,Management,Management,Management,encoder
+N/a; Surgical recovery,,Back / core,Back / core,Management,Management,Management,encoder
 N/a; Thoracic Spine Contusion,Back / core,Back / core,Back / core,Contusion,Contusion,Contusion,rules
 N/a; Upper respiratory illness,Illness,Illness,Illness,Illness,Illness,Illness,rules
 N/a; Upper respiratory illness (g league on assignment),Illness,Illness,Illness,Illness,Illness,Illness,rules
@@ -2559,7 +2556,7 @@ N/a; concussion protocol,Head / face,Head / face,Head / face,,Management,Managem
 N/a; illness,Illness,Illness,Illness,Illness,Illness,Illness,rules
 N/a; non-Covid Illness,Illness,Illness,Illness,Illness,Illness,Illness,rules
 N/a; oblique muscle strain,Back / core,Back / core,Back / core,Strain,Strain,Strain,rules
-NA; Face Mask,Head / face,Head / face,Head / face,,Soreness / tendinitis,Soreness / tendinitis,encoder
+NA; Face Mask,Head / face,Head / face,Head / face,,Illness,Illness,encoder
 NA; Illness,Illness,Illness,Illness,Illness,Illness,Illness,rules
 NBA Concussion Protocol,Head / face,Head / face,Head / face,,Management,Unspecified,encoder
 NON-COVID; Illness,Illness,Illness,Illness,Illness,Illness,Illness,rules
@@ -2568,7 +2565,7 @@ Nasal Bone; Fracture - Facemask,Head / face,Head / face,Head / face,Fracture,Fra
 Nasal Fracture; Face Mask,Head / face,Head / face,Head / face,Fracture,Fracture,Fracture,rules
 Nasal fracture,Head / face,Head / face,Head / face,Fracture,Fracture,Fracture,rules
 Nasal; Contusion,Head / face,Head / face,Head / face,Contusion,Contusion,Contusion,rules
-Nasal; Face Mask,Head / face,Head / face,Head / face,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Nasal; Face Mask,Head / face,Head / face,Head / face,,Illness,Illness,encoder
 Nasal; Facemask,Head / face,Head / face,Head / face,,Surgery,Surgery,encoder
 Nasal; Fracture,Head / face,Head / face,Head / face,Fracture,Fracture,Fracture,rules
 Nasal; Fracture (face mask),Head / face,Head / face,Head / face,Fracture,Fracture,Fracture,rules
@@ -2644,7 +2641,7 @@ Nose; Nasal Fracture,Head / face,Head / face,Head / face,Fracture,Fracture,Fract
 Nose; Nasal fracture,Head / face,Head / face,Head / face,Fracture,Fracture,Fracture,rules
 Not Available;,,Illness,Illness,,Illness,Illness,encoder
 Not Available; Broken Tooth,Head / face,Head / face,Head / face,Fracture,Fracture,Fracture,rules
-Not Available; Cervical Strain,,Back / core,Back / core,Strain,Strain,Strain,encoder
+Not Available; Cervical Strain,Back / core,Back / core,Back / core,Strain,Strain,Strain,rules
 Not Available; Concussion,Head / face,Head / face,Head / face,,Management,Management,encoder
 Not Available; Concussion protocol,Head / face,Head / face,Head / face,,Management,Management,encoder
 Not Available; Headache,Head / face,Head / face,Head / face,,Illness,Illness,encoder
@@ -2656,7 +2653,6 @@ Not Available; Non-COVID Illness,Illness,Illness,Illness,Illness,Illness,Illness
 Not Available; Non-COVID related illness,Illness,Illness,Illness,Illness,Illness,Illness,rules
 Not Available; Upper Respiratory Infection,Illness,Illness,Illness,,Illness,Illness,encoder
 Not Available; Upper respiratory infection,Illness,Illness,Illness,,Illness,Illness,encoder
-Not with team,,Illness,Illness,,Soreness / tendinitis,Illness,encoder
 Oblique Muscle; Strain,Back / core,Back / core,Back / core,Strain,Strain,Strain,rules
 Oblique Muscle; Strain (internal),Back / core,Back / core,Back / core,Strain,Strain,Strain,rules
 Oblique contusion - right,Back / core,Back / core,Back / core,Contusion,Contusion,Contusion,rules
@@ -2667,18 +2663,16 @@ Overall Body; Soreness,,Back / core,Back / core,Soreness / tendinitis,Soreness /
 Overall body; Soreness,,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,encoder
 Partially torn patellar tendon - right,Knee,Knee,Knee,Tear / rupture,Tear / rupture,Tear / rupture,rules
 Partially torn patellar tendon - right knee,Knee,Knee,Knee,Tear / rupture,Tear / rupture,Tear / rupture,rules
-Patelar Tendon Strain - Right,,Knee,Knee,Strain,Strain,Strain,encoder
+Patelar Tendon Strain - Right,Knee,Knee,Knee,Strain,Strain,Strain,rules
 Patellar tendon strain - right,Knee,Knee,Knee,Strain,Strain,Strain,rules
 "Patellofemoral Pain Syndrome, Left Knee",Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Pelvic contusion,Hip / groin,Hip / groin,Hip / groin,Contusion,Contusion,Contusion,rules
 Pelvic; Contusion,Hip / groin,Hip / groin,Hip / groin,Contusion,Contusion,Contusion,rules
 Pelvic; Core Muscle,Hip / groin,Hip / groin,Hip / groin,,Soreness / tendinitis,Soreness / tendinitis,encoder
-Pelvic; Core Muscle Injury,Hip / groin,Hip / groin,Hip / groin,,Strain,Strain,encoder
+Pelvic; Core Muscle Injury,Hip / groin,Hip / groin,Hip / groin,,Tear / rupture,Tear / rupture,encoder
 Pelvic; Core Muscle Injury Management,Hip / groin,Hip / groin,Hip / groin,Management,Management,Management,rules
 Pelvic; Core Muscle Surgery,Hip / groin,Hip / groin,Hip / groin,Surgery,Surgery,Surgery,rules
 Pelvis; contusion,Hip / groin,Hip / groin,Hip / groin,Contusion,Contusion,Contusion,rules
-Personal,,Illness,Illness,,Soreness / tendinitis,Illness,encoder
-Personal reasons,,Illness,Illness,,Management,Illness,encoder
 "Post - surgery, broken nose",Head / face,Head / face,Head / face,Surgery,Surgery,Surgery,rules
 Post traumatic; Headache,Head / face,Head / face,Head / face,,Fracture,Fracture,encoder
 Quad contusion - left,Hamstring / thigh,Hamstring / thigh,Hamstring / thigh,Contusion,Contusion,Contusion,rules
@@ -2690,7 +2684,6 @@ Rectus Abdominis; Strain,Back / core,Back / core,Back / core,Strain,Strain,Strai
 Respiratory Infection,Illness,Illness,Illness,,Illness,Illness,encoder
 Respiratory infection,Illness,Illness,Illness,,Illness,Illness,encoder
 Respiratory; Condition,Illness,Illness,Illness,,Illness,Illness,encoder
-Rest,,Back / core,Back / core,Management,Management,Management,encoder
 Return from Concussion Protocol,Head / face,Head / face,Head / face,,Management,Unspecified,encoder
 "Return from Injury Management, Left Foot",Foot / toe,Foot / toe,Foot / toe,Management,Management,Management,rules
 Return from injury management,,Back / core,Back / core,Management,Management,Management,encoder
@@ -2707,13 +2700,13 @@ Rib; Contusion,Back / core,Back / core,Back / core,Contusion,Contusion,Contusion
 Rib; Fracture,Back / core,Back / core,Back / core,Fracture,Fracture,Fracture,rules
 Rib; Sprain,Back / core,Back / core,Back / core,Sprain,Sprain,Sprain,rules
 Ribs; Contusion,Back / core,Back / core,Back / core,Contusion,Contusion,Contusion,rules
-Right 1st Costal Cartilage Non - displaced Fracture,,Foot / toe,Foot / toe,Fracture,Fracture,Fracture,encoder
+Right 1st Costal Cartilage Non - displaced Fracture,Back / core,Back / core,Back / core,Fracture,Fracture,Fracture,rules
 Right 1st MP joint; Sprain,,Foot / toe,Foot / toe,Sprain,Sprain,Sprain,encoder
 Right 1st Mp Joint; Sprain,,Foot / toe,Foot / toe,Sprain,Sprain,Sprain,encoder
 Right 1st Toe; Soreness,Foot / toe,Foot / toe,Foot / toe,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right 1st Toe; Sprain,Foot / toe,Foot / toe,Foot / toe,Sprain,Sprain,Sprain,rules
 Right 1st Toe; Surgery,Foot / toe,Foot / toe,Foot / toe,Surgery,Surgery,Surgery,rules
-Right 1st Toe; Surgey,Foot / toe,Foot / toe,Foot / toe,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Right 1st Toe; Surgey,Foot / toe,Foot / toe,Foot / toe,,Sprain,Sprain,encoder
 Right 2nd Finger; Hyperextension,Hand / wrist,Hand / wrist,Hand / wrist,,Soreness / tendinitis,Soreness / tendinitis,encoder
 Right 2nd Finger; Sprain,Hand / wrist,Hand / wrist,Hand / wrist,Sprain,Sprain,Sprain,rules
 Right 2nd Finger; Surgery,Hand / wrist,Hand / wrist,Hand / wrist,Surgery,Surgery,Surgery,rules
@@ -2775,7 +2768,7 @@ Right Achilles; Injury Management,Achilles,Achilles,Achilles,Management,Manageme
 "Right Achilles; Injury Management, Right Achilles Strain",Achilles,Achilles,Achilles,Strain,Strain,Strain,rules
 Right Achilles; Irritation,Achilles,Achilles,Achilles,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Achilles; Management,Achilles,Achilles,Achilles,Management,Management,Management,rules
-Right Achilles; Rehab,Achilles,Achilles,Achilles,,Management,Management,encoder
+Right Achilles; Rehab,Achilles,Achilles,Achilles,Management,Management,Management,rules
 Right Achilles; Repair,Achilles,Achilles,Achilles,Surgery,Surgery,Surgery,rules
 Right Achilles; Repair Management,Achilles,Achilles,Achilles,Surgery,Surgery,Surgery,rules
 Right Achilles; Right Achilles Strain,Achilles,Achilles,Achilles,Strain,Strain,Strain,rules
@@ -2818,8 +2811,8 @@ Right Adductor; Strain,Hip / groin,Hip / groin,Hip / groin,Strain,Strain,Strain,
 Right Adductor; Tendinosis,Hip / groin,Hip / groin,Hip / groin,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Adductor; Tension,Hip / groin,Hip / groin,Hip / groin,,Soreness / tendinitis,Soreness / tendinitis,encoder
 Right Adductor; Tightness,Hip / groin,Hip / groin,Hip / groin,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
-Right Angle; Sprain,,Ankle,Ankle,Sprain,Sprain,Sprain,encoder
-Right Anke; Sprain,,Knee,Knee,Sprain,Sprain,Sprain,encoder
+Right Angle; Sprain,Ankle,Ankle,Ankle,Sprain,Sprain,Sprain,rules
+Right Anke; Sprain,Ankle,Ankle,Ankle,Sprain,Sprain,Sprain,rules
 Right Ankle,Ankle,Ankle,Ankle,,Soreness / tendinitis,Unspecified,encoder
 Right Ankle And Lower Back; Sprain,Ankle,Ankle,Ankle,Sprain,Sprain,Sprain,rules
 Right Ankle Contusion,Ankle,Ankle,Ankle,Contusion,Contusion,Contusion,rules
@@ -2832,9 +2825,9 @@ Right Ankle/Midfoot; Sprain,Ankle,Ankle,Ankle,Sprain,Sprain,Sprain,rules
 Right Ankle/midfoot; Sprain,Ankle,Ankle,Ankle,Sprain,Sprain,Sprain,rules
 Right Ankle;,Ankle,Ankle,Ankle,,Soreness / tendinitis,Unspecified,encoder
 Right Ankle; /Midfoot Sprain,Ankle,Ankle,Ankle,Sprain,Sprain,Sprain,rules
-Right Ankle; Ankle,Ankle,Ankle,Ankle,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Right Ankle; Ankle,Ankle,Ankle,Ankle,,Sprain,Sprain,encoder
 Right Ankle; Ankle Sprain Recovery,Ankle,Ankle,Ankle,Sprain,Sprain,Sprain,rules
-Right Ankle; Aprain,Ankle,Ankle,Ankle,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Right Ankle; Aprain,Ankle,Ankle,Ankle,Sprain,Sprain,Sprain,rules
 Right Ankle; Bone Bruise,Ankle,Ankle,Ankle,Contusion,Contusion,Contusion,rules
 Right Ankle; Bone bruise,Ankle,Ankle,Ankle,Contusion,Contusion,Contusion,rules
 Right Ankle; Bursitis,Ankle,Ankle,Ankle,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
@@ -2858,7 +2851,7 @@ Right Ankle; Injury recovery,Ankle,Ankle,Ankle,Management,Management,Management,
 Right Ankle; Lateral Sprain,Ankle,Ankle,Ankle,Sprain,Sprain,Sprain,rules
 Right Ankle; Management,Ankle,Ankle,Ankle,Management,Management,Management,rules
 Right Ankle; Open dislocation,Ankle,Ankle,Ankle,Tear / rupture,Tear / rupture,Tear / rupture,rules
-Right Ankle; Rehab,Ankle,Ankle,Ankle,,Management,Management,encoder
+Right Ankle; Rehab,Ankle,Ankle,Ankle,Management,Management,Management,rules
 Right Ankle; Return to Competition Reconditioning,Ankle,Ankle,Ankle,Management,Management,Management,rules
 Right Ankle; Right Ankle Fracture,Ankle,Ankle,Ankle,Fracture,Fracture,Fracture,rules
 Right Ankle; Right Ankle Injury Management,Ankle,Ankle,Ankle,Management,Management,Management,rules
@@ -2873,10 +2866,10 @@ Right Ankle; Sore,Ankle,Ankle,Ankle,Soreness / tendinitis,Soreness / tendinitis,
 Right Ankle; Soreness,Ankle,Ankle,Ankle,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Ankle; Soreness + Health & Safety Protocols,Ankle,Ankle,Ankle,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Ankle; Soreness + Health and Safety Protocols,Ankle,Ankle,Ankle,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
-Right Ankle; Soreness/ Abdominal Strain,Ankle,Ankle,Ankle,Strain,Strain,Strain,rules
+Right Ankle; Soreness/ Abdominal Strain,Ankle,Ankle,Ankle,Strain,Soreness / tendinitis,Strain,rules
 Right Ankle; Soreness/ Left Hip Flexor Strain,Ankle,Ankle,Ankle,Strain,Strain,Strain,rules
 Right Ankle; Soreness; R Knee Discomfort,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
-Right Ankle; Spain,Ankle,Ankle,Ankle,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Right Ankle; Spain,Ankle,Ankle,Ankle,,Sprain,Sprain,encoder
 Right Ankle; Sprain,Ankle,Ankle,Ankle,Sprain,Sprain,Sprain,rules
 Right Ankle; Sprain - Injury Management,Ankle,Ankle,Ankle,Sprain,Sprain,Sprain,rules
 Right Ankle; Sprain /,Ankle,Ankle,Ankle,Sprain,Sprain,Sprain,rules
@@ -2892,7 +2885,7 @@ Right Ankle; Sprain/ Left Hamstring Tightness,Ankle,Ankle,Ankle,Sprain,Sprain,Sp
 Right Ankle; Sprain/ Right hip impingement,Ankle,Ankle,Ankle,Sprain,Sprain,Sprain,rules
 Right Ankle; Sprain/Contusion,Ankle,Ankle,Ankle,Sprain,Sprain,Sprain,rules
 Right Ankle; Sprain/Hip Contusion,Ankle,Ankle,Ankle,Sprain,Sprain,Sprain,rules
-Right Ankle; Sprain/Left Knee Soreness,Knee,Knee,Knee,Sprain,Sprain,Sprain,rules
+Right Ankle; Sprain/Left Knee Soreness,Knee,Ankle,Knee,Sprain,Sprain,Sprain,rules
 Right Ankle; Sprain/Strain,Ankle,Ankle,Ankle,Sprain,Sprain,Sprain,rules
 Right Ankle; Sprain/strain,Ankle,Ankle,Ankle,Sprain,Sprain,Sprain,rules
 Right Ankle; Sprain;,Ankle,Ankle,Ankle,Sprain,Sprain,Sprain,rules
@@ -2956,7 +2949,7 @@ Right Calf; Calf strain,Lower leg,Lower leg,Lower leg,Strain,Strain,Strain,rules
 Right Calf; Contusion,Lower leg,Lower leg,Lower leg,Contusion,Contusion,Contusion,rules
 Right Calf; Contusion; (R) Ankle Sprain,Ankle,Ankle,Ankle,Sprain,Sprain,Sprain,rules
 Right Calf; Contusion; Right Ankle Sprain,Ankle,Ankle,Ankle,Sprain,Sprain,Sprain,rules
-Right Calf; Contuson,Lower leg,Lower leg,Lower leg,,Contusion,Contusion,encoder
+Right Calf; Contuson,Lower leg,Lower leg,Lower leg,Contusion,Contusion,Contusion,rules
 Right Calf; Deep Vein Thrombosis,Lower leg,Lower leg,Lower leg,,Contusion,Contusion,encoder
 Right Calf; Deep vein thrombosis,Lower leg,Lower leg,Lower leg,,Contusion,Contusion,encoder
 Right Calf; Inflammation,Lower leg,Lower leg,Lower leg,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
@@ -2991,17 +2984,17 @@ Right Calf; sore,Lower leg,Lower leg,Lower leg,Soreness / tendinitis,Soreness / 
 Right Calf; soreness,Lower leg,Lower leg,Lower leg,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Calf; strain,Lower leg,Lower leg,Lower leg,Strain,Strain,Strain,rules
 Right Calf; strained,Lower leg,Lower leg,Lower leg,Strain,Strain,Strain,rules
-Right Cervical Nerve; Impingement,,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,encoder
-Right Cervical; Facet Inflammation,Head / face,Head / face,Head / face,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
-Right Cervical; Soreness,,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,encoder
-Right Cervical; Strain,,Back / core,Back / core,Strain,Strain,Strain,encoder
+Right Cervical Nerve; Impingement,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
+Right Cervical; Facet Inflammation,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
+Right Cervical; Soreness,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
+Right Cervical; Strain,Back / core,Back / core,Back / core,Strain,Strain,Strain,rules
 Right Cervicothoracic; Strain,,Back / core,Back / core,Strain,Strain,Strain,encoder
 Right Chest; Contusion,Back / core,Back / core,Back / core,Contusion,Contusion,Contusion,rules
 Right Costochondral;,,Shoulder / arm,Shoulder / arm,,Soreness / tendinitis,Unspecified,encoder
 Right Costochondral; Injury the the Ribs,Back / core,Back / core,Back / core,,Management,Management,encoder
 Right Costochondral; Injury to The Ribs,Back / core,Back / core,Back / core,,Management,Management,encoder
 Right Costochondral; Injury to the Ribs,Back / core,Back / core,Back / core,,Management,Management,encoder
-Right Cuboid; Injury,,Head / face,Head / face,,Management,Unspecified,encoder
+Right Cuboid; Injury,,Head / face,Head / face,,Contusion,Unspecified,encoder
 Right Deltoid; Contusion,,Head / face,Head / face,Contusion,Contusion,Contusion,encoder
 Right Distal Radius; Bone Bruise,,Hand / wrist,Hand / wrist,Contusion,Contusion,Contusion,encoder
 Right Ear; Pain,Head / face,Head / face,Head / face,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
@@ -3064,7 +3057,7 @@ Right Eye; Sty,Head / face,Head / face,Head / face,,Soreness / tendinitis,Sorene
 Right Eyelid; Swelling,Head / face,Head / face,Head / face,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Face; Fracture,Head / face,Head / face,Head / face,Fracture,Fracture,Fracture,rules
 Right Face; Sutures,Head / face,Head / face,Head / face,,Surgery,Surgery,encoder
-Right Facet;,Head / face,Head / face,Head / face,,Soreness / tendinitis,Unspecified,encoder
+Right Facet;,Head / face,Head / face,Head / face,,Fracture,Unspecified,encoder
 Right Facet; Inflammation,Head / face,Head / face,Head / face,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Facial; Contusion,Head / face,Head / face,Head / face,Contusion,Contusion,Contusion,rules
 Right Facial; Fracture,Head / face,Head / face,Head / face,Fracture,Fracture,Fracture,rules
@@ -3097,7 +3090,7 @@ Right Finger; Dislocation,Hand / wrist,Hand / wrist,Hand / wrist,Tear / rupture,
 Right Finger; Fracture,Hand / wrist,Hand / wrist,Hand / wrist,Fracture,Fracture,Fracture,rules
 Right Finger; Index finger dislocated,Hand / wrist,Hand / wrist,Hand / wrist,Tear / rupture,Tear / rupture,Tear / rupture,rules
 Right Finger; Infection,Hand / wrist,Hand / wrist,Hand / wrist,,Soreness / tendinitis,Soreness / tendinitis,encoder
-Right Finger; Laceration,Hand / wrist,Hand / wrist,Hand / wrist,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Right Finger; Laceration,Hand / wrist,Hand / wrist,Hand / wrist,,Surgery,Surgery,encoder
 Right Finger; Mallet Finger,Hand / wrist,Hand / wrist,Hand / wrist,,Soreness / tendinitis,Soreness / tendinitis,encoder
 Right Finger; Mallet Finger; L elbow Contusion,Shoulder / arm,Shoulder / arm,Shoulder / arm,Contusion,Contusion,Contusion,rules
 Right Finger; Right finger injury,Hand / wrist,Hand / wrist,Hand / wrist,,Fracture,Fracture,encoder
@@ -3111,12 +3104,12 @@ Right Finger; Tendon Injury,Hand / wrist,Hand / wrist,Hand / wrist,Soreness / te
 Right Finger; Tendon Strain,Hand / wrist,Hand / wrist,Hand / wrist,Strain,Strain,Strain,rules
 Right Finger; Tendon Strain - Splint,Hand / wrist,Hand / wrist,Hand / wrist,Strain,Strain,Strain,rules
 Right Finger; dislocated,Hand / wrist,Hand / wrist,Hand / wrist,Tear / rupture,Tear / rupture,Tear / rupture,rules
-Right Finger; laceration,Hand / wrist,Hand / wrist,Hand / wrist,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Right Finger; laceration,Hand / wrist,Hand / wrist,Hand / wrist,,Surgery,Surgery,encoder
 Right Finger; strain,Hand / wrist,Hand / wrist,Hand / wrist,Strain,Strain,Strain,rules
 Right First MTP; Irritation,,Illness,Illness,Soreness / tendinitis,Soreness / tendinitis,Illness,encoder
 Right First MTP; Sprain,,Knee,Knee,Sprain,Sprain,Sprain,encoder
 Right First Mtp; Irritation,,Illness,Illness,Soreness / tendinitis,Soreness / tendinitis,Illness,encoder
-Right First Rib;,Back / core,Back / core,Back / core,,Management,Unspecified,encoder
+Right First Rib;,Back / core,Back / core,Back / core,,Soreness / tendinitis,Unspecified,encoder
 Right First Rib; Fracture,Back / core,Back / core,Back / core,Fracture,Fracture,Fracture,rules
 Right Flexor Carpi Ulnaris; Tendinopathy,,Hand / wrist,Hand / wrist,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,encoder
 Right Flexor Carpi Ulnaris; Teninopathy,,Hand / wrist,Hand / wrist,,Soreness / tendinitis,Soreness / tendinitis,encoder
@@ -3133,7 +3126,7 @@ Right Foot/ankle; Soreness,Ankle,Ankle,Ankle,Soreness / tendinitis,Soreness / te
 Right Foot/ankle; Sprain,Ankle,Ankle,Ankle,Sprain,Sprain,Sprain,rules
 Right Foot;,Foot / toe,Foot / toe,Foot / toe,,Soreness / tendinitis,Unspecified,encoder
 Right Foot; Big toe - sprain,Foot / toe,Foot / toe,Foot / toe,Sprain,Sprain,Sprain,rules
-Right Foot; Bone,Foot / toe,Foot / toe,Foot / toe,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Right Foot; Bone,Foot / toe,Foot / toe,Foot / toe,,Fracture,Fracture,encoder
 Right Foot; Bone Bruise,Foot / toe,Foot / toe,Foot / toe,Contusion,Contusion,Contusion,rules
 Right Foot; Bone Contusion,Foot / toe,Foot / toe,Foot / toe,Contusion,Contusion,Contusion,rules
 Right Foot; Bruise,Foot / toe,Foot / toe,Foot / toe,Contusion,Contusion,Contusion,rules
@@ -3217,7 +3210,7 @@ Right Forearm; Muscle Strain,Shoulder / arm,Shoulder / arm,Shoulder / arm,Strain
 Right Forearm; Soreness,Shoulder / arm,Shoulder / arm,Shoulder / arm,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Forearm; Spasm,Shoulder / arm,Shoulder / arm,Shoulder / arm,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Forearm; Strain,Shoulder / arm,Shoulder / arm,Shoulder / arm,Strain,Strain,Strain,rules
-Right Fourth Metacarpal; Fracture,,Foot / toe,Foot / toe,Fracture,Fracture,Fracture,encoder
+Right Fourth Metacarpal; Fracture,,Back / core,Back / core,Fracture,Fracture,Fracture,encoder
 Right Gastrocnemius; Strain,Illness,Illness,Illness,Strain,Strain,Illness,rules
 Right General; Hernia Injury Recovery,,Hip / groin,Hip / groin,Management,Management,Management,encoder
 Right Glute; Contusion,Hip / groin,Hip / groin,Hip / groin,Contusion,Contusion,Contusion,rules
@@ -3266,7 +3259,7 @@ Right Hamstring; Contusion,Hamstring / thigh,Hamstring / thigh,Hamstring / thigh
 Right Hamstring; Discomfort,Hamstring / thigh,Hamstring / thigh,Hamstring / thigh,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Hamstring; Inflammation,Hamstring / thigh,Hamstring / thigh,Hamstring / thigh,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Hamstring; Inflammation/Left Hip Inflammation,Hamstring / thigh,Hamstring / thigh,Hamstring / thigh,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
-Right Hamstring; Injury,Hamstring / thigh,Hamstring / thigh,Hamstring / thigh,,Management,Unspecified,encoder
+Right Hamstring; Injury,Hamstring / thigh,Hamstring / thigh,Hamstring / thigh,,Soreness / tendinitis,Unspecified,encoder
 Right Hamstring; Injury Maintenance,Hamstring / thigh,Hamstring / thigh,Hamstring / thigh,Management,Management,Management,rules
 Right Hamstring; Injury Management,Hamstring / thigh,Hamstring / thigh,Hamstring / thigh,Management,Management,Management,rules
 Right Hamstring; Injury Management; Left Hip Contusion,Hamstring / thigh,Hamstring / thigh,Hamstring / thigh,Contusion,Contusion,Contusion,rules
@@ -3311,7 +3304,7 @@ Right Hand;,Hand / wrist,Hand / wrist,Hand / wrist,,Soreness / tendinitis,Unspec
 Right Hand; Avulsion Fracture,Hand / wrist,Hand / wrist,Hand / wrist,Fracture,Fracture,Fracture,rules
 Right Hand; Broken,Hand / wrist,Hand / wrist,Hand / wrist,Fracture,Fracture,Fracture,rules
 Right Hand; Contusion,Hand / wrist,Hand / wrist,Hand / wrist,Contusion,Contusion,Contusion,rules
-Right Hand; Contusoin,Hand / wrist,Hand / wrist,Hand / wrist,,Contusion,Contusion,encoder
+Right Hand; Contusoin,Hand / wrist,Hand / wrist,Hand / wrist,Contusion,Contusion,Contusion,rules
 Right Hand; Fracture,Hand / wrist,Hand / wrist,Hand / wrist,Fracture,Fracture,Fracture,rules
 Right Hand; Fractured Fourth Metacarpal,Hand / wrist,Hand / wrist,Hand / wrist,Fracture,Fracture,Fracture,rules
 Right Hand; Fractured Right 5th Metacarpal,Hand / wrist,Hand / wrist,Hand / wrist,Fracture,Fracture,Fracture,rules
@@ -3320,8 +3313,8 @@ Right Hand; Hairline Fracture,Hand / wrist,Hand / wrist,Hand / wrist,Fracture,Fr
 Right Hand; Injury,Hand / wrist,Hand / wrist,Hand / wrist,,Management,Unspecified,encoder
 Right Hand; Injury Maintenance,Hand / wrist,Hand / wrist,Hand / wrist,Management,Management,Management,rules
 Right Hand; Injury maintenance,Hand / wrist,Hand / wrist,Hand / wrist,Management,Management,Management,rules
-Right Hand; Laceration,Hand / wrist,Hand / wrist,Hand / wrist,,Contusion,Contusion,encoder
-Right Hand; MCP Joint,Hand / wrist,Hand / wrist,Hand / wrist,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Right Hand; Laceration,Hand / wrist,Hand / wrist,Hand / wrist,,Surgery,Surgery,encoder
+Right Hand; MCP Joint,Hand / wrist,Hand / wrist,Hand / wrist,,Fracture,Fracture,encoder
 Right Hand; MCP Joint Contusion,Hand / wrist,Hand / wrist,Hand / wrist,Contusion,Contusion,Contusion,rules
 Right Hand; MCP joint contusion,Hand / wrist,Hand / wrist,Hand / wrist,Contusion,Contusion,Contusion,rules
 Right Hand; Mallet Finger,Hand / wrist,Hand / wrist,Hand / wrist,,Soreness / tendinitis,Soreness / tendinitis,encoder
@@ -3400,13 +3393,13 @@ Right Hip; Flexor; Tightness,Hip / groin,Hip / groin,Hip / groin,Soreness / tend
 Right Hip; Flexor; strain,Hip / groin,Hip / groin,Hip / groin,Strain,Strain,Strain,rules
 Right Hip; Hip Flexor Strain,Hip / groin,Hip / groin,Hip / groin,Strain,Strain,Strain,rules
 Right Hip; Impingement,Hip / groin,Hip / groin,Hip / groin,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
-Right Hip; Impongement,Hip / groin,Hip / groin,Hip / groin,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Right Hip; Impongement,Hip / groin,Hip / groin,Hip / groin,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Hip; Inflammation,Hip / groin,Hip / groin,Hip / groin,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Hip; Injury,Hip / groin,Hip / groin,Hip / groin,,Management,Unspecified,encoder
 Right Hip; Injury Maintenance,Hip / groin,Hip / groin,Hip / groin,Management,Management,Management,rules
 Right Hip; Injury Management,Hip / groin,Hip / groin,Hip / groin,Management,Management,Management,rules
 Right Hip; Injury Recovery,Hip / groin,Hip / groin,Hip / groin,Management,Management,Management,rules
-Right Hip; Inpingment,Hip / groin,Hip / groin,Hip / groin,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Right Hip; Inpingment,Hip / groin,Hip / groin,Hip / groin,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Hip; Irritation,Hip / groin,Hip / groin,Hip / groin,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Hip; Joint,Hip / groin,Hip / groin,Hip / groin,,Soreness / tendinitis,Soreness / tendinitis,encoder
 Right Hip; Joint capsule Inflammation,Hip / groin,Hip / groin,Hip / groin,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
@@ -3428,16 +3421,16 @@ Right Hip; Soreness; Injury Management,Hip / groin,Hip / groin,Hip / groin,Soren
 Right Hip; Sprain,Hip / groin,Hip / groin,Hip / groin,Sprain,Sprain,Sprain,rules
 Right Hip; Stiffness,Hip / groin,Hip / groin,Hip / groin,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Hip; Strain,Hip / groin,Hip / groin,Hip / groin,Strain,Strain,Strain,rules
-Right Hip; Subluxation and Pelvic Muscle Strains,Hip / groin,Hip / groin,Hip / groin,Strain,Strain,Strain,rules
+Right Hip; Subluxation and Pelvic Muscle Strains,Hip / groin,Hip / groin,Hip / groin,Tear / rupture,Strain,Tear / rupture,rules
 Right Hip; Synovitis,Hip / groin,Hip / groin,Hip / groin,,Soreness / tendinitis,Soreness / tendinitis,encoder
 Right Hip; Tendinosis,Hip / groin,Hip / groin,Hip / groin,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Hip; Tightness,Hip / groin,Hip / groin,Hip / groin,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Hip; contusion,Hip / groin,Hip / groin,Hip / groin,Contusion,Contusion,Contusion,rules
 Right Hip; discomfort,Hip / groin,Hip / groin,Hip / groin,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Hip; sore,Hip / groin,Hip / groin,Hip / groin,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
-Right Iliac Wing;,,Illness,Illness,,Soreness / tendinitis,Illness,encoder
+Right Iliac Wing;,,Shoulder / arm,Shoulder / arm,,Soreness / tendinitis,Unspecified,encoder
 Right Iliac Wing; Fracture,,Ankle,Ankle,Fracture,Fracture,Fracture,encoder
-Right Ilium; Contusion,,Head / face,Head / face,Contusion,Contusion,Contusion,encoder
+Right Ilium; Contusion,,Hip / groin,Hip / groin,Contusion,Contusion,Contusion,encoder
 Right Index Finger Sprain,Hand / wrist,Hand / wrist,Hand / wrist,Sprain,Sprain,Sprain,rules
 Right Index Finger;,Hand / wrist,Hand / wrist,Hand / wrist,,Soreness / tendinitis,Unspecified,encoder
 Right Index Finger; Deep Contusion,Hand / wrist,Hand / wrist,Hand / wrist,Contusion,Contusion,Contusion,rules
@@ -3476,7 +3469,7 @@ Right Knee MCL; Sprain,Knee,Knee,Knee,Sprain,Sprain,Sprain,rules
 Right Knee Mcl; Sprain,Knee,Knee,Knee,Sprain,Sprain,Sprain,rules
 Right Knee Soreness,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Knee Sprain,Knee,Knee,Knee,Sprain,Sprain,Sprain,rules
-Right Knee Surfery,Knee,Knee,Knee,,Soreness / tendinitis,Unspecified,encoder
+Right Knee Surfery,Knee,Knee,Knee,Surgery,Surgery,Surgery,rules
 Right Knee Surgery,Knee,Knee,Knee,Surgery,Surgery,Surgery,rules
 Right Knee Surgery Rehab,Knee,Knee,Knee,Surgery,Surgery,Surgery,rules
 Right Knee Tendinitis,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
@@ -3490,7 +3483,7 @@ Right Knee; ACL - injury recovery,Knee,Knee,Knee,Management,Management,Managemen
 Right Knee; ACL 3rd Degree Sprain,Knee,Knee,Knee,Sprain,Sprain,Sprain,rules
 Right Knee; ACL Injury Recovery,Knee,Knee,Knee,Management,Management,Management,rules
 Right Knee; ACL Recovery,Knee,Knee,Knee,Management,Management,Management,rules
-Right Knee; ACL Rehabilitation,Knee,Knee,Knee,,Management,Management,encoder
+Right Knee; ACL Rehabilitation,Knee,Knee,Knee,Management,Management,Management,rules
 Right Knee; ACL Repair,Knee,Knee,Knee,Surgery,Surgery,Surgery,rules
 Right Knee; ACL Tear,Knee,Knee,Knee,Tear / rupture,Tear / rupture,Tear / rupture,rules
 Right Knee; ACL repair,Knee,Knee,Knee,Surgery,Surgery,Surgery,rules
@@ -3514,7 +3507,7 @@ Right Knee; Bruised,Knee,Knee,Knee,Contusion,Contusion,Contusion,rules
 Right Knee; Bursitis,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Knee; Cartilage Disruption,Knee,Knee,Knee,,Surgery,Surgery,encoder
 Right Knee; Chondromalacia,Knee,Knee,Knee,,Soreness / tendinitis,Soreness / tendinitis,encoder
-Right Knee; Comtusion,Knee,Knee,Knee,,Contusion,Contusion,encoder
+Right Knee; Comtusion,Knee,Knee,Knee,Contusion,Contusion,Contusion,rules
 Right Knee; Contused,Knee,Knee,Knee,,Contusion,Contusion,encoder
 Right Knee; Contusion,Knee,Knee,Knee,Contusion,Contusion,Contusion,rules
 "Right Knee; Contusion, Right Calf Inflammation",Knee,Knee,Knee,Contusion,Contusion,Contusion,rules
@@ -3573,10 +3566,10 @@ Right Knee; Meniscus Tear,Knee,Knee,Knee,Tear / rupture,Tear / rupture,Tear / ru
 Right Knee; Non-displaced tibial fracture,Knee,Knee,Knee,Fracture,Fracture,Fracture,rules
 Right Knee; Non-displaced tibial plateau fracture,Knee,Knee,Knee,Fracture,Fracture,Fracture,rules
 Right Knee; Out,Knee,Knee,Knee,,Soreness / tendinitis,Unspecified,encoder
-Right Knee; PCL,Knee,Knee,Knee,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Right Knee; PCL,Knee,Knee,Knee,,Management,Management,encoder
 Right Knee; PCL Sprain,Knee,Knee,Knee,Sprain,Sprain,Sprain,rules
 Right Knee; PCL Surgery,Knee,Knee,Knee,Surgery,Surgery,Surgery,rules
-Right Knee; PCLSurgery,Knee,Knee,Knee,,Surgery,Surgery,encoder
+Right Knee; PCLSurgery,Knee,Knee,Knee,Surgery,Surgery,Surgery,rules
 Right Knee; Pain,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Knee; Partial,Knee,Knee,Knee,,Soreness / tendinitis,Soreness / tendinitis,encoder
 Right Knee; Partial MCL Tear,Knee,Knee,Knee,Tear / rupture,Tear / rupture,Tear / rupture,rules
@@ -3607,12 +3600,12 @@ Right Knee; Patrial MCL Tear,Knee,Knee,Knee,Tear / rupture,Tear / rupture,Tear /
 Right Knee; Posterior,Knee,Knee,Knee,,Soreness / tendinitis,Soreness / tendinitis,encoder
 Right Knee; Posterior Capsule Sprain,Knee,Knee,Knee,Sprain,Sprain,Sprain,rules
 Right Knee; Posterior Impingement,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
-Right Knee; Procedure,Knee,Knee,Knee,,Surgery,Surgery,encoder
+Right Knee; Procedure,Knee,Knee,Knee,Surgery,Surgery,Surgery,rules
 Right Knee; RTN from Injury Management,Knee,Knee,Knee,Management,Management,Management,rules
 Right Knee; Recovery,Knee,Knee,Knee,Management,Management,Management,rules
-Right Knee; Rehab,Knee,Knee,Knee,,Management,Management,encoder
-Right Knee; Rehabilitation,Knee,Knee,Knee,,Management,Management,encoder
-"Right Knee; Rehabilitation, Right Knee",Knee,Knee,Knee,,Management,Management,encoder
+Right Knee; Rehab,Knee,Knee,Knee,Management,Management,Management,rules
+Right Knee; Rehabilitation,Knee,Knee,Knee,Management,Management,Management,rules
+"Right Knee; Rehabilitation, Right Knee",Knee,Knee,Knee,Management,Management,Management,rules
 Right Knee; Right Knee,Knee,Knee,Knee,,Soreness / tendinitis,Soreness / tendinitis,encoder
 Right Knee; Right Knee Contusion,Knee,Knee,Knee,Contusion,Contusion,Contusion,rules
 Right Knee; Right Knee Soreness,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
@@ -3681,7 +3674,7 @@ Right Knee; general soreness,Knee,Knee,Knee,Soreness / tendinitis,Soreness / ten
 Right Knee; inflammation,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Knee; injury,Knee,Knee,Knee,,Management,Management,encoder
 Right Knee; patellar fracture,Knee,Knee,Knee,Fracture,Fracture,Fracture,rules
-Right Knee; post-surgical rehab,Knee,Knee,Knee,,Surgery,Surgery,encoder
+Right Knee; post-surgical rehab,Knee,Knee,Knee,Management,Management,Management,rules
 Right Knee; recovery,Knee,Knee,Knee,Management,Management,Management,rules
 Right Knee; sore,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Knee; soreness,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
@@ -3756,7 +3749,7 @@ Right MCL; tear,Knee,Knee,Knee,Tear / rupture,Tear / rupture,Tear / rupture,rule
 Right Mcl; Sprain,Knee,Knee,Knee,Sprain,Sprain,Sprain,rules
 Right Mcl; tear,Knee,Knee,Knee,Tear / rupture,Tear / rupture,Tear / rupture,rules
 Right Medial Femoral,,Hip / groin,Hip / groin,,Surgery,Unspecified,encoder
-Right Medial Femoral Condyle; Fracture,,Lower leg,Lower leg,Fracture,Fracture,Fracture,encoder
+Right Medial Femoral Condyle; Fracture,,Hip / groin,Hip / groin,Fracture,Fracture,Fracture,encoder
 Right Meniscus;,Knee,Knee,Knee,,Soreness / tendinitis,Unspecified,encoder
 Right Meniscus; Surgery,Knee,Knee,Knee,Surgery,Surgery,Surgery,rules
 Right Meniscus; Tear,Knee,Knee,Knee,Tear / rupture,Tear / rupture,Tear / rupture,rules
@@ -3796,7 +3789,7 @@ Right Olecranon; Bursitis,,Head / face,Head / face,Soreness / tendinitis,Sorenes
 Right Oral; Surgery,,Head / face,Head / face,Surgery,Surgery,Surgery,encoder
 Right Orbital Bone; Fracture,Head / face,Head / face,Head / face,Fracture,Fracture,Fracture,rules
 Right Orbital; Fracture,Head / face,Head / face,Head / face,Fracture,Fracture,Fracture,rules
-Right Oribital; Fracture,,Hand / wrist,Hand / wrist,Fracture,Fracture,Fracture,encoder
+Right Oribital; Fracture,Head / face,Head / face,Head / face,Fracture,Fracture,Fracture,rules
 Right Over Eye; Stitches,Head / face,Head / face,Head / face,,Soreness / tendinitis,Soreness / tendinitis,encoder
 Right Patella Tendon; Avulsion Fracture,Knee,Knee,Knee,Fracture,Fracture,Fracture,rules
 Right Patella Tendon; Soreness / Left Achilles Soreness,Achilles,Achilles,Achilles,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
@@ -3805,13 +3798,13 @@ Right Patella Tendon; Tendonitis,Knee,Knee,Knee,Soreness / tendinitis,Soreness /
 Right Patella;,Knee,Knee,Knee,,Soreness / tendinitis,Unspecified,encoder
 Right Patella; Contusion,Knee,Knee,Knee,Contusion,Contusion,Contusion,rules
 Right Patella; Stress Fracture,Knee,Knee,Knee,Fracture,Fracture,Fracture,rules
-Right Patella; Subluxation,Knee,Knee,Knee,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Right Patella; Subluxation,Knee,Knee,Knee,Tear / rupture,Tear / rupture,Tear / rupture,rules
 Right Patella; Tendinitis,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Patella; Tendinopathy,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Patella; Tendinosis,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Patella; Tendonitis,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Patella; Tendonopathy,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
-Right Patella; subluxation,Knee,Knee,Knee,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Right Patella; subluxation,Knee,Knee,Knee,Tear / rupture,Tear / rupture,Tear / rupture,rules
 Right Patellar Tendinopathy,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Patellar Tendon; Strain,Knee,Knee,Knee,Strain,Strain,Strain,rules
 Right Patellar; Fracture,Knee,Knee,Knee,Fracture,Fracture,Fracture,rules
@@ -3906,7 +3899,7 @@ Right Quadriceps; Tendinosis,Hamstring / thigh,Hamstring / thigh,Hamstring / thi
 Right Quadriceps; Tendon Soreness,Hamstring / thigh,Hamstring / thigh,Hamstring / thigh,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Quadriceps; Tendonitis,Hamstring / thigh,Hamstring / thigh,Hamstring / thigh,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Quadriceps; contusion,Hamstring / thigh,Hamstring / thigh,Hamstring / thigh,Contusion,Contusion,Contusion,rules
-Right Retinal; Detachment,,Head / face,Head / face,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Right Retinal; Detachment,,Head / face,Head / face,,Tear / rupture,Tear / rupture,encoder
 Right Retrocalcaneal; Bursitis,,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,encoder
 Right Rib; Contusion,Back / core,Back / core,Back / core,Contusion,Contusion,Contusion,rules
 Right Rib; Fracture,Back / core,Back / core,Back / core,Fracture,Fracture,Fracture,rules
@@ -3948,7 +3941,7 @@ Right Shin; Contusion; right shoulder strain,Lower leg,Lower leg,Lower leg,Strai
 Right Shin; Soreness,Lower leg,Lower leg,Lower leg,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Shin; Strain,Lower leg,Lower leg,Lower leg,Strain,Strain,Strain,rules
 Right Shin; Stress Reaction,Lower leg,Lower leg,Lower leg,Fracture,Fracture,Fracture,rules
-Right Shoiulder; Surgery,,Knee,Knee,Surgery,Surgery,Surgery,encoder
+Right Shoiulder; Surgery,Shoulder / arm,Shoulder / arm,Shoulder / arm,Surgery,Surgery,Surgery,rules
 Right Shoulder Soreness,Shoulder / arm,Shoulder / arm,Shoulder / arm,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Shoulder;,Shoulder / arm,Shoulder / arm,Shoulder / arm,,Soreness / tendinitis,Unspecified,encoder
 Right Shoulder; AC Injury,Shoulder / arm,Shoulder / arm,Shoulder / arm,,Management,Management,encoder
@@ -3974,7 +3967,7 @@ Right Shoulder; Injury,Shoulder / arm,Shoulder / arm,Shoulder / arm,,Soreness / 
 Right Shoulder; Injury Maintenance,Shoulder / arm,Shoulder / arm,Shoulder / arm,Management,Management,Management,rules
 Right Shoulder; Injury Management,Shoulder / arm,Shoulder / arm,Shoulder / arm,Management,Management,Management,rules
 Right Shoulder; Injury Recovery,Shoulder / arm,Shoulder / arm,Shoulder / arm,Management,Management,Management,rules
-Right Shoulder; Inpingement,Shoulder / arm,Shoulder / arm,Shoulder / arm,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Right Shoulder; Inpingement,Shoulder / arm,Shoulder / arm,Shoulder / arm,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Shoulder; Instability Episode,Shoulder / arm,Shoulder / arm,Shoulder / arm,,Soreness / tendinitis,Soreness / tendinitis,encoder
 Right Shoulder; Irritation,Shoulder / arm,Shoulder / arm,Shoulder / arm,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Shoulder; Labral,Shoulder / arm,Shoulder / arm,Shoulder / arm,,Soreness / tendinitis,Soreness / tendinitis,encoder
@@ -3984,7 +3977,7 @@ Right Shoulder; Labral tear,Shoulder / arm,Shoulder / arm,Shoulder / arm,Tear / 
 Right Shoulder; Maintenance,Shoulder / arm,Shoulder / arm,Shoulder / arm,Management,Management,Management,rules
 Right Shoulder; Pain,Shoulder / arm,Shoulder / arm,Shoulder / arm,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Shoulder; Pain / G League Assignment,Shoulder / arm,Shoulder / arm,Shoulder / arm,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
-Right Shoulder; Rehabilitation,Shoulder / arm,Shoulder / arm,Shoulder / arm,,Management,Management,encoder
+Right Shoulder; Rehabilitation,Shoulder / arm,Shoulder / arm,Shoulder / arm,Management,Management,Management,rules
 Right Shoulder; Right Shoulder Sprain,Shoulder / arm,Shoulder / arm,Shoulder / arm,Sprain,Sprain,Sprain,rules
 Right Shoulder; Right shoulder tightness,Shoulder / arm,Shoulder / arm,Shoulder / arm,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Shoulder; Sore,Shoulder / arm,Shoulder / arm,Shoulder / arm,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
@@ -3999,7 +3992,7 @@ Right Shoulder; Sprain; Viral Illness,Shoulder / arm,Shoulder / arm,Shoulder / a
 Right Shoulder; Sprained,Shoulder / arm,Shoulder / arm,Shoulder / arm,Sprain,Sprain,Sprain,rules
 Right Shoulder; Stinger,Shoulder / arm,Shoulder / arm,Shoulder / arm,,Soreness / tendinitis,Soreness / tendinitis,encoder
 Right Shoulder; Strain,Shoulder / arm,Shoulder / arm,Shoulder / arm,Strain,Strain,Strain,rules
-Right Shoulder; Subluxation,Shoulder / arm,Shoulder / arm,Shoulder / arm,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Right Shoulder; Subluxation,Shoulder / arm,Shoulder / arm,Shoulder / arm,Tear / rupture,Tear / rupture,Tear / rupture,rules
 Right Shoulder; Surgery,Shoulder / arm,Shoulder / arm,Shoulder / arm,Surgery,Surgery,Surgery,rules
 Right Shoulder; Tendinitis,Shoulder / arm,Shoulder / arm,Shoulder / arm,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right Shoulder; Torn,Shoulder / arm,Shoulder / arm,Shoulder / arm,Tear / rupture,Tear / rupture,Tear / rupture,rules
@@ -4041,7 +4034,7 @@ Right Thumb; Avulsion fracture,Hand / wrist,Hand / wrist,Hand / wrist,Fracture,F
 Right Thumb; Bruised,Hand / wrist,Hand / wrist,Hand / wrist,Contusion,Contusion,Contusion,rules
 Right Thumb; Contusion,Hand / wrist,Hand / wrist,Hand / wrist,Contusion,Contusion,Contusion,rules
 Right Thumb; Contusion; Left Ankle Soreness,Ankle,Ankle,Ankle,Contusion,Contusion,Contusion,rules
-Right Thumb; DIsclocation,Hand / wrist,Hand / wrist,Hand / wrist,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Right Thumb; DIsclocation,Hand / wrist,Hand / wrist,Hand / wrist,Tear / rupture,Tear / rupture,Tear / rupture,rules
 Right Thumb; Dislocation,Hand / wrist,Hand / wrist,Hand / wrist,Tear / rupture,Tear / rupture,Tear / rupture,rules
 Right Thumb; Distal Phalanx Fracture,Hand / wrist,Hand / wrist,Hand / wrist,Fracture,Fracture,Fracture,rules
 Right Thumb; Extra tape for previous dislocation,Hand / wrist,Hand / wrist,Hand / wrist,Tear / rupture,Tear / rupture,Tear / rupture,rules
@@ -4051,7 +4044,7 @@ Right Thumb; Injury management,Hand / wrist,Hand / wrist,Hand / wrist,Management
 Right Thumb; Injury recovery,Hand / wrist,Hand / wrist,Hand / wrist,Management,Management,Management,rules
 Right Thumb; Laceration,Hand / wrist,Hand / wrist,Hand / wrist,,Surgery,Surgery,encoder
 Right Thumb; Ligament Tear,Hand / wrist,Hand / wrist,Hand / wrist,Tear / rupture,Tear / rupture,Tear / rupture,rules
-Right Thumb; Procedure,Hand / wrist,Hand / wrist,Hand / wrist,,Surgery,Surgery,encoder
+Right Thumb; Procedure,Hand / wrist,Hand / wrist,Hand / wrist,Surgery,Surgery,Surgery,rules
 Right Thumb; Right Thumb Fracture,Hand / wrist,Hand / wrist,Hand / wrist,Fracture,Fracture,Fracture,rules
 Right Thumb; Right thumb sprain,Hand / wrist,Hand / wrist,Hand / wrist,Sprain,Sprain,Sprain,rules
 Right Thumb; Soreness,Hand / wrist,Hand / wrist,Hand / wrist,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
@@ -4072,7 +4065,7 @@ Right Thumb; Surgery right thumb,Hand / wrist,Hand / wrist,Hand / wrist,Surgery,
 "Right Thumb; Surgery, right thumb",Hand / wrist,Hand / wrist,Hand / wrist,Surgery,Surgery,Surgery,rules
 Right Thumb; Tape for previous dislocation,Hand / wrist,Hand / wrist,Hand / wrist,Tear / rupture,Tear / rupture,Tear / rupture,rules
 Right Thumb; Torn UCL,Hand / wrist,Hand / wrist,Hand / wrist,Tear / rupture,Tear / rupture,Tear / rupture,rules
-Right Thumb; UCL,Hand / wrist,Hand / wrist,Hand / wrist,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Right Thumb; UCL,Hand / wrist,Hand / wrist,Hand / wrist,,Surgery,Surgery,encoder
 Right Thumb; UCL Reconstruction,Hand / wrist,Hand / wrist,Hand / wrist,Surgery,Surgery,Surgery,rules
 Right Thumb; UCL Sprain,Hand / wrist,Hand / wrist,Hand / wrist,Sprain,Sprain,Sprain,rules
 Right Thumb; UCL sprain,Hand / wrist,Hand / wrist,Hand / wrist,Sprain,Sprain,Sprain,rules
@@ -4112,7 +4105,7 @@ Right Tooth; Pain,Head / face,Head / face,Head / face,Soreness / tendinitis,Sore
 Right Tooth; Surgery,Head / face,Head / face,Head / face,Surgery,Surgery,Surgery,rules
 Right Trapezius; Soreness,,Hip / groin,Hip / groin,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,encoder
 Right Triceps; Strain,Shoulder / arm,Shoulder / arm,Shoulder / arm,Strain,Strain,Strain,rules
-Right Trunk;,,Back / core,Back / core,,Management,Unspecified,encoder
+Right Trunk;,,Back / core,Back / core,,Soreness / tendinitis,Unspecified,encoder
 Right Trunk; Contusion,,Back / core,Back / core,Contusion,Contusion,Contusion,encoder
 Right UCL; Repair,,Knee,Knee,Surgery,Surgery,Surgery,encoder
 Right UCL; Sprain,,Knee,Knee,Sprain,Sprain,Sprain,encoder
@@ -4136,7 +4129,7 @@ Right Wrist; Fracture/Concussion Protocol,Hand / wrist,Hand / wrist,Hand / wrist
 Right Wrist; Fracture/Facial Laceration/Concussion Protocol,Hand / wrist,Hand / wrist,Hand / wrist,Fracture,Fracture,Fracture,rules
 Right Wrist; Hairline Fracture,Hand / wrist,Hand / wrist,Hand / wrist,Fracture,Fracture,Fracture,rules
 Right Wrist; Inflammation,Hand / wrist,Hand / wrist,Hand / wrist,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
-Right Wrist; Injury,Hand / wrist,Hand / wrist,Hand / wrist,,Soreness / tendinitis,Unspecified,encoder
+Right Wrist; Injury,Hand / wrist,Hand / wrist,Hand / wrist,,Management,Unspecified,encoder
 Right Wrist; Injury Management,Hand / wrist,Hand / wrist,Hand / wrist,Management,Management,Management,rules
 Right Wrist; Injury Recovery,Hand / wrist,Hand / wrist,Hand / wrist,Management,Management,Management,rules
 Right Wrist; Irritation,Hand / wrist,Hand / wrist,Hand / wrist,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
@@ -4261,7 +4254,7 @@ Right knee and right wrist soreness,Knee,Knee,Knee,Soreness / tendinitis,Sorenes
 Right knee arthroscopy,Knee,Knee,Knee,Surgery,Surgery,Surgery,rules
 Right knee contusion,Knee,Knee,Knee,Contusion,Contusion,Contusion,rules
 Right knee contusion/sprain,Knee,Knee,Knee,Sprain,Sprain,Sprain,rules
-Right knee debridement procedure,Knee,Knee,Knee,,Surgery,Unspecified,encoder
+Right knee debridement procedure,Knee,Knee,Knee,Surgery,Surgery,Surgery,rules
 Right knee effusion,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right knee injury,Knee,Knee,Knee,,Management,Unspecified,encoder
 Right knee meniscus tear,Knee,Knee,Knee,Tear / rupture,Tear / rupture,Tear / rupture,rules
@@ -4282,9 +4275,9 @@ Right knee; Injury Recovery,Knee,Knee,Knee,Management,Management,Management,rule
 Right knee; Knee; Arthroscopic Surgical Procedure,Knee,Knee,Knee,Surgery,Surgery,Surgery,rules
 Right knee; Patellar fracture,Knee,Knee,Knee,Fracture,Fracture,Fracture,rules
 Right knee; Patellofemoral Syndrome,Knee,Knee,Knee,,Soreness / tendinitis,Soreness / tendinitis,encoder
-Right knee; Rehab,Knee,Knee,Knee,,Management,Management,encoder
+Right knee; Rehab,Knee,Knee,Knee,Management,Management,Management,rules
 Right knee; Right knee bone bruise,Knee,Knee,Knee,Contusion,Contusion,Contusion,rules
-Right knee; Right knee rehab,Knee,Knee,Knee,,Management,Management,encoder
+Right knee; Right knee rehab,Knee,Knee,Knee,Management,Management,Management,rules
 Right knee; Sore right knee,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right knee; Soreness,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right knee; Sprain,Knee,Knee,Knee,Sprain,Sprain,Sprain,rules
@@ -4302,7 +4295,7 @@ Right lower leg; contusion,Lower leg,Lower leg,Lower leg,Contusion,Contusion,Con
 Right meniscus injury,Knee,Knee,Knee,,Tear / rupture,Unspecified,encoder
 Right midfoot soreness,Foot / toe,Foot / toe,Foot / toe,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right neck; neck muscle spasms,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
-Right patella; Subluxation,Knee,Knee,Knee,,Soreness / tendinitis,Soreness / tendinitis,encoder
+Right patella; Subluxation,Knee,Knee,Knee,Tear / rupture,Tear / rupture,Tear / rupture,rules
 Right plantar fascia; Soreness,Foot / toe,Foot / toe,Foot / toe,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Right plantar fasciitis,Foot / toe,Foot / toe,Foot / toe,,Soreness / tendinitis,Unspecified,encoder
 Right quad contusion,Hamstring / thigh,Hamstring / thigh,Hamstring / thigh,Contusion,Contusion,Contusion,rules
@@ -4362,7 +4355,7 @@ Sinus; Surgery,,Head / face,Head / face,Surgery,Surgery,Surgery,encoder
 Sinusitis,,Head / face,Head / face,,Soreness / tendinitis,Unspecified,encoder
 Skin; Allergic Reaction,,Head / face,Head / face,,Soreness / tendinitis,Soreness / tendinitis,encoder
 Skin; Lesion,,Head / face,Head / face,,Soreness / tendinitis,Soreness / tendinitis,encoder
-Slight Left AC Sprain,,Ankle,Ankle,Sprain,Sprain,Sprain,encoder
+Slight Left AC Sprain,Shoulder / arm,Shoulder / arm,Shoulder / arm,Sprain,Sprain,Sprain,rules
 Sore Left Achilles,Achilles,Achilles,Achilles,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Sore Left Ankle,Ankle,Ankle,Ankle,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Sore Left Foot,Foot / toe,Foot / toe,Foot / toe,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
@@ -4379,7 +4372,7 @@ Sore Right Leg,Lower leg,Lower leg,Lower leg,Soreness / tendinitis,Soreness / te
 Sore Right Shoulder,Shoulder / arm,Shoulder / arm,Shoulder / arm,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Sore ankle - left,Ankle,Ankle,Ankle,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Sore groin,Hip / groin,Hip / groin,Hip / groin,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
-Sore groun,,Illness,Illness,Soreness / tendinitis,Soreness / tendinitis,Illness,encoder
+Sore groun,Hip / groin,Hip / groin,Hip / groin,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Sore hamstring - left,Hamstring / thigh,Hamstring / thigh,Hamstring / thigh,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Sore hamstring - right,Hamstring / thigh,Hamstring / thigh,Hamstring / thigh,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Sore knee - left,Knee,Knee,Knee,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
@@ -4457,7 +4450,7 @@ Stress fracture left tibia,Lower leg,Lower leg,Lower leg,Fracture,Fracture,Fract
 "Subtalar disloction, right foot",Foot / toe,Foot / toe,Foot / toe,,Tear / rupture,Unspecified,encoder
 Surgery - broken nose,Head / face,Head / face,Head / face,Surgery,Surgery,Surgery,rules
 Surgery - right ring finger,Hand / wrist,Hand / wrist,Hand / wrist,Surgery,Surgery,Surgery,rules
-TOS,,Head / face,Head / face,,Soreness / tendinitis,Unspecified,encoder
+TOS,Shoulder / arm,Shoulder / arm,Shoulder / arm,,Soreness / tendinitis,Unspecified,encoder
 Tail Bone; Contusion,,Lower leg,Lower leg,Contusion,Contusion,Contusion,encoder
 Tailbone; Contusion,,Back / core,Back / core,Contusion,Contusion,Contusion,encoder
 Tailbone; Soreness,,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,encoder
@@ -4465,10 +4458,10 @@ Tailbone; Tailbone Contusion,,Back / core,Back / core,Contusion,Contusion,Contus
 Thigh contusion - right,Hamstring / thigh,Hamstring / thigh,Hamstring / thigh,Contusion,Contusion,Contusion,rules
 Thigh contusion - right and Patellar tendinitis - right,Knee,Knee,Knee,Contusion,Contusion,Contusion,rules
 Thoracic Muscle; Strain,,Back / core,Back / core,Strain,Strain,Strain,encoder
-Thoracic Outlet Syndrome,,Back / core,Back / core,,Soreness / tendinitis,Unspecified,encoder
+Thoracic Outlet Syndrome,Shoulder / arm,Shoulder / arm,Shoulder / arm,,Soreness / tendinitis,Unspecified,encoder
 Thoracic Spine; Sprain,Back / core,Back / core,Back / core,Sprain,Sprain,Sprain,rules
 "Thoracic outlet decompression surgery, right arm",Shoulder / arm,Shoulder / arm,Shoulder / arm,Surgery,Surgery,Surgery,rules
-Thoracic outlet syndrome,,Back / core,Back / core,,Soreness / tendinitis,Unspecified,encoder
+Thoracic outlet syndrome,Shoulder / arm,Shoulder / arm,Shoulder / arm,,Soreness / tendinitis,Unspecified,encoder
 Thoracic spasm,,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,encoder
 Thoracic; Contusion,,Back / core,Back / core,Contusion,Contusion,Contusion,encoder
 Thoracic; Contusion; Right Knee Sprain; Left Ankle Soreness,Knee,Knee,Knee,Sprain,Sprain,Sprain,rules
@@ -4496,7 +4489,7 @@ Torn meniscus,Knee,Knee,Knee,Tear / rupture,Tear / rupture,Tear / rupture,rules
 "Torn meniscus, right knee",Knee,Knee,Knee,Tear / rupture,Tear / rupture,Tear / rupture,rules
 Torn right anterior cruciate ligament,,Knee,Knee,Tear / rupture,Tear / rupture,Tear / rupture,encoder
 Torn right meniscus,Knee,Knee,Knee,Tear / rupture,Tear / rupture,Tear / rupture,rules
-Transient Cervical Neuropraxia,,Back / core,Back / core,,Contusion,Unspecified,encoder
+Transient Cervical Neuropraxia,Back / core,Back / core,Back / core,,Contusion,Unspecified,encoder
 Under the weather,,Head / face,Head / face,,Illness,Unspecified,encoder
 Upper Back; Soreness,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 Upper Back; Spasm,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
@@ -4580,7 +4573,7 @@ right ankle soreness,Ankle,Ankle,Ankle,Soreness / tendinitis,Soreness / tendinit
 right foot surgery,Foot / toe,Foot / toe,Foot / toe,Surgery,Surgery,Surgery,rules
 right hip and core muscle surgery,Hip / groin,Hip / groin,Hip / groin,Surgery,Surgery,Surgery,rules
 right hip surgery,Hip / groin,Hip / groin,Hip / groin,Surgery,Surgery,Surgery,rules
-right knee debridement procedure,Knee,Knee,Knee,,Surgery,Unspecified,encoder
+right knee debridement procedure,Knee,Knee,Knee,Surgery,Surgery,Surgery,rules
 right wrist sprain,Hand / wrist,Hand / wrist,Hand / wrist,Sprain,Sprain,Sprain,rules
 sinus; Congestion,,Head / face,Head / face,,Soreness / tendinitis,Soreness / tendinitis,encoder
 sore left groin,Hip / groin,Hip / groin,Hip / groin,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
@@ -4598,7 +4591,7 @@ surgery - right knee,Knee,Knee,Knee,Surgery,Surgery,Surgery,rules
 tail bone; Contusion,,Lower leg,Lower leg,Contusion,Contusion,Contusion,encoder
 throat; Strep throat,Illness,Illness,Illness,,Soreness / tendinitis,Illness,encoder
 throat; sore,Illness,Illness,Illness,Soreness / tendinitis,Soreness / tendinitis,Illness,rules
-transient cervical neuropraxia,,Back / core,Back / core,,Contusion,Unspecified,encoder
+transient cervical neuropraxia,Back / core,Back / core,Back / core,,Contusion,Unspecified,encoder
 upper back/neck stiffness,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 upper back; Spasms,Back / core,Back / core,Back / core,Soreness / tendinitis,Soreness / tendinitis,Soreness / tendinitis,rules
 upper respiratory; Illness,Illness,Illness,Illness,Illness,Illness,Illness,rules

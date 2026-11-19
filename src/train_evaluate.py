@@ -57,6 +57,18 @@ def evaluate(pred, df):
     return out
 
 
+def row_errors(pred, df):
+    """Per-player absolute errors on the same scale as evaluate(): value per game (only for players with
+    15+ games) and games played. Used for the bootstrap by player (bootstrap_by_player.py)."""
+    act = actual_frame(df)
+    played = act["GP"] >= 15
+    ref = F.fit_reference(act[played])
+    zp, za = F.z_scores(pred, ref)["Z"], F.z_scores(act, ref)["Z"]
+    return pd.DataFrame({"PLAYER_ID": df["PLAYER_ID"].to_numpy(), "season": df["season"].to_numpy(),
+                         "z_err": (zp - za).abs().where(played).to_numpy(),
+                         "gp_err": (pred["GP"] - act["GP"]).abs().to_numpy()})
+
+
 def run_fold(name, fn, panel, season, n_seasons):
     train = eligible(window(panel, season, n_seasons))
     test = eligible(panel[panel["season"] == season])
@@ -81,11 +93,12 @@ def main():
     print(f"training window ({WINDOW_MODEL}, 0 = all seasons):\n{wins.round(4)}\nchosen: {n_best or 'all'} seasons")
 
     # ---------- model selection on validation folds
-    rows = []
+    rows, errs = [], []
     for name, fn in CANDIDATES.items():
         for s in VAL:
-            m, _, _ = run_fold(name, fn, panel, s, n_best)
+            m, pred, test = run_fold(name, fn, panel, s, n_best)
             rows.append({"model": name, "fold": s, **m})
+            errs.append(row_errors(pred, test).assign(model=name, split="validation"))
             print(f"{name:28s} {s}  Z_MAE={m['Z_MAE']:.3f}  rho={m['Z_Spearman']:.3f}  GP_MAE={m['GP_MAE']:.1f}")
     cv = pd.DataFrame(rows)
     cv.to_csv(RES / "validation_folds.csv", index=False)
@@ -105,9 +118,11 @@ def main():
     for name in finalists:
         m, pred, test = run_fold(name, CANDIDATES[name], panel, TEST, n_best)
         test_rows.append({"model": name, **m})
+        errs.append(row_errors(pred, test).assign(model=name, split="test"))
         preds[name] = pred
     test_df = pd.DataFrame(test_rows).set_index("model")
     test_df.to_csv(RES / "test_metrics.csv")
+    pd.concat(errs, ignore_index=True).to_csv(RES / "row_errors.csv", index=False)
     print(f"\nHold-out {TEST}:\n", test_df[["Z_MAE", "Z_Spearman", "GP_MAE", "Value_Spearman", "Top140_hit"]].round(3))
 
     # save test-season predictions for the business backtest

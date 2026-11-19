@@ -17,6 +17,7 @@ Outputs: results/injury_reasons.csv, injury_episodes.csv, injury_absence_by_type
 injury_next_season.csv, figures/injury_types.png
 """
 import re
+from difflib import get_close_matches
 from functools import lru_cache
 from pathlib import Path
 
@@ -42,8 +43,10 @@ REGIONS = {
     "Lower leg": ["calf", "tibia", "fibula", "shin", "lower leg", "leg"],
     "Hamstring / thigh": ["hamstring", "quad", "thigh"],
     "Hip / groin": ["hip", "groin", "adductor", "pelvi", "glute"],
-    "Back / core": ["back", "lumbar", "spine", "oblique", "rib", "abdom", "core", "neck", "chest", "sternum"],
-    "Shoulder / arm": ["shoulder", "elbow", "arm", "bicep", "tricep", "clavicle", "ac joint", "forearm"],
+    "Back / core": ["back", "lumbar", "spine", "oblique", "rib", "costal", "abdom", "append", "core", "neck",
+                    "cervical", "chest", "sternum"],
+    "Shoulder / arm": ["shoulder", "elbow", "arm", "bicep", "tricep", "clavicle", "ac joint", "ac sprain", "forearm",
+                       "thoracic outlet", "tos"],
     "Hand / wrist": ["hand", "wrist", "thumb", "finger", "digit", "pinky"],
     "Head / face": ["concussion", "head", "nasal", "nose", "face", "facial", "eye", "jaw", "orbital", "mask",
                     "tooth", "teeth", "lip", "ear"],
@@ -52,24 +55,63 @@ REGIONS = {
 }
 # injury type, most severe first: an episode takes the most severe type seen while it lasts
 TYPES = {
-    "Surgery": ["surgery", "repair", "reconstruction", "-scope", "arthroscop"],
-    "Tear / rupture": ["tear", "torn", "rupture", "dislocat"],
+    "Surgery": ["surgery", "repair", "reconstruction", "-scope", "arthroscop", "appendectomy", "debridement",
+                "procedure"],
+    "Tear / rupture": ["tear", "torn", "rupture", "dislocat", "sublux"],
     "Fracture": ["fracture", "fractuce", "break", "broken", "stress reaction"],
     "Sprain": ["sprain"],
     "Strain": ["strain"],
     "Contusion": ["contusion", "bruise"],
     "Soreness / tendinitis": ["sore", "tight", "inflam", "tendin", "tendon", "spasm", "pain", "discomfort",
                               "impingement", "irritat", "effusion", "bursitis", "stiff", "swelling"],
-    "Management": ["management", "mgmt", "recovery", "maintenance", "reconditioning", "rest"],
+    "Management": ["management", "mgmt", "recovery", "maintenance", "reconditioning", "rehab", "rest"],
     "Illness": ["illness", "covid", "flu", "virus", "health and safety"],
 }
 SEVERITY = list(TYPES)
-def rule(text, table):
-    t = text.lower()
+# reasons filed under Injury/Illness that are not injuries (whole string); dropped before classifying
+NON_INJURY = re.compile(r"^(n/a; )?(medical assessment|personal( reasons)?|family reasons|not with team|rest)$", re.I)
+
+
+def _match(t, table):
     for label, keys in table.items():
         if any(re.search(r"\b" + re.escape(k) if not k.startswith("-") else re.escape(k[1:]), t) for k in keys):
             return label
     return None
+
+
+@lru_cache(maxsize=None)
+def _vocab(names):
+    table = {"region": REGIONS, "type": TYPES}[names]
+    return sorted({k for keys in table.values() for k in keys if k.isalpha() and len(k) >= 4})
+
+
+FUZZY_HITS = {}
+KNOWN_WORDS = set()          # words that are not typos: in 3+ distinct reason strings, or a keyword
+
+
+def set_known_words(texts):
+    counts = pd.Series([w for t in set(texts) for w in set(re.findall(r"[a-z]+", t.lower()))]).value_counts()
+    KNOWN_WORDS.clear()
+    KNOWN_WORDS.update(counts[counts >= 3].index)
+    KNOWN_WORDS.update(_vocab("region") + _vocab("type"))
+
+
+def rule(text, table):
+    """Keyword rules; if no keyword matches, retry with typos fixed by fuzzy matching: a rare word (in fewer
+    than 3 distinct strings, not itself a keyword) of 4+ letters within 80% similarity of a keyword is
+    replaced by it ("groun" -> "groin", "ilness" -> "illness", "sprian" -> "sprain")."""
+    t = text.lower()
+    label = _match(t, table)
+    if label is None:
+        vocab = _vocab("region" if table is REGIONS else "type")
+        words = re.findall(r"[a-z]+", t)
+        fixed = [w if len(w) < 4 or w in KNOWN_WORDS else (get_close_matches(w, vocab, n=1, cutoff=0.8) or [w])[0]
+                 for w in words]
+        if fixed != words:
+            label = _match(" ".join(fixed), table)
+            if label is not None:
+                FUZZY_HITS[text] = " ".join(fixed)
+    return label
 
 
 def encoder_classifier(texts, labels):
@@ -87,6 +129,7 @@ def encoder_classifier(texts, labels):
 
 def classify_reasons(rep):
     texts = sorted(set(rep["text"]))
+    set_known_words(texts)
     out = pd.DataFrame(index=pd.Index(texts, name="text"))
     acc = {}
     for col, table in (("region", REGIONS), ("type", TYPES)):
@@ -122,6 +165,7 @@ def labelled_reports():
     rep = load_injury_reports()
     rep = rep[~rep["reason"].str.startswith(("Rest", "Health and Safety"))].copy()
     rep["text"] = rep["reason"].map(clean_reason)
+    rep = rep[~rep["text"].str.match(NON_INJURY)]
     lab, acc = classify_reasons(rep)
     return rep.merge(lab[["region", "type"]], left_on="text", right_index=True), lab, acc
 

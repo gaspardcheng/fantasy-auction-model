@@ -120,7 +120,6 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 101150,Lou Williams,25,2021-22,Hamstring / thigh,2022-02-06,2022-02-08,3,Soreness / tendinitis,Left Hamstring; Tension,False
 101150,Lou Williams,25,2021-22,Hip / groin,2022-02-25,2022-03-01,4,Soreness / tendinitis,Left Hip; Discomfort,False
 101161,Amir Johnson,22,2018-19,Illness,2019-01-11,2019-01-11,1,Illness,Migraine,False
-101161,Amir Johnson,22,2018-19,Illness,2019-01-31,2019-01-31,1,Illness,Personal reasons,False
 200746,LaMarcus Aldridge,22,2018-19,Illness,2019-02-06,2019-02-06,1,Illness,Load management,False
 200746,LaMarcus Aldridge,23,2019-20,Hamstring / thigh,2019-11-30,2019-12-03,3,Soreness / tendinitis,Right Thigh; Soreness,False
 200746,LaMarcus Aldridge,23,2019-20,Hand / wrist,2020-01-27,2020-01-29,2,Sprain,Right Thumb; Sprain,False
@@ -147,7 +146,6 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 200752,Rudy Gay,26,2022-23,Back / core,2023-03-24,2023-04-09,12,Soreness / tendinitis,Low Back; Soreness,True
 200752,Rudy Gay,26,2022-23,Hand / wrist,2022-11-15,2022-12-03,11,Sprain,Left Hand; Third MCP joint sprain,False
 200755,JJ Redick,22,2018-19,Back / core,2019-01-08,2019-01-08,1,Soreness / tendinitis,Back tightness,False
-200755,JJ Redick,22,2018-19,Back / core,2019-02-02,2019-02-02,1,Management,Rest,False
 200755,JJ Redick,22,2018-19,Back / core,2019-04-08,2019-04-08,1,Soreness / tendinitis,Back tightness,True
 200755,JJ Redick,22,2018-19,Hamstring / thigh,2019-04-09,2019-04-10,2,Contusion,Back tightness and left quad contusion,True
 200755,JJ Redick,23,2019-20,Foot / toe,2019-11-16,2019-11-16,1,Sprain,Left Great Toe; Sprain,False
@@ -262,8 +260,8 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 201143,Al Horford,29,2025-26,Foot / toe,2026-01-20,2026-01-26,2,Management,Left Toe; Injury Management,False
 201143,Al Horford,29,2025-26,Foot / toe,2026-02-24,2026-04-09,23,Strain,Right Soleus; Strain,True
 201144,Mike Conley,22,2018-19,Ankle,2019-03-31,2019-04-10,7,Soreness / tendinitis,Left ankle soreness,True
-201144,Mike Conley,22,2018-19,Back / core,2019-03-03,2019-03-03,1,Soreness / tendinitis,General soreness,False
-201144,Mike Conley,22,2018-19,Back / core,2019-03-22,2019-03-22,1,Soreness / tendinitis,General soreness,False
+201144,Mike Conley,22,2018-19,Hip / groin,2019-03-03,2019-03-03,1,Soreness / tendinitis,General soreness,False
+201144,Mike Conley,22,2018-19,Hip / groin,2019-03-22,2019-03-22,1,Soreness / tendinitis,General soreness,False
 201144,Mike Conley,22,2018-19,Knee,2019-02-01,2019-02-01,1,Soreness / tendinitis,Left knee soreness,False
 201144,Mike Conley,23,2019-20,Hamstring / thigh,2019-12-03,2020-01-16,25,Strain,Left Hamstring; Strain,False
 201144,Mike Conley,23,2019-20,Illness,2020-02-12,2020-02-12,1,Illness,N/A; Illness,False
@@ -381,7 +379,6 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 201568,Danilo Gallinari,25,2021-22,Shoulder / arm,2022-03-30,2022-03-30,1,Contusion,Right Elbow; Contusion,False
 201568,Danilo Gallinari,26,2022-23,Knee,2022-10-18,2023-05-29,174,Surgery,Left Knee; ACL Repair,True
 201568,Danilo Gallinari,27,2023-24,Back / core,2023-12-29,2023-12-31,3,Soreness / tendinitis,Back; Lower back spasm,False
-201568,Danilo Gallinari,27,2023-24,Illness,2023-11-25,2023-11-25,1,Illness,N/a; Rest,False
 201569,Eric Gordon,22,2018-19,Knee,2018-12-30,2019-01-14,13,Contusion,Right Knee Soreness,False
 201569,Eric Gordon,22,2018-19,Knee,2019-02-04,2019-02-04,1,Soreness / tendinitis,Right Knee Soreness,False
 201569,Eric Gordon,23,2019-20,Ankle,2020-07-30,2020-08-11,12,Sprain,Left Ankle; Sprain,True
@@ -550,12 +547,12 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 201939,Stephen Curry,26,2022-23,Lower leg,2023-02-05,2023-03-03,14,Sprain,Left Superior Tib/fib; Sprain,False
 201939,Stephen Curry,26,2022-23,Shoulder / arm,2022-11-04,2022-11-04,1,Soreness / tendinitis,Right Elbow; Soreness,False
 201939,Stephen Curry,26,2022-23,Shoulder / arm,2022-11-21,2022-11-21,1,Soreness / tendinitis,Right Elbow; Soreness,False
-201939,Stephen Curry,26,2022-23,Shoulder / arm,2022-12-15,2023-01-07,16,Soreness / tendinitis,Left Shoulder; Subluxation,False
+201939,Stephen Curry,26,2022-23,Shoulder / arm,2022-12-15,2023-01-07,16,Tear / rupture,Left Shoulder; Subluxation,False
 201939,Stephen Curry,27,2023-24,Ankle,2024-03-09,2024-03-13,4,Sprain,Right Ankle; Sprain,False
 201939,Stephen Curry,27,2023-24,Ankle,2024-04-14,2024-04-14,1,Sprain,Right Ankle; Sprain,True
 201939,Stephen Curry,27,2023-24,Knee,2023-11-14,2023-11-16,3,Strain,Right Knee; Strain,False
+201939,Stephen Curry,28,2024-25,Back / core,2024-10-28,2024-11-02,5,Strain,Left Peroneal; Strain,False
 201939,Stephen Curry,28,2024-25,Hamstring / thigh,2025-05-08,2025-05-14,4,Strain,Left Hamstring; Strain,True
-201939,Stephen Curry,28,2024-25,Hip / groin,2024-10-28,2024-11-02,5,Strain,Left Peroneal; Strain,False
 201939,Stephen Curry,28,2024-25,Hip / groin,2025-03-21,2025-03-22,2,Contusion,Left Pelvic; Contusion,False
 201939,Stephen Curry,28,2024-25,Knee,2024-11-27,2024-12-05,2,Soreness / tendinitis,Bilateral Knee; Patellofemoral Pain,False
 201939,Stephen Curry,28,2024-25,Knee,2024-12-27,2025-01-10,3,Management,Bilateral Knee; Injury Management,False
@@ -572,8 +569,8 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 201942,DeMar DeRozan,26,2022-23,Hamstring / thigh,2023-03-24,2023-03-24,1,Strain,Right Quadricep; Strain,False
 201942,DeMar DeRozan,28,2024-25,Back / core,2024-11-15,2024-11-29,5,Soreness / tendinitis,Lower Back; Tightness,False
 201942,DeMar DeRozan,29,2025-26,Hamstring / thigh,2026-03-29,2026-04-12,4,Strain,Right Hamstring; Soreness,True
-201949,James Johnson,22,2018-19,Ankle,2019-02-22,2019-02-28,4,Sprain,Slight Left AC Sprain,False
 201949,James Johnson,22,2018-19,Illness,2018-12-30,2018-12-30,1,Illness,Illness,False
+201949,James Johnson,22,2018-19,Shoulder / arm,2019-02-22,2019-02-28,4,Sprain,Slight Left AC Sprain,False
 201949,James Johnson,24,2020-21,Hip / groin,2021-04-20,2021-04-22,3,Strain,Right Adductor; Strain,False
 201949,James Johnson,25,2021-22,Illness,2022-01-16,2022-01-17,2,Illness,N/a; Illness (non-covid),False
 201949,James Johnson,25,2021-22,Illness,2022-04-06,2022-04-06,1,Illness,N/a; Illness (non-covid),True
@@ -719,7 +716,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 202324,Derrick Favors,25,2021-22,Back / core,2022-01-07,2022-01-28,4,Soreness / tendinitis,Low Back; Soreness,False
 202324,Derrick Favors,25,2021-22,Back / core,2022-03-04,2022-04-10,24,Soreness / tendinitis,Low Back; Soreness,True
 202324,Derrick Favors,25,2021-22,Illness,2021-11-29,2021-12-02,4,Illness,N/A; Non-COVID Illness,False
-202326,DeMarcus Cousins,22,2018-19,Achilles,2018-12-17,2019-01-16,22,Unspecified,Left Achilles Rehab,False
+202326,DeMarcus Cousins,22,2018-19,Achilles,2018-12-17,2019-01-16,22,Management,Left Achilles Rehab,False
 202326,DeMarcus Cousins,22,2018-19,Achilles,2019-02-27,2019-02-27,1,Management,"Return from injury management, Achilles",False
 202326,DeMarcus Cousins,22,2018-19,Achilles,2019-03-24,2019-04-10,3,Management,"Load Management, Return from Achilles Injury",True
 202326,DeMarcus Cousins,22,2018-19,Ankle,2019-03-18,2019-03-19,2,Soreness / tendinitis,Right Ankle Soreness,False
@@ -815,7 +812,6 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 202397,Ish Smith,24,2020-21,Hamstring / thigh,2021-02-13,2021-04-01,38,Strain,Right Quad; Right quadriceps strain,False
 202397,Ish Smith,26,2022-23,Lower leg,2022-11-06,2022-11-19,11,Strain,Right Calf; Strain,False
 202397,Ish Smith,27,2023-24,Illness,2023-11-01,2023-11-01,1,Illness,Return to Competition Reconditioning,False
-202498,Lance Thomas,22,2018-19,Illness,2019-04-08,2019-04-09,2,Illness,Personal reasons,True
 202681,Kyrie Irving,22,2018-19,Back / core,2019-03-30,2019-03-30,1,Soreness / tendinitis,Low Back Soreness,False
 202681,Kyrie Irving,22,2018-19,Hamstring / thigh,2019-01-14,2019-01-14,1,Contusion,Right Quad Contusion,False
 202681,Kyrie Irving,22,2018-19,Head / face,2019-01-02,2019-01-04,3,Soreness / tendinitis,Eye Inflammation,False
@@ -991,7 +987,6 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 202697,Iman Shumpert,22,2018-19,Lower leg,2019-02-28,2019-03-03,3,Soreness / tendinitis,Sore Right Calf,False
 202697,Iman Shumpert,23,2019-20,Knee,2019-12-10,2019-12-10,1,Soreness / tendinitis,Left Knee; Soreness,False
 202697,Iman Shumpert,24,2020-21,Hamstring / thigh,2021-02-08,2021-02-21,9,Strain,Left Hamstring; Strain,False
-202699,Tobias Harris,22,2018-19,Back / core,2019-04-10,2019-04-10,1,Management,Rest,True
 202699,Tobias Harris,23,2019-20,Ankle,2020-08-11,2020-08-11,1,Soreness / tendinitis,Right Ankle; Soreness,True
 202699,Tobias Harris,23,2019-20,Knee,2020-02-23,2020-02-23,1,Contusion,Right Knee; Contusion,False
 202699,Tobias Harris,24,2020-21,Knee,2021-02-26,2021-03-01,3,Contusion,Right Knee; Contusion,False
@@ -1032,7 +1027,6 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 202709,Cory Joseph,26,2022-23,Illness,2023-03-24,2023-03-24,1,Illness,Non-covid; Illness,False
 202709,Cory Joseph,26,2022-23,Knee,2023-01-19,2023-01-19,1,Soreness / tendinitis,Right Knee; Soreness,False
 202709,Cory Joseph,28,2024-25,Knee,2025-04-13,2025-04-13,1,Soreness / tendinitis,Left Knee; Soreness,True
-202710,Jimmy Butler,22,2018-19,Back / core,2019-03-11,2019-03-12,2,Management,Rest,False
 202710,Jimmy Butler,22,2018-19,Back / core,2019-04-01,2019-04-10,4,Soreness / tendinitis,Back tightness,True
 202710,Jimmy Butler,22,2018-19,Hand / wrist,2019-01-23,2019-01-26,3,Sprain,Sprained right wrist,False
 202710,Jimmy Butler,22,2018-19,Illness,2019-01-02,2019-01-05,2,Illness,Upper respiratory infection,False
@@ -1355,7 +1349,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 203210,JaMychal Green,26,2022-23,Lower leg,2022-12-30,2023-01-19,14,Soreness / tendinitis,Right Lower Leg; Infection,False
 203382,Aron Baynes,22,2018-19,Ankle,2019-03-22,2019-03-23,2,Sprain,Left Ankle Sprain,False
 203382,Aron Baynes,22,2018-19,Ankle,2019-04-08,2019-04-09,2,Soreness / tendinitis,Left Ankle Soreness,True
-203382,Aron Baynes,22,2018-19,Foot / toe,2018-12-20,2019-01-14,23,Fracture,Left Fourth Metacarpal Fracture,False
+203382,Aron Baynes,22,2018-19,Back / core,2018-12-20,2019-01-14,23,Fracture,Left Fourth Metacarpal Fracture,False
 203382,Aron Baynes,22,2018-19,Foot / toe,2019-02-02,2019-03-01,18,Contusion,Left Foot Contusion,False
 203382,Aron Baynes,23,2019-20,Hip / groin,2019-11-21,2019-11-27,5,Strain,Right Hip Flexor; Strain,False
 203382,Aron Baynes,23,2019-20,Hip / groin,2020-01-20,2020-02-12,17,Soreness / tendinitis,Left Hip; Soreness,False
@@ -1388,7 +1382,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 203459,Allen Crabbe,22,2018-19,Knee,2019-03-16,2019-04-23,29,Surgery,Right knee arthroscopy,True
 203459,Allen Crabbe,23,2019-20,Illness,2019-12-02,2019-12-02,1,Illness,Flu-like; Symptoms,False
 203459,Allen Crabbe,23,2019-20,Knee,2019-12-03,2019-12-04,2,Soreness / tendinitis,Right Knee; Soreness,False
-203459,Allen Crabbe,23,2019-20,Knee,2020-01-27,2020-02-03,3,Soreness / tendinitis,Left Patella; Subluxation,False
+203459,Allen Crabbe,23,2019-20,Knee,2020-01-27,2020-02-03,3,Tear / rupture,Left Patella; Subluxation,False
 203460,Andre Roberson,22,2018-19,Knee,2018-12-17,2019-04-23,80,Soreness / tendinitis,Left Patellar Tendon,True
 203460,Andre Roberson,23,2019-20,Ankle,2020-08-09,2020-08-09,1,Soreness / tendinitis,Right Ankle; Soreness,True
 203460,Andre Roberson,23,2019-20,Knee,2019-11-15,2020-03-11,74,Management,Left Knee; Injury Recovery,False
@@ -1411,7 +1405,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 203469,Cody Zeller,24,2020-21,Hip / groin,2021-02-26,2021-03-01,3,Contusion,Left Hip; Contusion,False
 203469,Cody Zeller,24,2020-21,Shoulder / arm,2021-03-19,2021-03-22,3,Soreness / tendinitis,Left Shoulder; Bursitis,False
 203469,Cody Zeller,25,2021-22,Knee,2021-12-12,2021-12-21,7,Fracture,Right Patellar; Fracture,False
-203469,Cody Zeller,25,2021-22,Knee,2022-01-13,2022-02-08,21,Surgery,Right Knee; patellar fracture,False
+203469,Cody Zeller,25,2021-22,Knee,2022-01-13,2022-02-08,21,Fracture,Right Knee; patellar fracture,False
 203469,Cody Zeller,26,2022-23,Head / face,2023-03-12,2023-03-25,11,Fracture,Nasal; Fracture,False
 203469,Cody Zeller,27,2023-24,Ankle,2023-12-23,2023-12-23,1,Sprain,Right Ankle; Sprain,False
 203471,Dennis Schroder,23,2019-20,Ankle,2019-12-28,2019-12-29,2,Soreness / tendinitis,Right Ankle; Soreness,False
@@ -1638,8 +1632,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 203516,James Ennis III,24,2020-21,Lower leg,2020-12-22,2021-01-04,12,Strain,Right Calf/hamstring; Strain,False
 203516,James Ennis III,24,2020-21,Lower leg,2021-02-26,2021-03-19,14,Soreness / tendinitis,Left Calf; Sore,False
 203516,James Ennis III,24,2020-21,Lower leg,2021-04-18,2021-05-16,22,Soreness / tendinitis,Right Calf; Sore,True
-203518,Alex Abrines,22,2018-19,Illness,2018-12-25,2018-12-31,5,Illness,Stomach illness,False
-203518,Alex Abrines,22,2018-19,Illness,2019-01-19,2019-01-19,1,Illness,Personal,False
+203518,Alex Abrines,22,2018-19,Illness,2018-12-25,2018-12-30,4,Illness,Stomach illness,False
 203521,Matthew Dellavedova,22,2018-19,Foot / toe,2019-01-04,2019-01-05,2,Sprain,Left Foot Sprain,False
 203521,Matthew Dellavedova,22,2018-19,Head / face,2019-03-08,2019-04-09,23,Unspecified,Concussion,True
 203521,Matthew Dellavedova,24,2020-21,Back / core,2021-03-12,2021-03-29,12,Surgery,Abdominal; Appendectomy,False
@@ -1743,10 +1736,9 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 203903,Jordan Clarkson,27,2023-24,Back / core,2024-03-27,2024-03-27,1,Soreness / tendinitis,Left Low Back; Soreness,False
 203903,Jordan Clarkson,27,2023-24,Hamstring / thigh,2023-12-02,2023-12-21,9,Strain,Right Hamstring; Strain,False
 203903,Jordan Clarkson,27,2023-24,Hand / wrist,2024-03-29,2024-03-31,2,Soreness / tendinitis,Left SI; Pain,False
-203903,Jordan Clarkson,27,2023-24,Hip / groin,2024-03-15,2024-03-23,6,Strain,Right Groin; Strain,False
+203903,Jordan Clarkson,27,2023-24,Hip / groin,2024-03-15,2024-04-14,13,Strain,Left SI; Inflammation,True
 203903,Jordan Clarkson,27,2023-24,Illness,2023-11-25,2023-11-25,1,Illness,N/A; Illness,False
 203903,Jordan Clarkson,27,2023-24,Illness,2024-03-02,2024-03-02,1,Illness,N/A; Illness,False
-203903,Jordan Clarkson,27,2023-24,Illness,2024-04-02,2024-04-14,7,Illness,Left SI; Inflammation,True
 203903,Jordan Clarkson,28,2024-25,Foot / toe,2024-11-02,2024-11-04,2,Soreness / tendinitis,Left Heel; Plantar Fasciitis,False
 203903,Jordan Clarkson,28,2024-25,Foot / toe,2024-11-21,2024-12-08,8,Soreness / tendinitis,Left Plantar; Fasciitis,False
 203903,Jordan Clarkson,28,2024-25,Foot / toe,2024-12-26,2025-04-13,38,Soreness / tendinitis,Left Plantar; Fasciitis,True
@@ -1776,7 +1768,6 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 203915,Spencer Dinwiddie,25,2021-22,Knee,2022-03-19,2022-03-30,2,Management,Right Knee; Injury Recovery,False
 203915,Spencer Dinwiddie,26,2022-23,Knee,2022-12-17,2022-12-17,1,Management,Right Knee; Injury Recovery,False
 203915,Spencer Dinwiddie,27,2023-24,Ankle,2023-10-31,2023-11-01,2,Sprain,Left Ankle; Sprain,False
-203917,Nik Stauskas,22,2018-19,Illness,2019-02-08,2019-02-08,1,Illness,Not with team,False
 203917,Nik Stauskas,22,2018-19,Knee,2019-01-29,2019-01-30,2,Unspecified,Left knee,False
 203917,Nik Stauskas,25,2021-22,Ankle,2022-04-02,2022-04-10,5,Sprain,Right Ankle; Sprain,True
 203918,Rodney Hood,22,2018-19,Achilles,2018-12-22,2019-01-09,9,Soreness / tendinitis,Left Achilles Tendon Soreness,False
@@ -1968,7 +1959,6 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 203953,Jabari Parker,23,2019-20,Illness,2020-01-04,2020-01-04,1,Illness,Throat; Infection,False
 203953,Jabari Parker,23,2019-20,Shoulder / arm,2019-12-29,2020-02-08,30,Soreness / tendinitis,Right Shoulder; Impingement,False
 203953,Jabari Parker,24,2020-21,Back / core,2020-12-23,2020-12-23,1,Soreness / tendinitis,Back; Tightness,False
-203954,Joel Embiid,22,2018-19,Back / core,2019-01-25,2019-01-26,2,Management,Rest,False
 203954,Joel Embiid,22,2018-19,Knee,2019-02-20,2019-04-19,26,Soreness / tendinitis,Left knee soreness,True
 203954,Joel Embiid,23,2019-20,Ankle,2020-08-10,2020-08-11,2,Unspecified,Left Ankle; Injury,True
 203954,Joel Embiid,23,2019-20,Hand / wrist,2020-01-08,2020-01-25,17,Tear / rupture,Left Hand; Torn radial collateral ligament,False
@@ -2049,7 +2039,6 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 203991,Clint Capela,28,2024-25,Back / core,2025-01-29,2025-02-04,7,Soreness / tendinitis,Back; Spasms,False
 203991,Clint Capela,28,2024-25,Foot / toe,2025-03-30,2025-03-30,1,Sprain,Left Fourth Metacarpal; Sprain,False
 203991,Clint Capela,28,2024-25,Hand / wrist,2025-03-26,2025-03-26,1,Unspecified,Left Fourth,False
-203991,Clint Capela,28,2024-25,Illness,2025-03-12,2025-03-18,6,Illness,N/A; Family Reasons,False
 203991,Clint Capela,28,2024-25,Knee,2025-01-23,2025-01-23,1,Soreness / tendinitis,Right Knee; Soreness,False
 203991,Clint Capela,28,2024-25,Knee,2025-03-21,2025-04-18,22,Sprain,Left Fourth Metacarpal; Ligament Sprain,True
 203991,Clint Capela,29,2025-26,Illness,2026-01-01,2026-01-01,1,Illness,N/a; Illness,False
@@ -2211,7 +2200,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1626157,Karl-Anthony Towns,22,2018-19,Knee,2019-04-10,2019-04-10,1,Soreness / tendinitis,Right Knee Inflammation,True
 1626157,Karl-Anthony Towns,23,2019-20,Hand / wrist,2020-02-20,2020-03-10,18,Fracture,Left Wrist; Fracture,False
 1626157,Karl-Anthony Towns,23,2019-20,Knee,2020-01-01,2020-01-13,3,Sprain,Left Knee; Sprain,False
-1626157,Karl-Anthony Towns,24,2020-21,Back / core,2020-12-29,2021-01-10,8,Soreness / tendinitis,Left Perilunate; Subluxation,False
+1626157,Karl-Anthony Towns,24,2020-21,Back / core,2020-12-29,2021-01-10,8,Tear / rupture,Left Perilunate; Subluxation,False
 1626157,Karl-Anthony Towns,25,2021-22,Illness,2022-01-03,2022-01-03,1,Illness,Return to Competition Reconditioning,False
 1626157,Karl-Anthony Towns,26,2022-23,Lower leg,2022-11-30,2023-03-27,71,Strain,Right Calf; Strain,False
 1626157,Karl-Anthony Towns,27,2023-24,Knee,2023-12-23,2023-12-23,1,Soreness / tendinitis,Left Knee; Soreness,False
@@ -2243,9 +2232,9 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1626159,Justise Winslow,22,2018-19,Knee,2019-02-23,2019-02-25,3,Soreness / tendinitis,Left Knee Soreness,False
 1626159,Justise Winslow,23,2019-20,Back / core,2019-12-08,2020-03-10,57,Strain,Lower Back; Bone Bruise,False
 1626159,Justise Winslow,23,2019-20,Head / face,2019-11-08,2019-11-25,10,Illness,Head; Concussion,False
-1626159,Justise Winslow,23,2019-20,Hip / groin,2020-07-30,2020-08-15,16,Management,Left Hip; Displacement,True
+1626159,Justise Winslow,23,2019-20,Hip / groin,2020-07-30,2020-08-15,16,Fracture,Left Hip; Displacement,True
 1626159,Justise Winslow,24,2020-21,Hamstring / thigh,2021-03-31,2021-04-17,14,Soreness / tendinitis,Right Thigh; Soreness,False
-1626159,Justise Winslow,24,2020-21,Hip / groin,2020-12-23,2021-02-26,32,Management,Left Hip; Displacement,False
+1626159,Justise Winslow,24,2020-21,Hip / groin,2020-12-23,2021-02-26,32,Fracture,Left Hip; Displacement,False
 1626159,Justise Winslow,24,2020-21,Hip / groin,2021-03-15,2021-03-15,1,Management,Left Hip; Rtn From Injury Management,False
 1626159,Justise Winslow,25,2021-22,Achilles,2022-02-27,2022-03-20,9,Soreness / tendinitis,Right Achilles; soreness,False
 1626159,Justise Winslow,25,2021-22,Lower leg,2022-03-25,2022-04-10,11,Soreness / tendinitis,Left Calf; inflammation,True
@@ -2333,7 +2322,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1626167,Myles Turner,29,2025-26,Knee,2026-03-29,2026-03-29,1,Soreness / tendinitis,Right Patella; Tendonopathy,False
 1626167,Myles Turner,29,2025-26,Lower leg,2026-02-20,2026-02-20,1,Strain,Right Calf; Strain,False
 1626168,Trey Lyles,22,2018-19,Hamstring / thigh,2019-02-22,2019-03-12,10,Strain,Left hamstring strain,False
-1626168,Trey Lyles,23,2019-20,Illness,2020-07-31,2020-08-13,14,Illness,""" ""; Appendectomy",True
+1626168,Trey Lyles,23,2019-20,Back / core,2020-07-31,2020-08-13,14,Surgery,""" ""; Appendectomy",True
 1626168,Trey Lyles,24,2020-21,Ankle,2021-03-31,2021-05-16,36,Sprain,Right Ankle; Sprain,True
 1626168,Trey Lyles,25,2021-22,Illness,2021-12-31,2022-01-01,2,Illness,Return to Competition Reconditioning,False
 1626168,Trey Lyles,26,2022-23,Illness,2022-11-28,2022-11-30,2,Illness,N/a; Non-COVID related illness,False
@@ -2353,10 +2342,11 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1626171,Bobby Portis,28,2024-25,Shoulder / arm,2024-11-15,2024-11-15,1,Contusion,Right Elbow; Contusion,False
 1626171,Bobby Portis,29,2025-26,Hand / wrist,2026-03-28,2026-04-12,12,Sprain,Left Wrist; Sprain,True
 1626171,Bobby Portis,29,2025-26,Hip / groin,2026-02-04,2026-02-04,1,Contusion,Right Hip; Contusion,False
-1626172,Kevon Looney,22,2018-19,Foot / toe,2019-06-05,2019-06-05,1,Fracture,Right 1st Costal Cartilage Non - displaced Fracture,True
+1626172,Kevon Looney,22,2018-19,Back / core,2019-06-05,2019-06-05,1,Fracture,Right 1st Costal Cartilage Non - displaced Fracture,True
 1626172,Kevon Looney,22,2018-19,Hip / groin,2019-03-02,2019-03-05,3,Soreness / tendinitis,Right Pelvic Soreness,False
-1626172,Kevon Looney,23,2019-20,Back / core,2019-11-15,2019-12-01,14,Illness,General; Neuropathy,False
+1626172,Kevon Looney,23,2019-20,Back / core,2019-11-15,2019-11-15,1,Unspecified,Neuropathy,False
 1626172,Kevon Looney,23,2019-20,Back / core,2019-12-24,2020-01-30,29,Soreness / tendinitis,Left Abdominal; Soreness,False
+1626172,Kevon Looney,23,2019-20,Foot / toe,2019-11-17,2019-12-01,13,Illness,General; Neuropathy,False
 1626172,Kevon Looney,23,2019-20,Hip / groin,2020-03-05,2020-03-11,5,Soreness / tendinitis,Left Hip; Soreness,False
 1626172,Kevon Looney,24,2020-21,Ankle,2021-02-03,2021-02-20,13,Sprain,Left Ankle; Sprain,False
 1626172,Kevon Looney,28,2024-25,Illness,2024-11-18,2024-11-18,1,Illness,N/a; Illness,False
@@ -2391,14 +2381,14 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1626179,Terry Rozier,28,2024-25,Illness,2025-02-13,2025-02-13,1,Illness,Stomach; Illness,False
 1626179,Terry Rozier,28,2024-25,Illness,2025-04-03,2025-04-03,1,Illness,Stomach; Gastroenteritis,False
 1626181,Norman Powell,23,2019-20,Hand / wrist,2020-02-01,2020-02-25,17,Fracture,Left Finger; Fourth - metacarpal fracture,False
-1626181,Norman Powell,23,2019-20,Shoulder / arm,2019-12-19,2020-01-08,19,Soreness / tendinitis,Left Shoulder; Subluxation,False
+1626181,Norman Powell,23,2019-20,Shoulder / arm,2019-12-19,2020-01-08,19,Tear / rupture,Left Shoulder; Subluxation,False
 1626181,Norman Powell,24,2020-21,Hamstring / thigh,2021-01-30,2021-01-31,2,Contusion,Right Quadriceps; Contusion,False
 1626181,Norman Powell,25,2021-22,Foot / toe,2022-02-14,2022-04-10,24,Fracture,Left Foot; Fractured Medial Sesamoid Bone,True
 1626181,Norman Powell,25,2021-22,Hamstring / thigh,2021-11-29,2021-11-30,2,Contusion,Right Quad; Contusion,False
 1626181,Norman Powell,25,2021-22,Knee,2021-10-25,2021-10-25,1,Soreness / tendinitis,Left Patellar; Tendonipathy,False
 1626181,Norman Powell,26,2022-23,Hip / groin,2022-11-30,2022-12-17,13,Strain,Left Groin; Strain,False
 1626181,Norman Powell,26,2022-23,Knee,2023-02-16,2023-02-16,1,Management,Right Knee; Injury Management,False
-1626181,Norman Powell,26,2022-23,Shoulder / arm,2023-03-03,2023-03-27,11,Soreness / tendinitis,Left Shoulder; Subluxation,False
+1626181,Norman Powell,26,2022-23,Shoulder / arm,2023-03-03,2023-03-27,11,Tear / rupture,Left Shoulder; Subluxation,False
 1626181,Norman Powell,28,2024-25,Back / core,2025-01-22,2025-01-22,1,Soreness / tendinitis,Back; Soreness,False
 1626181,Norman Powell,28,2024-25,Hamstring / thigh,2024-11-20,2024-12-04,6,Strain,Left Hamstring; Strain,False
 1626181,Norman Powell,28,2024-25,Hamstring / thigh,2025-03-04,2025-03-14,8,Strain,Right Hamstring; Strain,False
@@ -2460,9 +2450,8 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1626204,Larry Nance Jr.,27,2023-24,Back / core,2023-11-13,2023-12-26,24,Fracture,Right Rib; Fracture,False
 1626204,Larry Nance Jr.,27,2023-24,Illness,2024-03-16,2024-03-16,1,Illness,Non-COVID; Illness,False
 1626204,Larry Nance Jr.,28,2024-25,Hand / wrist,2024-12-29,2025-01-23,17,Surgery,Right Hand; Surgery,False
-1626204,Larry Nance Jr.,28,2024-25,Hip / groin,2025-03-16,2025-03-16,1,Unspecified,Right Medial Femoral,False
+1626204,Larry Nance Jr.,28,2024-25,Hip / groin,2025-02-19,2025-04-18,49,Fracture,Right Medial Femoral Condyle; Fracture,True
 1626204,Larry Nance Jr.,28,2024-25,Knee,2025-02-11,2025-02-12,2,Unspecified,Right Knee; Injury,False
-1626204,Larry Nance Jr.,28,2024-25,Lower leg,2025-02-19,2025-04-18,48,Fracture,Right Medial Femoral Condyle; Fracture,True
 1626204,Larry Nance Jr.,29,2025-26,Illness,2026-05-16,2026-05-17,2,Illness,Illness; Illness,True
 1626204,Larry Nance Jr.,29,2025-26,Lower leg,2025-11-29,2026-01-06,31,Strain,Right Calf; Strain,False
 1626209,Mario Hezonja,22,2018-19,Lower leg,2019-02-14,2019-03-12,11,Unspecified,Contused left leg,False
@@ -2484,7 +2473,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1626246,Boban Marjanovic,22,2018-19,Knee,2019-02-27,2019-03-10,11,Sprain,"Bone bruise, mild sprain, right knee",False
 1626253,Axel Toupane,24,2020-21,Back / core,2021-04-27,2021-05-15,14,Strain,Right Oblique Muscle; Strain,True
 1626259,Malcolm Miller,23,2019-20,Back / core,2020-01-30,2020-02-02,3,Strain,Neck; Strain,False
-1627732,Ben Simmons,22,2018-19,Head / face,2019-04-10,2019-04-10,1,Unspecified,Dental procedure,True
+1627732,Ben Simmons,22,2018-19,Head / face,2019-04-10,2019-04-10,1,Surgery,Dental procedure,True
 1627732,Ben Simmons,22,2018-19,Illness,2019-03-25,2019-03-25,1,Illness,Gastroenteritis,False
 1627732,Ben Simmons,23,2019-20,Back / core,2020-02-20,2020-03-11,13,Soreness / tendinitis,"Back; Nerve impingement, lower back",False
 1627732,Ben Simmons,23,2019-20,Knee,2020-08-06,2020-08-23,17,Surgery,Left Knee; surgery,True
@@ -2528,7 +2517,6 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1627734,Domantas Sabonis,29,2025-26,Back / core,2026-02-01,2026-02-09,4,Soreness / tendinitis,Lower Back; Soreness,False
 1627734,Domantas Sabonis,29,2025-26,Hamstring / thigh,2025-10-22,2025-10-22,1,Strain,Right Hamstring; Strain,False
 1627734,Domantas Sabonis,29,2025-26,Knee,2025-11-18,2026-04-12,64,Surgery,Left Knee; Meniscus Repair,True
-1627735,Wade Baldwin IV,22,2018-19,Illness,2019-02-08,2019-02-08,1,Illness,Not with team,False
 1627736,Malik Beasley,24,2020-21,Hamstring / thigh,2021-04-03,2021-05-16,26,Soreness / tendinitis,Left Hamstring; Injury,True
 1627736,Malik Beasley,25,2021-22,Ankle,2022-03-26,2022-03-30,4,Sprain,Left Ankle; Sprain,False
 1627736,Malik Beasley,27,2023-24,Illness,2023-12-16,2023-12-17,2,Illness,Non-covid; Illness,False
@@ -2663,7 +2651,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1627752,Taurean Prince,24,2020-21,Ankle,2021-04-23,2021-05-16,20,Surgery,Left Ankle; Surgery,True
 1627752,Taurean Prince,24,2020-21,Shoulder / arm,2021-03-12,2021-03-27,13,Sprain,Left Shoulder; Sprain,False
 1627752,Taurean Prince,26,2022-23,Ankle,2023-01-25,2023-01-28,3,Sprain,Left Ankle; Sprain,False
-1627752,Taurean Prince,26,2022-23,Shoulder / arm,2022-11-24,2023-01-02,29,Soreness / tendinitis,Right Shoulder; Subluxation,False
+1627752,Taurean Prince,26,2022-23,Shoulder / arm,2022-11-24,2023-01-02,29,Tear / rupture,Right Shoulder; Subluxation,False
 1627752,Taurean Prince,27,2023-24,Knee,2023-11-04,2023-11-04,1,Soreness / tendinitis,Left Patellar; Tendonitis,False
 1627752,Taurean Prince,27,2023-24,Knee,2024-01-21,2024-01-21,1,Soreness / tendinitis,Left Knee; Soreness,False
 1627752,Taurean Prince,28,2024-25,Ankle,2025-02-21,2025-02-21,1,Sprain,Left Ankle; Sprain,False
@@ -2688,7 +2676,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1627759,Jaylen Brown,25,2021-22,Hamstring / thigh,2021-11-06,2021-12-10,16,Strain,Right Hamstring; Strain,False
 1627759,Jaylen Brown,25,2021-22,Knee,2021-10-24,2021-10-24,1,Soreness / tendinitis,Left Patella; Tendinopathy,False
 1627759,Jaylen Brown,25,2021-22,Knee,2022-03-28,2022-03-28,1,Soreness / tendinitis,Right Knee; Tendinopathy,False
-1627759,Jaylen Brown,26,2022-23,Hand / wrist,2023-04-07,2023-04-09,3,Soreness / tendinitis,Right Finger; Laceration,True
+1627759,Jaylen Brown,26,2022-23,Hand / wrist,2023-04-07,2023-04-09,3,Surgery,Right Finger; Laceration,True
 1627759,Jaylen Brown,26,2022-23,Head / face,2023-02-09,2023-02-15,6,Fracture,Facial; Fracture,False
 1627759,Jaylen Brown,26,2022-23,Hip / groin,2023-01-13,2023-01-24,5,Soreness / tendinitis,Right Adductor; Tightness,False
 1627759,Jaylen Brown,27,2023-24,Ankle,2024-03-17,2024-03-23,2,Sprain,Right Ankle; Sprain,False
@@ -2924,11 +2912,10 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1627936,Alex Caruso,27,2023-24,Foot / toe,2023-11-13,2023-11-13,1,Strain,Left Toe; Strain,False
 1627936,Alex Caruso,28,2024-25,Ankle,2025-02-01,2025-02-03,2,Sprain,Left Ankle; Sprain,False
 1627936,Alex Caruso,28,2024-25,Ankle,2025-03-04,2025-03-05,2,Sprain,Left Ankle; Sprain,False
-1627936,Alex Caruso,28,2024-25,Ankle,2025-04-11,2025-04-11,1,Sprain,Right Ankle; Sprain,True
+1627936,Alex Caruso,28,2024-25,Ankle,2025-04-11,2025-04-13,2,Sprain,Right Ankle; Sprain,True
 1627936,Alex Caruso,28,2024-25,Hip / groin,2024-11-13,2024-12-03,11,Strain,Right Hip; Strain,False
 1627936,Alex Caruso,28,2024-25,Hip / groin,2024-12-25,2025-01-12,15,Strain,Left Hip; Strain,False
 1627936,Alex Caruso,28,2024-25,Hip / groin,2025-02-13,2025-02-13,1,Soreness / tendinitis,Left Hip; Tightness,False
-1627936,Alex Caruso,28,2024-25,Knee,2025-04-13,2025-04-13,1,Sprain,Right Anke; Sprain,True
 1627936,Alex Caruso,29,2025-26,Ankle,2026-02-22,2026-02-25,2,Sprain,Left Ankle; Sprain,False
 1627936,Alex Caruso,29,2025-26,Back / core,2026-01-05,2026-01-07,2,Soreness / tendinitis,Low Back; Soreness,False
 1627936,Alex Caruso,29,2025-26,Hamstring / thigh,2025-11-30,2025-12-07,4,Contusion,Right Quad; Soreness,False
@@ -2942,8 +2929,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1628021,David Nwaba,24,2020-21,Hand / wrist,2021-03-02,2021-05-16,58,Sprain,Right Wrist; Sprain,True
 1628035,Alfonzo McKinnie,23,2019-20,Foot / toe,2020-02-20,2020-03-04,13,Soreness / tendinitis,Left Foot; Plantar Fasciitis,False
 1628035,Alfonzo McKinnie,25,2021-22,Illness,2022-01-01,2022-01-01,1,Illness,Return to Competition Reconditioning,False
-1628365,Markelle Fultz,22,2018-19,Back / core,2018-12-17,2019-04-23,90,Unspecified,Thoracic outlet syndrome,True
-1628365,Markelle Fultz,22,2018-19,Head / face,2019-03-01,2019-03-10,7,Unspecified,TOS,False
+1628365,Markelle Fultz,22,2018-19,Shoulder / arm,2018-12-17,2019-04-23,97,Unspecified,Thoracic outlet syndrome,True
 1628365,Markelle Fultz,23,2019-20,Illness,2019-12-12,2019-12-12,1,Illness,Stomach; Virus,False
 1628365,Markelle Fultz,24,2020-21,Knee,2021-01-07,2021-05-16,114,Tear / rupture,Left Knee; Torn ACL,True
 1628365,Markelle Fultz,25,2021-22,Knee,2021-10-19,2022-03-23,109,Management,Left Knee; Injury recovery,False
@@ -3069,8 +3055,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1628372,Dennis Smith Jr.,27,2023-24,Hip / groin,2023-10-31,2023-10-31,1,Contusion,Left Hip; Contusion,False
 1628372,Dennis Smith Jr.,27,2023-24,Hip / groin,2024-03-24,2024-04-14,15,Soreness / tendinitis,Right Hip; Synovitis,True
 1628373,Frank Ntilikina,22,2018-19,Ankle,2019-01-07,2019-01-11,4,Sprain,Sprained left ankle,False
-1628373,Frank Ntilikina,22,2018-19,Hip / groin,2019-01-28,2019-04-10,51,Soreness / tendinitis,Sore groin,True
-1628373,Frank Ntilikina,22,2018-19,Illness,2019-03-05,2019-03-06,2,Illness,Sore groun,False
+1628373,Frank Ntilikina,22,2018-19,Hip / groin,2019-01-28,2019-04-10,53,Soreness / tendinitis,Sore groin,True
 1628373,Frank Ntilikina,23,2019-20,Hip / groin,2020-01-12,2020-01-14,2,Soreness / tendinitis,Groin; Sore,False
 1628373,Frank Ntilikina,23,2019-20,Hip / groin,2020-02-01,2020-02-01,1,Soreness / tendinitis,Groin; Sore,False
 1628373,Frank Ntilikina,23,2019-20,Hip / groin,2020-02-24,2020-02-27,4,Soreness / tendinitis,Bilateral Groin; Sore,False
@@ -3088,7 +3073,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1628373,Frank Ntilikina,26,2022-23,Knee,2023-03-29,2023-03-29,1,Sprain,Right Knee; Sprain,False
 1628373,Frank Ntilikina,27,2023-24,Hip / groin,2024-02-04,2024-02-07,3,Soreness / tendinitis,Right Hip; Impingement,False
 1628373,Frank Ntilikina,27,2023-24,Lower leg,2023-10-24,2024-01-14,60,Fracture,Left Tibia; Non- displaced fracture,False
-1628374,Lauri Markkanen,22,2018-19,Illness,2019-03-27,2019-04-10,12,Illness,Medical assessment,True
+1628374,Lauri Markkanen,22,2018-19,Illness,2019-03-27,2019-03-27,1,Illness,Injury/Illness,False
 1628374,Lauri Markkanen,23,2019-20,Hip / groin,2020-01-24,2020-03-02,26,Fracture,Right Pelvis; Stress Reaction,False
 1628374,Lauri Markkanen,24,2020-21,Shoulder / arm,2021-02-06,2021-03-03,20,Sprain,Right Acromioclavicular; Sprain,False
 1628374,Lauri Markkanen,25,2021-22,Ankle,2022-01-23,2022-02-15,19,Sprain,Right Ankle; Sprain,False
@@ -3192,7 +3177,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1628381,John Collins,29,2025-26,Back / core,2026-02-22,2026-03-13,9,Strain,Neck; Strain,False
 1628383,Justin Patton,22,2018-19,Foot / toe,2018-12-17,2019-02-04,38,Surgery,Right foot surgery,False
 1628383,Justin Patton,22,2018-19,Foot / toe,2019-03-15,2019-03-15,1,Soreness / tendinitis,Right midfoot soreness,False
-1628384,OG Anunoby,22,2018-19,Back / core,2019-04-12,2019-05-25,36,Unspecified,Appendectomy,True
+1628384,OG Anunoby,22,2018-19,Back / core,2019-04-12,2019-05-25,36,Surgery,Appendectomy,True
 1628384,OG Anunoby,22,2018-19,Head / face,2019-03-28,2019-04-03,6,Unspecified,Concussion - like symptoms,True
 1628384,OG Anunoby,23,2019-20,Knee,2020-08-12,2020-08-14,2,Soreness / tendinitis,Right Knee; Soreness,True
 1628384,OG Anunoby,24,2020-21,Knee,2021-04-16,2021-04-16,1,Soreness / tendinitis,Right Knee; Swelling,False
@@ -3207,7 +3192,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1628384,O.G. Anunoby,26,2022-23,Hand / wrist,2023-01-28,2023-02-14,16,Sprain,Left Wrist; Sprain,False
 1628384,O.G. Anunoby,26,2022-23,Hip / groin,2022-12-11,2022-12-18,7,Strain,Left Hip; Strain,False
 1628384,OG Anunoby,27,2023-24,Hamstring / thigh,2024-05-09,2024-05-17,8,Strain,Left Hamstring; Strain,True
-1628384,OG Anunoby,27,2023-24,Hand / wrist,2023-11-14,2023-11-17,4,Soreness / tendinitis,Right Finger; laceration,False
+1628384,OG Anunoby,27,2023-24,Hand / wrist,2023-11-14,2023-11-17,4,Surgery,Right Finger; laceration,False
 1628384,OG Anunoby,27,2023-24,Shoulder / arm,2024-02-05,2024-04-04,42,Surgery,Right Elbow; Surgery,False
 1628384,OG Anunoby,28,2024-25,Foot / toe,2025-02-03,2025-02-08,4,Sprain,Right Foot; Sprain,False
 1628384,OG Anunoby,28,2024-25,Hand / wrist,2025-04-09,2025-04-13,3,Sprain,Right Thumb; Sprain,True
@@ -3337,7 +3322,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1628402,Frank Jackson,25,2021-22,Illness,2022-01-13,2022-01-23,6,Illness,Return to Competition Reconditioning,False
 1628403,Caleb Swanigan,23,2019-20,Ankle,2019-11-15,2019-11-17,2,Sprain,Left Ankle; Left Ankle Sprain,False
 1628404,Josh Hart,22,2018-19,Knee,2019-02-11,2019-02-12,2,Soreness / tendinitis,Right knee patellar tendinitis,False
-1628404,Josh Hart,22,2018-19,Knee,2019-03-22,2019-04-09,11,Soreness / tendinitis,Right knee debridement procedure,True
+1628404,Josh Hart,22,2018-19,Knee,2019-03-22,2019-04-09,11,Surgery,Right knee debridement procedure,True
 1628404,Josh Hart,23,2019-20,Ankle,2019-11-19,2019-11-21,2,Sprain,Left Ankle; Sprain,False
 1628404,Josh Hart,23,2019-20,Knee,2019-11-15,2019-11-17,3,Sprain,Left Knee/Ankle; Sprain,False
 1628404,Josh Hart,24,2020-21,Hand / wrist,2021-04-02,2021-05-16,37,Surgery,Right Thumb; Surgery,True
@@ -3386,7 +3371,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1628415,Dillon Brooks,27,2023-24,Hip / groin,2024-04-14,2024-04-14,1,Soreness / tendinitis,Left Adductor; Soreness,True
 1628415,Dillon Brooks,28,2024-25,Ankle,2024-12-26,2024-12-27,2,Soreness / tendinitis,Right Ankle; Soreness,False
 1628415,Dillon Brooks,29,2025-26,Back / core,2025-10-31,2025-11-06,4,Strain,Core Muscle; Strain,False
-1628415,Dillon Brooks,29,2025-26,Foot / toe,2026-04-12,2026-04-12,1,Management,Left 2nd Metacarpal; Injury Management,True
+1628415,Dillon Brooks,29,2025-26,Back / core,2026-04-12,2026-04-12,1,Management,Left 2nd Metacarpal; Injury Management,True
 1628415,Dillon Brooks,29,2025-26,Hand / wrist,2026-02-22,2026-03-30,19,Fracture,Left Hand; Fracture,False
 1628415,Dillon Brooks,29,2025-26,Hip / groin,2025-10-29,2025-10-29,1,Soreness / tendinitis,Right Groin; Soreness,False
 1628416,Tyler Dorsey,22,2018-19,Knee,2019-01-30,2019-01-30,1,Contusion,Left knee contusion,False
@@ -3524,7 +3509,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1628960,Grayson Allen,22,2018-19,Ankle,2018-12-24,2019-01-11,13,Sprain,Ankle sprain - right,False
 1628960,Grayson Allen,23,2019-20,Ankle,2019-11-15,2019-11-19,4,Soreness / tendinitis,Left Ankle; Soreness,False
 1628960,Grayson Allen,23,2019-20,Ankle,2019-12-11,2019-12-16,6,Soreness / tendinitis,Right Ankle; Soreness,False
-1628960,Grayson Allen,23,2019-20,Hip / groin,2020-01-26,2020-03-10,26,Soreness / tendinitis,Left Hip; Injury,False
+1628960,Grayson Allen,23,2019-20,Hip / groin,2020-01-26,2020-03-10,26,Fracture,Left Hip; Injury,False
 1628960,Grayson Allen,24,2020-21,Ankle,2020-12-31,2021-01-01,2,Sprain,Left Ankle; sprain,False
 1628960,Grayson Allen,24,2020-21,Back / core,2021-05-06,2021-05-16,8,Soreness / tendinitis,Left Abdominal; Soreness,True
 1628960,Grayson Allen,24,2020-21,Hand / wrist,2021-04-30,2021-05-01,2,Unspecified,Left Hand; Injury,False
@@ -3560,7 +3545,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1628963,Marvin Bagley III,23,2019-20,Foot / toe,2020-01-22,2020-03-11,28,Soreness / tendinitis,Left Foot; Soreness,False
 1628963,Marvin Bagley III,23,2019-20,Foot / toe,2020-07-30,2020-08-13,15,Sprain,Right Foot; Sprain,True
 1628963,Marvin Bagley III,23,2019-20,Hand / wrist,2019-11-15,2019-12-06,15,Fracture,Right Thumb; Fracture,False
-1628963,Marvin Bagley III,24,2020-21,Foot / toe,2021-03-16,2021-04-28,27,Fracture,Left 4th Metacarpal; Fracture,False
+1628963,Marvin Bagley III,24,2020-21,Back / core,2021-03-16,2021-04-28,27,Fracture,Left 4th Metacarpal; Fracture,False
 1628963,Marvin Bagley III,24,2020-21,Hip / groin,2021-05-12,2021-05-16,4,Soreness / tendinitis,Right Groin; Tightness,True
 1628963,Marvin Bagley III,25,2021-22,Ankle,2022-01-30,2022-02-03,4,Sprain,Left Ankle; Sprain,False
 1628963,Marvin Bagley III,25,2021-22,Ankle,2022-02-27,2022-03-03,4,Sprain,Left Ankle; Sprain,False
@@ -3667,7 +3652,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1628976,Wendell Carter Jr.,26,2022-23,Foot / toe,2022-11-21,2022-12-21,25,Strain,Right Plantar Fascia; Strain,False
 1628976,Wendell Carter Jr.,26,2022-23,Hip / groin,2023-03-05,2023-03-09,4,Soreness / tendinitis,Left Hip; Pain,False
 1628976,Wendell Carter Jr.,26,2022-23,Hip / groin,2023-04-06,2023-04-07,2,Soreness / tendinitis,Left Hip; Soreness,True
-1628976,Wendell Carter Jr.,27,2023-24,Foot / toe,2023-11-13,2023-12-02,8,Fracture,Left Third Metacarpal; Fracture,False
+1628976,Wendell Carter Jr.,27,2023-24,Back / core,2023-11-13,2023-12-02,8,Fracture,Left Third Metacarpal; Fracture,False
 1628976,Wendell Carter Jr.,27,2023-24,Hand / wrist,2023-11-03,2023-12-17,28,Fracture,Left Hand; Fractured third metacarpal,False
 1628976,Wendell Carter Jr.,27,2023-24,Knee,2024-01-07,2024-01-13,4,Soreness / tendinitis,Right Knee; Tendinitis,False
 1628976,Wendell Carter Jr.,28,2024-25,Foot / toe,2024-11-04,2024-11-25,17,Strain,Left Foot; Plantar fasciitis,False
@@ -3905,11 +3890,11 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1629011,Mitchell Robinson,27,2023-24,Ankle,2023-12-10,2024-03-26,87,Surgery,Left Ankle; Surgery,False
 1629011,Mitchell Robinson,27,2023-24,Ankle,2024-04-28,2024-05-19,13,Surgery,Left Ankle; Surgery,True
 1629011,Mitchell Robinson,28,2024-25,Ankle,2024-10-22,2025-04-13,102,Surgery,Left Ankle; Surgery,True
-1629011,Mitchell Robinson,29,2025-26,Ankle,2025-10-21,2025-11-03,8,Soreness / tendinitis,Left Ankle; Left Ankle Injury Management,False
+1629011,Mitchell Robinson,29,2025-26,Ankle,2025-10-21,2025-11-03,8,Sprain,Left Ankle; Left Ankle Injury Management,False
 1629011,Mitchell Robinson,29,2025-26,Ankle,2025-12-03,2025-12-03,1,Management,Left Ankle; Left Ankle Injury Management,False
 1629011,Mitchell Robinson,29,2025-26,Ankle,2025-12-18,2025-12-31,3,Management,Left Ankle; Left Ankle Injury Management,False
-1629011,Mitchell Robinson,29,2025-26,Ankle,2026-01-15,2026-03-09,8,Soreness / tendinitis,Left Ankle; Left Ankle Injury Management,False
-1629011,Mitchell Robinson,29,2025-26,Ankle,2026-04-01,2026-04-12,4,Soreness / tendinitis,Left Ankle; Left Ankle Injury Management,True
+1629011,Mitchell Robinson,29,2025-26,Ankle,2026-01-15,2026-03-09,8,Sprain,Left Ankle; Left Ankle Injury Management,False
+1629011,Mitchell Robinson,29,2025-26,Ankle,2026-04-01,2026-04-12,4,Sprain,Left Ankle; Left Ankle Injury Management,True
 1629011,Mitchell Robinson,29,2025-26,Illness,2025-11-24,2025-11-24,1,Illness,Illness; Illness,False
 1629012,Collin Sexton,24,2020-21,Ankle,2021-01-12,2021-01-15,3,Sprain,Left Ankle; Sprain,False
 1629012,Collin Sexton,24,2020-21,Hamstring / thigh,2021-03-24,2021-03-24,1,Soreness / tendinitis,Right Hamstring; Soreness,False
@@ -4165,7 +4150,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1629057,Robert Williams III,22,2018-19,Illness,2019-03-18,2019-03-18,1,Illness,Illness,False
 1629057,Robert Williams III,23,2019-20,Hip / groin,2019-12-08,2020-02-26,65,Soreness / tendinitis,Left Hip; Bone Edema,False
 1629057,Robert Williams III,24,2020-21,Ankle,2021-05-29,2021-06-01,4,Sprain,Left Ankle; Sprain,True
-1629057,Robert Williams III,24,2020-21,Foot / toe,2021-05-11,2021-05-16,4,Management,Left Foot; Turf Toe,True
+1629057,Robert Williams III,24,2020-21,Foot / toe,2021-05-11,2021-05-16,4,Sprain,Left Foot; Turf Toe,True
 1629057,Robert Williams III,24,2020-21,Hip / groin,2021-02-11,2021-02-12,2,Soreness / tendinitis,Left Hip; Soreness,False
 1629057,Robert Williams III,24,2020-21,Illness,2020-12-25,2020-12-25,1,Illness,Illness; Illness,False
 1629057,Robert Williams III,24,2020-21,Knee,2021-04-17,2021-04-27,9,Soreness / tendinitis,Left Knee; Soreness,False
@@ -4248,7 +4233,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1629130,Duncan Robinson,27,2023-24,Head / face,2024-01-30,2024-02-04,6,Unspecified,Concussion Protocol,False
 1629130,Duncan Robinson,27,2023-24,Head / face,2024-03-21,2024-04-14,13,Soreness / tendinitis,Left Facet; Syndrome,True
 1629130,Duncan Robinson,28,2024-25,Foot / toe,2024-12-29,2024-12-29,1,Soreness / tendinitis,Right Foot; Inflammation,False
-1629130,Duncan Robinson,28,2024-25,Hip / groin,2025-03-28,2025-04-02,6,Soreness / tendinitis,Left sacroiliac joint; Dysfunction,False
+1629130,Duncan Robinson,28,2024-25,Hip / groin,2025-03-28,2025-04-02,6,Tear / rupture,Left sacroiliac joint; Dysfunction,False
 1629130,Duncan Robinson,29,2025-26,Hip / groin,2026-03-30,2026-04-06,2,Strain,Right Hip; Injury Management,True
 1629134,Kendrick Nunn,23,2019-20,Illness,2020-08-12,2020-08-12,1,Illness,throat; sore,True
 1629134,Kendrick Nunn,24,2020-21,Ankle,2021-03-28,2021-03-31,3,Sprain,Right Ankle; Sprain,False
@@ -4441,7 +4426,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1629630,Ja Morant,27,2023-24,Shoulder / arm,2024-01-09,2024-04-14,56,Surgery,Right Shoulder; Labral Repair,True
 1629630,Ja Morant,28,2024-25,Back / core,2024-12-20,2024-12-21,2,Soreness / tendinitis,Low Back; Soreness,False
 1629630,Ja Morant,28,2024-25,Hamstring / thigh,2025-03-17,2025-03-27,5,Strain,Left Hamstring; Strain,False
-1629630,Ja Morant,28,2024-25,Hip / groin,2024-11-08,2024-11-23,8,Strain,Right Hip; Subluxation and Pelvic Muscle Strains,False
+1629630,Ja Morant,28,2024-25,Hip / groin,2024-11-08,2024-11-23,8,Tear / rupture,Right Hip; Subluxation and Pelvic Muscle Strains,False
 1629630,Ja Morant,28,2024-25,Hip / groin,2025-04-26,2025-04-26,1,Contusion,Left Hip; Contusion,True
 1629630,Ja Morant,28,2024-25,Knee,2024-11-27,2024-11-27,1,Contusion,Left Knee; Contusion,False
 1629630,Ja Morant,28,2024-25,Shoulder / arm,2024-12-29,2025-01-06,5,Sprain,Right Ac Joint; Sprain,False
@@ -4675,8 +4660,8 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1629652,Luguentz Dort,26,2022-23,Knee,2022-12-07,2022-12-07,1,Contusion,Left Knee; Contusion,False
 1629652,Luguentz Dort,26,2022-23,Shoulder / arm,2023-04-09,2023-04-09,1,Strain,Right Shoulder; Strain,True
 1629652,Luguentz Dort,27,2023-24,Ankle,2023-12-11,2023-12-11,1,Sprain,Left Ankle; Sprain,False
+1629652,Luguentz Dort,28,2024-25,Ankle,2024-12-27,2024-12-28,2,Sprain,Right Anke; Sprain,False
 1629652,Luguentz Dort,28,2024-25,Hip / groin,2025-03-16,2025-03-21,4,Soreness / tendinitis,Right Hip; Soreness,False
-1629652,Luguentz Dort,28,2024-25,Knee,2024-12-27,2024-12-28,2,Sprain,Right Anke; Sprain,False
 1629652,Luguentz Dort,28,2024-25,Knee,2025-01-25,2025-01-26,2,Soreness / tendinitis,Right Knee; Soreness,False
 1629652,Luguentz Dort,28,2024-25,Knee,2025-03-07,2025-03-07,1,Soreness / tendinitis,Right Patellofemoral; Soreness,False
 1629652,Luguentz Dort,28,2024-25,Knee,2025-04-09,2025-04-13,3,Management,Right Patellofemoral; Injury Management,True
@@ -4710,7 +4695,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1629655,Daniel Gafford,29,2025-26,Illness,2026-03-14,2026-03-16,3,Illness,Illness; Illness,False
 1629655,Daniel Gafford,29,2025-26,Shoulder / arm,2026-03-26,2026-04-08,5,Sprain,Right Shoulder; Impingement,True
 1629656,Quentin Grimes,25,2021-22,Knee,2022-02-08,2022-02-08,1,Soreness / tendinitis,Left Knee; Sore,False
-1629656,Quentin Grimes,25,2021-22,Knee,2022-02-26,2022-04-02,19,Soreness / tendinitis,Right Patella; Subluxation,False
+1629656,Quentin Grimes,25,2021-22,Knee,2022-02-26,2022-04-02,19,Tear / rupture,Right Patella; Subluxation,False
 1629656,Quentin Grimes,26,2022-23,Ankle,2022-12-21,2022-12-21,1,Sprain,Right Ankle; sprained,False
 1629656,Quentin Grimes,26,2022-23,Foot / toe,2022-10-19,2022-10-30,11,Soreness / tendinitis,Left Foot; sore,False
 1629656,Quentin Grimes,26,2022-23,Shoulder / arm,2023-04-23,2023-04-23,1,Contusion,Right Shoulder; Contused,True
@@ -4801,7 +4786,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1629676,Isaiah Roby,26,2022-23,Ankle,2023-02-14,2023-03-03,8,Sprain,Right Ankle; Sprain,False
 1629676,Isaiah Roby,26,2022-23,Ankle,2023-04-14,2023-04-17,3,Sprain,Right Ankle; Sprained,True
 1629676,Isaiah Roby,26,2022-23,Illness,2022-11-02,2022-11-04,2,Illness,""" ""; Flu-like symptoms",False
-1629677,Luka Samanic,24,2020-21,Foot / toe,2021-05-13,2021-05-19,4,Fracture,Left Fourth Metacarpal; Fracture,True
+1629677,Luka Samanic,24,2020-21,Back / core,2021-05-13,2021-05-19,4,Fracture,Left Fourth Metacarpal; Fracture,True
 1629677,Luka Samanic,24,2020-21,Illness,2021-01-16,2021-01-20,5,Illness,""" ""; Sore Throat",False
 1629677,Luka Samanic,27,2023-24,Illness,2023-12-13,2023-12-16,3,Illness,N/A; Illness,False
 1629678,Admiral Schofield,25,2021-22,Knee,2022-04-03,2022-04-05,2,Contusion,Left Knee; Contusion,True
@@ -4822,7 +4807,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1629681,Killian Tillie,24,2020-21,Hamstring / thigh,2020-12-23,2021-01-15,16,Strain,Right Hamstring; Strain,False
 1629681,Killian Tillie,25,2021-22,Back / core,2021-11-08,2021-11-12,3,Soreness / tendinitis,Back; Soreness,False
 1629681,Killian Tillie,25,2021-22,Back / core,2022-02-08,2022-02-12,5,Soreness / tendinitis,Back; Soreness,False
-1629681,Killian Tillie,25,2021-22,Back / core,2022-04-16,2022-05-13,12,Management,Back; Lower Back Procedure Recovery,True
+1629681,Killian Tillie,25,2021-22,Back / core,2022-04-16,2022-05-13,12,Surgery,Back; Lower Back Procedure Recovery,True
 1629681,Killian Tillie,25,2021-22,Knee,2022-03-20,2022-04-10,11,Soreness / tendinitis,Left Knee; Soreness,True
 1629682,Tremont Waters,23,2019-20,Knee,2020-08-26,2020-09-03,8,Sprain,Left Knee; Sprain,True
 1629683,Quinndary Weatherspoon,24,2020-21,Knee,2020-12-22,2021-01-24,25,Surgery,Left Knee; Surgery,False
@@ -4890,8 +4875,8 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1629731,Dean Wade,29,2025-26,Head / face,2025-11-06,2025-11-07,2,Contusion,Right Eye; Contusion,False
 1629731,Dean Wade,29,2025-26,Knee,2026-01-04,2026-01-16,10,Contusion,Left Knee; Contusion,False
 1629734,Kyle Alexander,23,2019-20,Knee,2020-02-05,2020-02-28,15,Sprain,Right Knee; Hyperextended & PCL Sprain,False
+1629735,Chris Silva,23,2019-20,Back / core,2020-08-30,2020-09-27,22,Fracture,Left Pubic Bone; Stress Fracture,True
 1629735,Chris Silva,23,2019-20,Hip / groin,2020-08-24,2020-08-24,1,Strain,Left Groin; Strain,True
-1629735,Chris Silva,23,2019-20,Lower leg,2020-08-30,2020-09-27,22,Fracture,Left Pubic Bone; Stress Fracture,True
 1629735,Chris Silva,24,2020-21,Hip / groin,2021-01-23,2021-02-22,26,Strain,Left Hip Flexor; Strain,False
 1629738,Vincent Poirier,23,2019-20,Hand / wrist,2019-12-18,2020-01-11,22,Fracture,Right Pinkie; Fracture,False
 1629741,Marko Guduric,23,2019-20,Illness,2020-02-05,2020-02-05,1,Illness,Illness; Illness,False
@@ -4924,7 +4909,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1630163,LaMelo Ball,28,2024-25,Ankle,2024-12-28,2024-12-30,3,Soreness / tendinitis,L Ankle; R Wrist; Soreness,False
 1630163,LaMelo Ball,28,2024-25,Ankle,2025-01-28,2025-04-13,33,Sprain,Right Ankle; Impingement,True
 1630163,LaMelo Ball,28,2024-25,Lower leg,2024-11-28,2024-12-20,12,Strain,Left Calf; Strain,False
-1630163,LaMelo Ball,29,2025-26,Ankle,2025-11-02,2025-12-14,15,Contusion,Right Ankle; Impingement,False
+1630163,LaMelo Ball,29,2025-26,Ankle,2025-11-02,2025-12-14,15,Fracture,Right Ankle; Impingement,False
 1630164,James Wiseman,24,2020-21,Hand / wrist,2021-02-02,2021-02-20,14,Sprain,Left Wrist; Sprain,False
 1630164,James Wiseman,24,2020-21,Knee,2021-04-12,2021-05-21,25,Tear / rupture,Right Knee; Meniscus Tear,True
 1630164,James Wiseman,25,2021-22,Knee,2021-10-19,2022-06-16,136,Tear / rupture,Right Knee; Injury Recovery,True
@@ -5327,7 +5312,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1630245,Ayo Dosunmu,29,2025-26,Lower leg,2026-03-28,2026-04-12,3,Soreness / tendinitis,Right Calf; Injury Maintenance,True
 1630245,Ayo Dosunmu,29,2025-26,Lower leg,2026-05-04,2026-05-04,1,Soreness / tendinitis,Right Calf; Soreness,True
 1630249,Vit Krejci,25,2021-22,Ankle,2022-01-16,2022-02-05,15,Sprain,Right Ankle; Sprain,False
-1630249,Vit Krejci,27,2023-24,Shoulder / arm,2024-01-04,2024-02-03,27,Soreness / tendinitis,Left Shoulder; Subluxation,False
+1630249,Vit Krejci,27,2023-24,Shoulder / arm,2024-01-04,2024-02-03,27,Tear / rupture,Left Shoulder; Subluxation,False
 1630249,Vit Krejci,28,2024-25,Back / core,2025-02-11,2025-03-06,15,Fracture,Lumbar; Fracture,False
 1630249,Vit Krejci,28,2024-25,Hip / groin,2024-10-29,2024-11-18,16,Strain,Right Adductor; Strain,False
 1630249,Vit Krejci,29,2025-26,Lower leg,2026-03-16,2026-04-08,10,Contusion,Left Calf; Contusion,True
@@ -5439,7 +5424,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1630533,Ziaire Williams,26,2022-23,Foot / toe,2023-03-22,2023-03-24,2,Soreness / tendinitis,Right Foot; Soreness,False
 1630533,Ziaire Williams,26,2022-23,Knee,2022-10-19,2022-12-05,28,Soreness / tendinitis,Right Patellar; Tendinitis,False
 1630533,Ziaire Williams,26,2022-23,Knee,2023-01-01,2023-01-01,1,Soreness / tendinitis,Right Knee; Soreness,False
-1630533,Ziaire Williams,27,2023-24,Hand / wrist,2024-01-29,2024-02-12,11,Contusion,Left Hand; Bone Contusion,False
+1630533,Ziaire Williams,27,2023-24,Hand / wrist,2024-01-29,2024-02-12,11,Fracture,Left Hand; Bone Contusion,False
 1630533,Ziaire Williams,27,2023-24,Hip / groin,2024-03-03,2024-04-14,25,Strain,Right Low Back; Hip Flexor Strain,True
 1630533,Ziaire Williams,27,2023-24,Illness,2023-12-02,2023-12-02,1,Illness,Illness; Illness,False
 1630533,Ziaire Williams,28,2024-25,Achilles,2025-03-16,2025-03-16,1,Soreness / tendinitis,Left Achilles; Soreness,False
@@ -5454,7 +5439,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1630533,Ziaire Williams,29,2025-26,Lower leg,2026-01-29,2026-02-01,4,Contusion,Left Calf; Contusion,False
 1630534,Ochai Agbaji,27,2023-24,Hip / groin,2024-03-30,2024-04-03,5,Contusion,Right Hip; Contusion,False
 1630534,Ochai Agbaji,28,2024-25,Ankle,2025-03-01,2025-03-12,11,Sprain,Left Ankle; Sprain,False
-1630534,Ochai Agbaji,28,2024-25,Hand / wrist,2025-01-20,2025-01-25,4,Contusion,Right Hand; Laceration,False
+1630534,Ochai Agbaji,28,2024-25,Hand / wrist,2025-01-20,2025-01-25,4,Surgery,Right Hand; Laceration,False
 1630534,Ochai Agbaji,28,2024-25,Hip / groin,2025-01-09,2025-01-10,2,Soreness / tendinitis,Left Hip; Pointer,False
 1630534,Ochai Agbaji,29,2025-26,Back / core,2025-11-11,2025-11-17,3,Strain,Lower Back; Spasms,False
 1630535,Greg Brown III,25,2021-22,Head / face,2022-03-28,2022-03-28,1,Soreness / tendinitis,Left Eye; corneal abrasion,False
@@ -5498,9 +5483,8 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1630544,Tre Mann,25,2021-22,Hamstring / thigh,2022-04-01,2022-04-10,6,Strain,Right Hamstring; Strain,True
 1630544,Tre Mann,26,2022-23,Back / core,2022-11-14,2022-11-20,5,Soreness / tendinitis,Low Back; Soreness,False
 1630544,Tre Mann,27,2023-24,Hip / groin,2024-03-08,2024-03-11,4,Strain,Left Groin; Strain,False
-1630544,Tre Mann,28,2024-25,Back / core,2024-11-17,2024-11-29,8,Soreness / tendinitis,Low Back; Soreness,False
-1630544,Tre Mann,28,2024-25,Back / core,2025-02-06,2025-04-13,52,Soreness / tendinitis,Disc; Herniation,True
-1630544,Tre Mann,28,2024-25,Illness,2024-11-30,2025-02-05,47,Illness,Disc; Irritation,False
+1630544,Tre Mann,28,2024-25,Back / core,2024-11-17,2025-04-13,104,Soreness / tendinitis,Disc; Herniation,True
+1630544,Tre Mann,28,2024-25,Illness,2024-12-15,2024-12-19,3,Illness,N/A; Disc Irritation,False
 1630544,Tre Mann,29,2025-26,Ankle,2025-11-18,2025-12-03,5,Soreness / tendinitis,Left Ankle; Soreness,False
 1630544,Tre Mann,29,2025-26,Illness,2026-01-22,2026-01-22,1,Illness,Illness; Illness,False
 1630544,Tre Mann,29,2025-26,Knee,2025-12-05,2025-12-18,9,Contusion,Right Knee; Bone Bruise,False
@@ -5553,7 +5537,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1630553,Keon Johnson,26,2022-23,Illness,2022-12-30,2022-12-30,1,Illness,Illness; Non-Covid,False
 1630554,Jason Preston,25,2021-22,Foot / toe,2021-10-21,2022-04-15,94,Management,Right Foot; Injury Recovery,True
 1630557,Corey Kispert,26,2022-23,Ankle,2022-10-18,2022-11-02,15,Sprain,Left Ankle; Left ankle sprain,False
-1630557,Corey Kispert,27,2023-24,Ankle,2023-11-03,2023-11-03,1,Soreness / tendinitis,Left Ankle; Left ankle,False
+1630557,Corey Kispert,27,2023-24,Ankle,2023-11-03,2023-11-03,1,Sprain,Left Ankle; Left ankle,False
 1630557,Corey Kispert,28,2024-25,Ankle,2024-12-04,2024-12-15,9,Sprain,Left Ankle; Sprain,False
 1630557,Corey Kispert,28,2024-25,Hand / wrist,2025-03-16,2025-04-13,27,Surgery,Left Thumb; Surgery,True
 1630557,Corey Kispert,29,2025-26,Hamstring / thigh,2025-12-25,2026-01-06,11,Strain,Left Hamstring; Strain,False
@@ -5596,9 +5580,8 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1630567,Scottie Barnes,26,2022-23,Knee,2022-11-25,2022-11-26,2,Sprain,Left Knee; Sprain,False
 1630567,Scottie Barnes,27,2023-24,Hand / wrist,2024-03-02,2024-04-14,37,Fracture,Left Hand; Fracture; Third Metacarpal,True
 1630567,Scottie Barnes,28,2024-25,Ankle,2024-12-11,2024-12-16,4,Sprain,Right Ankle; Sprain,False
-1630567,Scottie Barnes,28,2024-25,Hand / wrist,2024-10-31,2024-11-18,8,Fracture,Right Oribital; Fracture,False
 1630567,Scottie Barnes,28,2024-25,Hand / wrist,2025-04-06,2025-04-06,1,Contusion,Right Hand; MCP joint contusion,True
-1630567,Scottie Barnes,28,2024-25,Head / face,2024-10-29,2024-11-12,8,Fracture,Right Orbital; Fracture,False
+1630567,Scottie Barnes,28,2024-25,Head / face,2024-10-29,2024-11-18,16,Fracture,Right Oribital; Fracture,False
 1630567,Scottie Barnes,29,2025-26,Knee,2026-01-09,2026-01-09,1,Sprain,Right Knee; Sprain,False
 1630568,Luka Garza,25,2021-22,Illness,2022-01-23,2022-01-23,1,Illness,Return to Competition Reconditioning,False
 1630568,Luka Garza,28,2024-25,Ankle,2024-12-22,2025-01-04,9,Sprain,Left Ankle; Sprain,False
@@ -5640,7 +5623,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1630579,Jericho Sims,26,2022-23,Shoulder / arm,2023-04-21,2023-05-12,16,Surgery,Right Shoulder; Surgery,True
 1630579,Jericho Sims,27,2023-24,Ankle,2023-12-22,2023-12-29,8,Sprain,Right Ankle; Sprained,False
 1630579,Jericho Sims,27,2023-24,Illness,2024-02-06,2024-02-06,1,Illness,Illness; Illness,False
-1630579,Jericho Sims,28,2024-25,Hand / wrist,2025-03-18,2025-04-13,21,Sprain,Right Thumb; UCL Sprain,True
+1630579,Jericho Sims,28,2024-25,Hand / wrist,2025-03-18,2025-04-13,21,Surgery,Right Thumb; UCL Sprain,True
 1630580,Joe Wieskamp,25,2021-22,Illness,2022-03-12,2022-03-12,1,Illness,""" ""; Congestion",False
 1630580,Joe Wieskamp,26,2022-23,Hamstring / thigh,2023-03-25,2023-03-28,4,Strain,Right Hamstring; Strain,False
 1630581,Josh Giddey,25,2021-22,Hip / groin,2022-02-25,2022-04-10,27,Soreness / tendinitis,Right Hip; Soreness,True
@@ -5733,9 +5716,9 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1630595,Cade Cunningham,26,2022-23,Lower leg,2022-11-11,2023-04-09,121,Fracture,Left Tibia; Stress Fracture,True
 1630595,Cade Cunningham,27,2023-24,Knee,2024-01-08,2024-01-28,15,Strain,Left Knee; Strain,False
 1630595,Cade Cunningham,27,2023-24,Knee,2024-03-24,2024-04-14,7,Soreness / tendinitis,Left Knee; Injury Management,True
-1630595,Cade Cunningham,28,2024-25,Knee,2024-11-22,2024-11-27,6,Sprain,Left Sacroiliac Joint; Sprain,False
 1630595,Cade Cunningham,28,2024-25,Knee,2025-04-13,2025-04-13,1,Soreness / tendinitis,Left Knee; Patellar Tendinopathy,True
 1630595,Cade Cunningham,28,2024-25,Lower leg,2025-03-23,2025-04-02,6,Contusion,Left Calf; Contusion,False
+1630595,Cade Cunningham,28,2024-25,Shoulder / arm,2024-11-22,2024-11-27,6,Sprain,Left Sacroiliac Joint; Sprain,False
 1630595,Cade Cunningham,29,2025-26,Back / core,2026-03-18,2026-03-18,1,Contusion,Left Back; Contusion,False
 1630595,Cade Cunningham,29,2025-26,Hamstring / thigh,2026-03-07,2026-03-07,1,Contusion,Left Quadriceps; Contusion,False
 1630595,Cade Cunningham,29,2025-26,Illness,2026-03-19,2026-04-06,14,Illness,Left Lung; Pneumothorax,True
@@ -5865,7 +5848,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1631095,Jabari Smith Jr.,26,2022-23,Illness,2022-11-05,2022-11-05,1,Illness,Illness; Illness,False
 1631095,Jabari Smith Jr.,27,2023-24,Ankle,2023-12-29,2023-12-29,1,Sprain,Left Ankle; Sprain,False
 1631095,Jabari Smith Jr.,27,2023-24,Ankle,2024-01-21,2024-01-27,2,Sprain,Left Ankle; Sprain,False
-1631095,Jabari Smith Jr.,28,2024-25,Foot / toe,2025-01-05,2025-02-13,27,Fracture,Left Metacarpal; Fracture,False
+1631095,Jabari Smith Jr.,28,2024-25,Back / core,2025-01-05,2025-02-13,27,Fracture,Left Metacarpal; Fracture,False
 1631095,Jabari Smith Jr.,28,2024-25,Hip / groin,2025-04-09,2025-04-13,3,Soreness / tendinitis,Left Groin; Soreness,True
 1631095,Jabari Smith Jr.,28,2024-25,Illness,2025-01-26,2025-01-26,1,Illness,Left Metacarpal;,False
 1631095,Jabari Smith Jr.,29,2025-26,Ankle,2026-02-27,2026-03-02,4,Sprain,Right Ankle; Sprain,False
@@ -5874,8 +5857,8 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1631096,Chet Holmgren,28,2024-25,Ankle,2025-03-02,2025-03-02,1,Sprain,Left Ankle; Sprain,False
 1631096,Chet Holmgren,28,2024-25,Back / core,2025-04-11,2025-04-13,2,Soreness / tendinitis,Low Back; Spasm,True
 1631096,Chet Holmgren,28,2024-25,Hip / groin,2025-03-29,2025-03-29,1,Management,Left Hip; Injury Management,False
-1631096,Chet Holmgren,28,2024-25,Illness,2025-01-11,2025-01-11,1,Illness,Right Iliac Wing;,False
 1631096,Chet Holmgren,28,2024-25,Lower leg,2025-03-05,2025-03-05,1,Unspecified,Right Lower Leg;,False
+1631096,Chet Holmgren,28,2024-25,Shoulder / arm,2025-01-11,2025-01-11,1,Unspecified,Right Iliac Wing;,False
 1631096,Chet Holmgren,29,2025-26,Back / core,2025-10-28,2025-11-05,4,Sprain,Low Back; Sprain,False
 1631096,Chet Holmgren,29,2025-26,Back / core,2026-02-04,2026-02-04,1,Soreness / tendinitis,Low Back; Spasms,False
 1631096,Chet Holmgren,29,2025-26,Back / core,2026-02-25,2026-02-25,1,Soreness / tendinitis,Low Back; Spasms,False
@@ -5999,9 +5982,8 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1631114,Jalen Williams,26,2022-23,Hand / wrist,2023-04-09,2023-04-09,1,Strain,Right Wrist; Strain,True
 1631114,Jalen Williams,26,2022-23,Head / face,2022-10-21,2022-10-28,7,Fracture,Right Orbital Bone; Fracture,False
 1631114,Jalen Williams,27,2023-24,Ankle,2024-01-31,2024-02-04,4,Sprain,Right Ankle; Sprain,False
-1631114,Jalen Williams,27,2023-24,Ankle,2024-04-02,2024-04-05,4,Sprain,Left Ankle; Sprain,False
+1631114,Jalen Williams,27,2023-24,Ankle,2024-04-02,2024-04-07,5,Sprain,Left Ankle; Sprain,True
 1631114,Jalen Williams,27,2023-24,Hip / groin,2023-11-19,2023-11-25,3,Strain,Left Hip; Strain,False
-1631114,Jalen Williams,27,2023-24,Knee,2024-04-07,2024-04-07,1,Sprain,Left Anke; Sprain,True
 1631114,Jalen Williams,28,2024-25,Hand / wrist,2025-02-01,2025-02-03,2,Sprain,Right Wrist; Sprain,False
 1631114,Jalen Williams,28,2024-25,Hand / wrist,2025-03-07,2025-03-07,1,Sprain,Right Wrist; Sprain,False
 1631114,Jalen Williams,28,2024-25,Hip / groin,2025-01-19,2025-01-19,1,Strain,Right Hip; Strain,False
@@ -6174,7 +6156,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1631250,Pete Nance,28,2024-25,Ankle,2025-02-28,2025-03-09,7,Sprain,Left Ankle; Sprain,False
 1631250,Pete Nance,29,2025-26,Knee,2026-04-10,2026-04-12,2,Sprain,Right Knee; Sprain,True
 1631254,Kenneth Lofton Jr.,27,2023-24,Shoulder / arm,2024-01-11,2024-01-22,6,Sprain,Left Shoulder; AC Joint Sprain,False
-1631255,Karlo Matkovic,28,2024-25,Back / core,2024-12-07,2025-01-05,19,Soreness / tendinitis,Low Back; Disc Protrusion,False
+1631255,Karlo Matkovic,28,2024-25,Back / core,2024-12-07,2025-01-05,19,Tear / rupture,Low Back; Disc Protrusion,False
 1631255,Karlo Matkovic,28,2024-25,Hamstring / thigh,2025-04-12,2025-04-13,2,Soreness / tendinitis,Left Hamstring; Soreness,True
 1631255,Karlo Matkovic,29,2025-26,Back / core,2025-10-21,2025-10-22,2,Soreness / tendinitis,Low Back; Spasms,False
 1631255,Karlo Matkovic,29,2025-26,Back / core,2026-04-02,2026-04-12,5,Soreness / tendinitis,Low Back; Injury Management,True
@@ -6192,7 +6174,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1631288,Jamal Cain,28,2024-25,Illness,2025-01-07,2025-01-07,1,Illness,Non-COVID; Illness,False
 1631288,Jamal Cain,28,2024-25,Illness,2025-02-12,2025-02-13,2,Illness,Non-COVID; Illness,False
 1631298,Jack White,26,2022-23,Hip / groin,2023-01-24,2023-02-04,9,Strain,Left Adductor; Strain,False
-1631303,Justin Minaya,27,2023-24,Head / face,2024-03-31,2024-04-03,4,Contusion,Right Ilium; Contusion,False
+1631303,Justin Minaya,27,2023-24,Hip / groin,2024-03-31,2024-04-03,4,Contusion,Right Ilium; Contusion,False
 1631303,Justin Minaya,27,2023-24,Illness,2023-11-22,2023-11-22,1,Illness,Illness; Illness,False
 1631306,Cole Swider,26,2022-23,Foot / toe,2022-10-20,2022-10-23,2,Soreness / tendinitis,Right Foot; Soreness,False
 1631321,Sidy Cissoko,27,2023-24,Ankle,2024-01-07,2024-01-26,18,Sprain,Left Ankle; Sprain,False
@@ -6200,7 +6182,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1631321,Sidy Cissoko,28,2024-25,Head / face,2025-01-29,2025-01-29,1,Unspecified,Concussion Protocol,False
 1631323,Simone Fontecchio,26,2022-23,Ankle,2022-12-10,2022-12-15,3,Sprain,Left Ankle; Sprain,False
 1631323,Simone Fontecchio,26,2022-23,Foot / toe,2023-02-01,2023-02-01,1,Soreness / tendinitis,Left Foot; Soreness,False
-1631323,Simone Fontecchio,26,2022-23,Foot / toe,2023-03-27,2023-03-27,1,Management,Left Foot; Turf toe,False
+1631323,Simone Fontecchio,26,2022-23,Foot / toe,2023-03-27,2023-03-27,1,Sprain,Left Foot; Turf toe,False
 1631323,Simone Fontecchio,26,2022-23,Illness,2023-01-08,2023-01-08,1,Illness,N/A; Illness,False
 1631323,Simone Fontecchio,27,2023-24,Foot / toe,2024-03-20,2024-04-14,21,Contusion,Left Great Toe; Contusion,True
 1631323,Simone Fontecchio,28,2024-25,Foot / toe,2024-11-13,2024-11-15,3,Sprain,Left Great Toe; Sprain,False
@@ -6226,7 +6208,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1641706,Brandon Miller,28,2024-25,Ankle,2024-12-20,2024-12-30,6,Sprain,Left Ankle; Sprain,False
 1641706,Brandon Miller,28,2024-25,Hand / wrist,2025-01-19,2025-04-13,71,Surgery,Right Wrist; Ligament Repair,True
 1641706,Brandon Miller,28,2024-25,Hip / groin,2024-10-24,2024-10-30,5,Strain,Left Glute; Strain,False
-1641706,Brandon Miller,29,2025-26,Shoulder / arm,2025-10-26,2025-12-03,24,Soreness / tendinitis,Left Shoulder; Subluxation,False
+1641706,Brandon Miller,29,2025-26,Shoulder / arm,2025-10-26,2025-12-03,24,Tear / rupture,Left Shoulder; Subluxation,False
 1641707,Taylor Hendricks,27,2023-24,Foot / toe,2024-03-06,2024-03-12,2,Sprain,Left Toe; 1st MTP sprain,False
 1641707,Taylor Hendricks,27,2023-24,Knee,2024-03-09,2024-03-09,1,Sprain,Left 1st MTP; Sprain,False
 1641707,Taylor Hendricks,28,2024-25,Lower leg,2024-10-29,2025-04-13,89,Fracture,Right Fibula; Fracture,True
@@ -6300,11 +6282,9 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1641722,Jordan Hawkins,28,2024-25,Illness,2025-01-29,2025-01-31,2,Illness,Non-COVID; Illness,False
 1641722,Jordan Hawkins,29,2025-26,Illness,2025-11-28,2025-11-30,3,Illness,N/A; Illness,False
 1641723,Kobe Bufkin,27,2023-24,Foot / toe,2024-03-05,2024-03-30,19,Sprain,Left Big Toe; Sprain,False
-1641723,Kobe Bufkin,27,2023-24,Hand / wrist,2023-11-04,2023-12-22,35,Fracture,Left Thumb; Fracture,False
-1641723,Kobe Bufkin,27,2023-24,Lower leg,2023-12-02,2023-12-02,1,Fracture,Left Thunb; Fracture,False
-1641723,Kobe Bufkin,28,2024-25,Knee,2025-04-09,2025-04-10,2,Surgery,Right Shoiulder; Surgery,True
-1641723,Kobe Bufkin,28,2024-25,Shoulder / arm,2024-10-22,2024-11-17,22,Soreness / tendinitis,Right Shoulder; Subluxation,False
-1641723,Kobe Bufkin,28,2024-25,Shoulder / arm,2024-12-19,2025-04-18,92,Surgery,Right Shoulder; Surgery,True
+1641723,Kobe Bufkin,27,2023-24,Hand / wrist,2023-11-04,2023-12-22,36,Fracture,Left Thumb; Fracture,False
+1641723,Kobe Bufkin,28,2024-25,Shoulder / arm,2024-10-22,2024-11-17,22,Tear / rupture,Right Shoulder; Subluxation,False
+1641723,Kobe Bufkin,28,2024-25,Shoulder / arm,2024-12-19,2025-04-18,94,Surgery,Right Shoulder; Surgery,True
 1641724,Jett Howard,28,2024-25,Ankle,2025-01-12,2025-01-19,6,Sprain,Left Ankle; Sprain,False
 1641724,Jett Howard,29,2025-26,Ankle,2026-02-11,2026-02-11,1,Sprain,Left Ankle; Sprain,False
 1641724,Jett Howard,29,2025-26,Ankle,2026-04-05,2026-04-12,7,Sprain,Left Ankle; Sprain,True
@@ -6370,7 +6350,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1641744,Zach Edey,28,2024-25,Head / face,2024-12-31,2024-12-31,1,Management,Concussion; Protocol,False
 1641744,Zach Edey,29,2025-26,Ankle,2025-10-22,2025-11-12,14,Surgery,Left Ankle; Surgery Recovery,False
 1641744,Zach Edey,29,2025-26,Ankle,2025-12-12,2026-04-12,61,Surgery,Left Ankle; Stress Reaction,True
-1641745,Adam Flagler,28,2024-25,Foot / toe,2024-12-10,2024-12-17,3,Fracture,Right Fourth Metacarpal; Fracture,False
+1641745,Adam Flagler,28,2024-25,Back / core,2024-12-10,2024-12-17,3,Fracture,Right Fourth Metacarpal; Fracture,False
 1641747,DaRon Holmes II,28,2024-25,Achilles,2024-10-24,2025-05-18,128,Surgery,Right Achilles Tendon; Repair,True
 1641748,Andre Jackson Jr.,27,2023-24,Illness,2024-02-27,2024-02-27,1,Illness,Non-covid; Illness,False
 1641748,Andre Jackson Jr.,28,2024-25,Hip / groin,2025-01-17,2025-01-17,1,Contusion,Right Hip; Contusion,False
@@ -6473,7 +6453,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1641890,Tyler Smith,28,2024-25,Back / core,2025-03-11,2025-03-13,3,Soreness / tendinitis,Back; Spasms,False
 1641890,Tyler Smith,28,2024-25,Illness,2025-01-28,2025-01-28,1,Illness,Non-covid; Illness,False
 1641931,Onuralp Bitim,27,2023-24,Head / face,2023-12-20,2024-01-03,13,Fracture,Nasal; Fracture,False
-1641931,Onuralp Bitim,27,2023-24,Head / face,2024-04-16,2024-04-19,4,Soreness / tendinitis,Right Retinal; Detachment,True
+1641931,Onuralp Bitim,27,2023-24,Head / face,2024-04-16,2024-04-19,4,Tear / rupture,Right Retinal; Detachment,True
 1641931,Onuralp Bitim,27,2023-24,Illness,2023-12-01,2023-12-06,4,Illness,General; Illness,False
 1641989,Elijah Harkless,28,2024-25,Hip / groin,2025-04-09,2025-04-13,3,Strain,Left Groin; Strain,True
 1641989,Elijah Harkless,29,2025-26,Hamstring / thigh,2026-04-01,2026-04-12,6,Strain,Left Hamstring; Strain,True
@@ -6491,7 +6471,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1642259,Alex Sarr,29,2025-26,Hip / groin,2025-12-01,2025-12-21,11,Strain,Right Adductor; Strain,False
 1642259,Alex Sarr,29,2025-26,Lower leg,2026-02-01,2026-02-01,1,Soreness / tendinitis,Right Calf; Soreness,False
 1642260,Nikola Topic,28,2024-25,Knee,2024-10-24,2025-06-22,146,Surgery,Left Knee; Surgery,True
-1642260,Nikola Topic,29,2025-26,Illness,2025-10-21,2026-02-09,62,Illness,N/a; Surgical Recovery,False
+1642260,Nikola Topic,29,2025-26,Back / core,2025-10-21,2026-02-09,62,Management,N/a; Surgical Recovery,False
 1642262,Cody Williams,28,2024-25,Ankle,2025-01-22,2025-02-07,9,Sprain,Left Ankle; Sprain,False
 1642262,Cody Williams,28,2024-25,Illness,2025-03-31,2025-04-13,9,Illness,N/A; Illness,True
 1642262,Cody Williams,29,2025-26,Shoulder / arm,2026-03-23,2026-03-23,1,Soreness / tendinitis,Right Shoulder; Soreness,False
@@ -6651,8 +6631,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1642530,Yuki Kawamura,28,2024-25,Hamstring / thigh,2025-03-03,2025-03-05,2,Soreness / tendinitis,Right Hamstring;,False
 1642530,Yuki Kawamura,28,2024-25,Shoulder / arm,2025-01-04,2025-01-04,1,Sprain,Left Ac Joint; Sprain,False
 1642843,Cooper Flagg,29,2025-26,Ankle,2026-01-15,2026-01-17,2,Sprain,Left Ankle; Sprain,False
-1642843,Cooper Flagg,29,2025-26,Back / core,2026-03-02,2026-03-03,2,Sprain,Left Midfront; Sprain,False
-1642843,Cooper Flagg,29,2025-26,Foot / toe,2026-02-12,2026-03-01,9,Sprain,Left Midfoot; Sprain,False
+1642843,Cooper Flagg,29,2025-26,Foot / toe,2026-02-12,2026-03-03,11,Sprain,Left Midfoot; Sprain,False
 1642844,Dylan Harper,29,2025-26,Lower leg,2025-11-05,2025-11-23,11,Strain,Left Calf; Strain,False
 1642844,Dylan Harper,29,2025-26,Lower leg,2026-03-14,2026-03-16,2,Contusion,Right Calf; Contusion,False
 1642845,VJ Edgecombe,29,2025-26,Back / core,2026-03-04,2026-03-09,4,Contusion,Lumbar; Contusion,False
@@ -6678,7 +6657,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1642859,Jase Richardson,29,2025-26,Back / core,2026-03-07,2026-03-07,1,Soreness / tendinitis,Low back; Spasms,False
 1642862,Liam McNeeley,29,2025-26,Ankle,2026-02-09,2026-03-14,12,Sprain,Left Ankle; Sprain,False
 1642862,Liam McNeeley,29,2025-26,Illness,2025-11-15,2025-11-19,5,Illness,N/a; Illness,False
-1642864,Hugo Gonzalez,29,2025-26,Foot / toe,2026-04-12,2026-04-12,1,Soreness / tendinitis,Right Foot; Bone,True
+1642864,Hugo Gonzalez,29,2025-26,Foot / toe,2026-04-12,2026-04-12,1,Fracture,Right Foot; Bone,True
 1642867,Collin Murray-Boyles,29,2025-26,Back / core,2026-03-29,2026-04-10,2,Sprain,Lower Back; Spasms,True
 1642867,Collin Murray-Boyles,29,2025-26,Hand / wrist,2026-01-20,2026-01-21,2,Contusion,Left Thumb; Contusion,False
 1642867,Collin Murray-Boyles,29,2025-26,Hand / wrist,2026-02-10,2026-02-11,2,Sprain,Left Thumb; Sprain - injury management,False
@@ -6706,7 +6685,7 @@ PLAYER_ID,player,s,season,region,start,end,games,type,example,into_offseason
 1642907,Cedric Coward,29,2025-26,Knee,2026-02-11,2026-03-12,11,Sprain,Right Knee; Injury Management,False
 1642907,Cedric Coward,29,2025-26,Shoulder / arm,2026-02-07,2026-02-07,1,Soreness / tendinitis,Right Shoulder; Soreness,False
 1642914,Javon Small,29,2025-26,Back / core,2026-03-30,2026-03-30,1,Soreness / tendinitis,Low Back; Soreness,False
-1642914,Javon Small,29,2025-26,Foot / toe,2025-11-09,2025-12-22,21,Soreness / tendinitis,Left Toe; Turf Toe,False
+1642914,Javon Small,29,2025-26,Foot / toe,2025-11-09,2025-12-22,21,Sprain,Left Toe; Turf Toe,False
 1642914,Javon Small,29,2025-26,Hamstring / thigh,2026-04-05,2026-04-08,3,Contusion,Left Thigh; Contusion,True
 1642920,Kobe Sanders,29,2025-26,Knee,2025-10-28,2025-11-08,6,Sprain,Right Knee; Sprain,False
 1642928,Dylan Cardwell,29,2025-26,Ankle,2026-02-19,2026-03-11,13,Sprain,Left Ankle; Sprain,False
