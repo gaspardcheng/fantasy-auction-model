@@ -1,0 +1,8 @@
+nba_api>=1.4
+pandas>=1.5
+requests
+lxml
+html5lib
+beautifulsoup4
+pdfplumber
+kaggle

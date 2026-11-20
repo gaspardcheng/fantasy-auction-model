@@ -12,3 +12,9 @@ data/Data 1 extended.csv
 data/player_season_extra.csv
 data/injury_reports_pre2021.csv
 Project1_data_package/data/
+Project1_data_package/output/
+Project1_data_package/raw/
+Project1_data_package/cache/
+Project1_data_package/*.pdf
+Project1_data_package/docs/download_report.md
+results/run_*.log
