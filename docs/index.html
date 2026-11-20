@@ -105,7 +105,7 @@ function rebuild(){
   // teams
   const teams = st.teams.map((t,i)=>({...t, i, roster:[], spent:0}));
   st.sales.forEach(s=>{ const t=teams[s.team]; t.roster.push({p:P[s.pid],price:s.price}); t.spent+=s.price; });
-  teams.forEach(t=>{ t.left = S.budget - t.spent; t.open = S.roster_spots - t.roster.length; t.maxBid = t.open>0 ? t.left : 0; });
+  teams.forEach(t=>{ t.left = S.budget - t.spent; t.open = S.roster_spots - t.roster.length; t.maxBid = t.open>0 ? t.left-(t.open-1) : 0; });
   const money = teams.reduce((s,t)=>s+(t.open>0?t.left:0),0), slots = teams.reduce((s,t)=>s+t.open,0);
   // live prices: remaining money split over the best `slots` available players by value over replacement
   const ranked = [...avail].sort((a,b)=>b.vw-a.vw); const top = ranked.slice(0,slots);
@@ -163,7 +163,7 @@ function rotoPoints(mine, others){ // expected rank points per category (14 = be
 }
 // change in MY expected roto points if I buy p at `price` (money spent instead on an average player)
 function deltaMe(p, price){
-  const me = M.teams[st.me]; if (me.open<=0 || price>me.left) return null;
+  const me = M.teams[st.me]; if (me.open<=0 || price>me.maxBid) return null;
   p._excl = true;
   const fill = fillerFor(me.left-price, me.open-1);
   p._excl = false;
@@ -172,7 +172,7 @@ function deltaMe(p, price){
 }
 function maxBid(p){ // highest price at which buying p still beats spending that money elsewhere
   const me = M.teams[st.me]; if (me.open<=0) return 0;
-  let lo=0, hi=me.left; if ((deltaMe(p,0)??-1) <= 0) return 0;
+  let lo=1, hi=me.maxBid; if (hi<1 || (deltaMe(p,1)??-1) <= 0) return 0;   // $1 minimum, $1 kept per other open spot
   if ((deltaMe(p,hi)??-1) > 0) return hi;
   for (let i=0;i<9;i++){ const mid=(lo+hi)/2; (deltaMe(p,mid) > 0) ? lo=mid : hi=mid; }
   return Math.floor(lo);
@@ -196,7 +196,7 @@ function renderNom(){
   const prem = x => { const d = x-p.live; return `${d>=0?"+":"−"}$${Math.abs(Math.round(d))}`+(p.live>0?` (${d>=0?"+":"−"}${Math.abs(Math.round(d/p.live*100))}%)`:""); };
   const dBid = hasBid ? deltaMe(p, bid) : null;
   // premium ladder: my expected roto-point gain at a few prices between live and my max
-  const steps = [...new Set([0,0.1,0.2,0.3,0.4].map(f=>Math.round(p.live*(1+f))).concat(p.mymax))].filter(x=>x<=M.teams[st.me].left).sort((a,b)=>a-b);
+  const steps = [...new Set([0,0.1,0.2,0.3,0.4].map(f=>Math.round(p.live*(1+f))).concat(p.mymax))].filter(x=>x<=M.teams[st.me].maxBid).sort((a,b)=>a-b);
   const ladder = p.live>0 && p.mymax>0 ? `<div class="scroll" style="margin-top:10px"><table style="width:auto"><thead><tr><th class="l">Bid</th>${steps.map(x=>`<th>$${x}</th>`).join("")}</tr></thead><tbody>
     <tr><td class="l muted">vs live</td>${steps.map(x=>`<td class="muted">${x===p.mymax?"max":prem(x)}</td>`).join("")}</tr>
     <tr><td class="l muted">+My pts</td>${steps.map(x=>{const d=deltaMe(p,x);return `<td class="${d>0?"zp":"zn"}">${sgn(d)}</td>`}).join("")}</tr></tbody></table></div>` : "";
@@ -299,7 +299,7 @@ $("soldBtn").addEventListener("click", ()=>{
   if (!p || M.sold.has(p.id)) return $("msg").textContent="Pick an available player first.";
   const t = M.teams[team];
   if (t.open<=0) return $("msg").textContent=t.name+" has no open spots.";
-  if (!(price>=0) || price>t.left) return $("msg").textContent=`Price must be between $0 and $${t.left}.`;
+  if (!(price>=1) || price>t.maxBid) return $("msg").textContent=`Price must be between $1 and $${t.maxBid} (keeps $1 for each other open spot).`;
   st.sales.push({pid:p.id, team, price}); $("msg").textContent=`${p.name} → ${t.name} $${price}`;
   $("nomInput").value=""; $("curBid").value=""; $("soldPrice").value=""; render();
 });
