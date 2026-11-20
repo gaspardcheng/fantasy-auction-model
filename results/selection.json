@@ -1,12 +1,15 @@
 {
- "selected_model": "Ridge a=10",
+ "selected_model": "Ridge a=10 + GBM games",
  "finalists": [
   "Naive (last season)",
   "Marcel (weighted avg)",
+  "Comparables k=100",
+  "ElasticNet (CV penalty)",
   "Ensemble Ridge+RF + injury-text NN games",
-  "GBM lr=0.03 leaves=7",
+  "GBM lr=0.03 leaves=7 minleaf=50",
+  "MLP 128",
   "RandomForest leaf=30",
-  "Ridge a=10",
+  "Ridge a=10 + GBM games",
   "Ensemble Ridge+RF",
   "Ensemble Ridge+RF + injury-type games"
  ],

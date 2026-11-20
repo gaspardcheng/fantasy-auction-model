@@ -1,8 +1,11 @@
 """Benchmarks and ML models. Each returns predicted per-game stats + games played for the rows of `test`."""
 import numpy as np
 import pandas as pd
+from sklearn.compose import TransformedTargetRegressor
 from sklearn.ensemble import HistGradientBoostingRegressor, RandomForestRegressor
-from sklearn.linear_model import Ridge
+from sklearn.linear_model import ElasticNetCV, LogisticRegression, MultiTaskElasticNetCV, Ridge
+from sklearn.neighbors import KNeighborsRegressor
+from sklearn.neural_network import MLPRegressor
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 
@@ -135,17 +138,120 @@ def ensemble(*fns):
     return f
 
 
+class ENet:
+    """Elastic net with the penalty (alpha and L1 share) chosen by 5-fold cross-validation inside the
+    training rows. Multi-output: one sparsity pattern shared by all 11 stats, so the kept features read as
+    one pricing rule."""
+    L1 = [0.2, 0.5, 0.8, 1.0]                                 # 1.0 = LASSO
+
+    def fit(self, X, Y):
+        Y = np.asarray(Y)
+        cv = (MultiTaskElasticNetCV if Y.ndim > 1 else ElasticNetCV)(l1_ratio=self.L1, alphas=30, cv=5,
+                                                                    max_iter=5000, n_jobs=-1)
+        self.m = make_pipeline(StandardScaler(), cv).fit(X, Y)
+        return self
+
+    def predict(self, X):
+        return self.m.predict(X)
+
+
+def enet(tr, te):
+    return _fit_predict(ENet, tr, te)
+
+
+def gbm_es(lr, leaves, min_leaf):
+    """Gradient boosting with early stopping: the number of trees is chosen on a 10% inner validation split."""
+    return lambda tr, te: _fit_predict(
+        lambda: PerTarget(learning_rate=lr, max_iter=2000, max_leaf_nodes=leaves, min_samples_leaf=min_leaf,
+                          l2_regularization=1.0, early_stopping=True, validation_fraction=0.1,
+                          n_iter_no_change=30), tr, te)
+
+
+class MLP:
+    """Multi-output neural network (all 11 stats jointly, or games), early stopping on a 10% inner split.
+    Inputs and targets standardized; average of 3 seeds."""
+    def __init__(self, hidden=(64, 32)):
+        self.hidden = hidden
+
+    def fit(self, X, Y):
+        self.ms = [TransformedTargetRegressor(
+            make_pipeline(StandardScaler(), MLPRegressor(hidden_layer_sizes=self.hidden, alpha=1e-2, learning_rate_init=1e-3,
+                                                         early_stopping=True, n_iter_no_change=20,
+                                                         max_iter=500, random_state=seed)),
+            transformer=StandardScaler()).fit(X, np.asarray(Y)) for seed in range(3)]
+        return self
+
+    def predict(self, X):
+        return np.mean([m.predict(X) for m in self.ms], axis=0)
+
+
+def mlp(hidden):
+    return lambda tr, te: _fit_predict(lambda: MLP(hidden), tr, te)
+
+
+COMP_FEATURES = ["age", "MIN_l1", "GP_l1", "gp_mean", "min_trend", "USG_PCT_l1", "TS_PCT_l1", "AST_PCT_l1",
+                 "REB_PCT_l1", "height"] + [f"{t}_l1" for t in TARGETS]
+
+
+class Comparables:
+    """Nearest-neighbour comparables: the k most similar past player-seasons (age, role, last season's
+    line) and what happened to them next, distance-weighted."""
+    def __init__(self, k):
+        self.k = k
+
+    def fit(self, X, Y):
+        self.m = make_pipeline(StandardScaler(), KNeighborsRegressor(self.k, weights="distance"))
+        self.m.fit(X[COMP_FEATURES], Y)
+        return self
+
+    def predict(self, X):
+        return self.m.predict(X[COMP_FEATURES])
+
+
+def comparables(k):
+    return lambda tr, te: _fit_predict(lambda: Comparables(k), tr, te)
+
+
+MISS_GAMES = 20
+
+
+def miss20_games(stats_fn):
+    """Games played from a "misses 20+ games" classifier (logistic regression on history, age and the
+    injury-report flags): expected games = P(miss) x mean games of past missers + (1 - P) x mean games
+    of past non-missers, each mean fitted by Ridge within its group."""
+    def f(tr, te):
+        from injury_types import injury_flags
+        p = stats_fn(tr, te)
+        tr, te = injury_flags(tr), injury_flags(te)
+        X_cols = feature_cols(tr)
+        miss = (tr["y_GP"] <= 82 - MISS_GAMES).to_numpy()
+        clf = make_pipeline(StandardScaler(), LogisticRegression(C=0.1, max_iter=2000)).fit(tr[X_cols], miss)
+        prob = clf.predict_proba(te[X_cols])[:, 1]
+        part = [make_pipeline(StandardScaler(), Ridge(100)).fit(tr.loc[g, X_cols], tr.loc[g, "y_GP"])
+                for g in (miss, ~miss)]
+        gp = prob * part[0].predict(te[X_cols]) + (1 - prob) * part[1].predict(te[X_cols])
+        p["GP"] = np.clip(gp, 0, 82)
+        return p
+    return f
+
+
 CANDIDATES = {
     "Naive (last season)": naive,
     "Marcel (weighted avg)": marcel,
     **{f"Ridge a={a}": ridge(a) for a in (10, 100, 1000)},
-    **{f"GBM lr={lr} leaves={lv}": gbm(lr, lv, 20) for lr in (0.03, 0.08) for lv in (7, 15)},
+    "ElasticNet (CV penalty)": enet,
+    **{f"GBM lr={lr} leaves={lv} minleaf={ml}": gbm_es(lr, lv, ml)
+       for lr, lv, ml in ((0.03, 7, 50), (0.03, 15, 50), (0.1, 7, 50), (0.03, 7, 150))},
     **{f"RandomForest leaf={m}": forest(m) for m in (5, 15, 30)},
+    **{f"MLP {'x'.join(map(str, h))}": mlp(h) for h in ((64, 32), (128,))},
+    **{f"Comparables k={k}": comparables(k) for k in (25, 100)},
     "Ensemble Ridge+RF": ensemble(ridge(100), forest(15)),
-    # unstructured data: games played from the injury-report text (per-game stats unchanged, so these tie
-    # with "Ensemble Ridge+RF" on per-game error and are separated by games-played error)
+    # games played from the injury reports (per-game stats unchanged, so these tie with their stats model on
+    # per-game error and are separated by games-played error)
     "Ensemble Ridge+RF + injury-text NN games": games_from(ensemble(ridge(100), forest(15)), injury_text_nn),
     "Ensemble Ridge+RF + injury-type games": games_from(ensemble(ridge(100), forest(15)),
                                                          injury_types(ensemble(ridge(100), forest(15)))),
+    "Ridge a=10 + miss-20 classifier games": miss20_games(ridge(10)),
+    "Ridge a=10 + GBM games": games_from(ridge(10), gbm_es(0.03, 7, 50)),
 }
 BASELINES = ["Naive (last season)", "Marcel (weighted avg)"]

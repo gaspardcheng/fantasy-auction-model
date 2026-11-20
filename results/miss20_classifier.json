@@ -1,0 +1,112 @@
+{
+ "base_rate_train": 0.523836875358989,
+ "base_rate_test": 0.5524079320113314,
+ "n_train": 1741,
+ "n_test": 353,
+ "Logistic, history + injury text": {
+  "cv_train": {
+   "AUC": 0.6955695934649653,
+   "Brier": 0.22072384729600178,
+   "threshold": 0.5499072667529242,
+   "flagged_share": 0.424468696151637,
+   "precision": 0.6968876860622463,
+   "recall": 0.5646929824561403
+  },
+  "test": {
+   "AUC": 0.6536838688737424,
+   "Brier": 0.2327644399563207,
+   "threshold": 0.5499072667529242,
+   "flagged_share": 0.45325779036827196,
+   "precision": 0.68125,
+   "recall": 0.558974358974359
+  }
+ },
+ "Tree depth 3, history + injury text": {
+  "cv_train": {
+   "AUC": 0.6514308615326012,
+   "Brier": 0.2340438663170981,
+   "threshold": 0.6190476190476191,
+   "flagged_share": 0.2981045376220563,
+   "precision": 0.720616570327553,
+   "recall": 0.4100877192982456
+  },
+  "test": {
+   "AUC": 0.6117169750081143,
+   "Brier": 0.24353160560341225,
+   "threshold": 0.6190476190476191,
+   "flagged_share": 0.3286118980169972,
+   "precision": 0.6810344827586207,
+   "recall": 0.40512820512820513
+  }
+ },
+ "Logistic, history only": {
+  "cv_train": {
+   "AUC": 0.6923145091316953,
+   "Brier": 0.22167492761556493,
+   "threshold": 0.6017646038277662,
+   "flagged_share": 0.34060884549109705,
+   "precision": 0.7403035413153457,
+   "recall": 0.48135964912280704
+  },
+  "test": {
+   "AUC": 0.6483609217786432,
+   "Brier": 0.23384551175024296,
+   "threshold": 0.6017646038277662,
+   "flagged_share": 0.3597733711048159,
+   "precision": 0.7007874015748031,
+   "recall": 0.4564102564102564
+  }
+ },
+ "Logistic, history only, all seasons": {
+  "test": {
+   "AUC": 0.6508925673482635,
+   "Brier": 0.24147921055406843,
+   "threshold": 0.41256395544132896,
+   "flagged_share": 0.5439093484419264,
+   "precision": 0.6666666666666666,
+   "recall": 0.6564102564102564
+  }
+ },
+ "odds_ratio_per_sd": {
+  "age": 1.18,
+  "GP_l1": 0.67,
+  "GP_l2": 0.94,
+  "GP_l3": 0.99,
+  "gp_mean": 0.84,
+  "MIN_l1": 0.71,
+  "n_seasons": 1.03,
+  "inj_knee": 1.14,
+  "inj_achilles": 0.99,
+  "inj_major": 0.97,
+  "inj_chronic": 1.03,
+  "inj_carried": 1.1,
+  "inj_games": 0.87
+ },
+ "calibration_test": {
+  "0": {
+   "n": 71,
+   "predicted": 0.308,
+   "actual": 0.366
+  },
+  "1": {
+   "n": 70,
+   "predicted": 0.412,
+   "actual": 0.429
+  },
+  "2": {
+   "n": 71,
+   "predicted": 0.516,
+   "actual": 0.606
+  },
+  "3": {
+   "n": 70,
+   "predicted": 0.628,
+   "actual": 0.657
+  },
+  "4": {
+   "n": 71,
+   "predicted": 0.795,
+   "actual": 0.704
+  }
+ }
+}

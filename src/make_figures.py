@@ -20,7 +20,7 @@ plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 11, "axes.edgeco
                      "axes.spines.top": False, "axes.spines.right": False, "axes.spines.left": False,
                      "figure.dpi": 200, "savefig.bbox": "tight", "figure.facecolor": "white"})
 LABEL = {"Naive (last season)": "Last season\n(rule)", "Marcel (weighted avg)": "Weighted avg\n(public rule)",
-         "Our model (no injury text)": "Our model\nno injury text", "Our model": "Our model\n+ injury types",
+         "Ensemble Ridge+RF": "Ridge+RF\nensemble", "Our model": "Our model\n(selected)",
          "Perfect foresight": "Perfect\nforesight"}
 
 

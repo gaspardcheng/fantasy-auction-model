@@ -1,0 +1,42 @@
+{
+ "enet_alpha": 0.005518476897628996,
+ "enet_l1_ratio": 1.0,
+ "n_inputs": 68,
+ "enet_kept": 59,
+ "enet_dropped": [
+  "FG3A_l2",
+  "FG3A_l3",
+  "FGM_l2",
+  "GP_l2",
+  "MIN_l3",
+  "PTS_l1",
+  "PTS_l3",
+  "has_lag1",
+  "n_seasons"
+ ],
+ "enet_pts_top": {
+  "age": -1.331,
+  "PTS_l2": 1.309,
+  "MIN_l1": -1.141,
+  "FGA_l2": -0.567,
+  "REB_l1": 0.493,
+  "FTA_l1": -0.452,
+  "FGA_l1": -0.406,
+  "moved": -0.327,
+  "AST_l1": 0.32,
+  "age2": 0.248
+ },
+ "gbm_trees": 257,
+ "gbm_games_importance_top": {
+  "GP_l1": 4.421,
+  "moved": 0.421,
+  "age": 0.248,
+  "STL_l1": 0.042,
+  "MIN_l2": 0.03,
+  "GP_l3": 0.027,
+  "PTS_l1": 0.027,
+  "FGM_l1": 0.021,
+  "USG_PCT_l2": 0.021,
+  "FTM_l1": 0.02
+ }
+}

@@ -88,7 +88,7 @@ def main(n_sims=N_SIMS):
     df = pd.read_csv(RES / "test_predictions.csv")
     sel = json.load(open(RES / "selection.json"))
     methods = {"Naive (last season)": "Naive (last season)", "Marcel (weighted avg)": "Marcel (weighted avg)",
-               "Our model (no injury text)": "Ensemble Ridge+RF",
+               "Ensemble Ridge+RF": "Ensemble Ridge+RF",
                "Our model": sel["selected_model"], "Perfect foresight": "actual"}
     act = frame(df, "actual")
     ref_a = F.fit_reference(act[act["GP"] >= 15])
@@ -129,7 +129,7 @@ def main(n_sims=N_SIMS):
         top3=("rank", lambda r: (r <= 3).mean()), avg_rank=("rank", "mean"), roster=("roster", "mean"))
     for room in room_vals:
         piv = out[out["room"] == room].pivot(index="sim", columns="method", values="points")
-        for b in ["Naive (last season)", "Marcel (weighted avg)", "Our model (no injury text)"]:
+        for b in ["Naive (last season)", "Marcel (weighted avg)", "Ensemble Ridge+RF"]:
             d = piv["Our model"] - piv[b]
             se = d.std() / np.sqrt(len(d))
             summ.loc[(room, "Our model"), f"gain_vs_{b.split()[0]}"] = d.mean()

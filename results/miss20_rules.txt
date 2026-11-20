@@ -1,0 +1,22 @@
+|--- GP_l1 <= 65.1
+|   |--- MIN_l1 <= 21.9
+|   |   |--- GP_l2 <= 67.4
+|   |   |   |--- weights: [75.0, 280.0] class: True
+|   |   |--- GP_l2 >  67.4
+|   |   |   |--- weights: [34.0, 57.0] class: True
+|   |--- MIN_l1 >  21.9
+|   |   |--- gp_mean <= 53.4
+|   |   |   |--- weights: [36.0, 85.0] class: True
+|   |   |--- gp_mean >  53.4
+|   |   |   |--- weights: [161.0, 145.0] class: False
+|--- GP_l1 >  65.1
+|   |--- gp_mean <= 72.0
+|   |   |--- GP_l1 <= 77.5
+|   |   |   |--- weights: [212.0, 216.0] class: True
+|   |   |--- GP_l1 >  77.5
+|   |   |   |--- weights: [62.0, 27.0] class: False
+|   |--- gp_mean >  72.0
+|   |   |--- MIN_l1 <= 28.1
+|   |   |   |--- weights: [100.0, 57.0] class: False
+|   |   |--- MIN_l1 >  28.1
+|   |   |   |--- weights: [149.0, 45.0] class: False
