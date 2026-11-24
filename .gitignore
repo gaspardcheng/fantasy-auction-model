@@ -7,10 +7,7 @@ __pycache__/
 data/injury_reports/
 data/reason_embeddings.csv
 
-# extended NBA data (Project1_data_package): not redistributed until NBA data terms are confirmed
-data/Data 1 extended.csv
-data/player_season_extra.csv
-data/injury_reports_pre2021.csv
+# Project1_data_package build intermediates (final CSVs are copied into data/)
 Project1_data_package/data/
 Project1_data_package/output/
 Project1_data_package/raw/

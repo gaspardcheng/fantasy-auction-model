@@ -16,10 +16,6 @@ and price but not z/game.
 
 ```bash
 python3 -m pip install -r requirements.txt
-# the extended NBA data is not in the repo (see Data): rebuild it (about 1 hour of downloads), or copy the
-# three CSVs into data/ if you already have them
-bash Project1_data_package/scripts/run_all.sh "$PWD/data/Data 1.csv"
-cp Project1_data_package/output/{"Data 1 extended",player_season_extra,injury_reports_pre2021}.csv data/
 bash run_all.sh          # injury types → model selection → bootstrap → risk classifier → backtest → figures → boards
 open docs/index.html     # live auction board
 ```
@@ -28,7 +24,7 @@ Most of the time is model selection (22 candidates × 11 fits). The backtest alo
 
 | Step | Script | Output |
 |---|---|---|
-| Extended data (one-off rebuild) | `Project1_data_package/scripts/` | `Data 1 extended.csv`, `player_season_extra.csv`, `injury_reports_pre2021.csv` |
+| Extended data (optional rebuild, ~1 h) | `Project1_data_package/scripts/` | `Data 1 extended.csv`, `player_season_extra.csv`, `injury_reports_pre2021.csv` |
 | Injury reports 2021-26 (optional rebuild, ~1 h) | `src/fetch_injury_reports.py`, `src/parse_injury_reports.py` | `data/injury_reports.csv` |
 | Injury types, absence, next-season effects | `src/injury_types.py` | `results/injury_*.csv`, `figures/injury_types.png` |
 | Training window + model selection + hold-out test | `src/train_evaluate.py` | `results/window_selection.csv`, `validation_*.csv`, `test_metrics.csv`, `test_predictions.csv`, `row_errors.csv`, `selection.json` |
@@ -42,20 +38,20 @@ Most of the time is model selection (22 candidates × 11 fits). The backtest alo
 
 ## Data
 
-* `data/Data 1 extended.csv` (not in the repo): per-game stats for every NBA player, 1996-97 to 2025-26
+* `data/Data 1 extended.csv`: per-game stats for every NBA player, 1996-97 to 2025-26
   (14,569 player-seasons; NBA Stats). Matches the original `data/Data 1.csv` (2021-22 to 2025-26, 2,867
   player-seasons) on all 2,867 rows.
-* `data/player_season_extra.csv` (not in the repo): usage %, true shooting %, assist %, rebound %, pace, height,
+* `data/player_season_extra.csv`: usage %, true shooting %, assist %, rebound %, pace, height,
   team at first and last game, and each team's actual games played.
-* `data/injury_reports.csv` and `data/injury_reports_pre2021.csv` (the second not in the repo): the NBA's official
-  game-day injury reports, 17 Dec 2018 to the 2026 Finals (1,689 reports, 136,206 rows of player, status and
-  free-text reason; 4,600 distinct reasons). There are no official reports before 2018-19.
+* `data/injury_reports.csv` and `data/injury_reports_pre2021.csv`: the NBA's official game-day injury
+  reports, 17 Dec 2018 to the 2026 Finals (1,689 reports, 136,206 rows of player, status and free-text
+  reason; 4,600 distinct reasons). There are no official reports before 2018-19.
 * `data/Data 2.xlsx`: third-party 2026-27 projections with Yahoo position eligibility (200 players). Used only for
   the 2026-27 blend, positions and next season's teams, never for training or evaluation.
 * `data/Data 3.xlsx`: NBA games per team per week, used by the head-to-head boards only.
 
-The three extended files come from free public sources (`Project1_data_package/docs/SOURCES.md`) but are kept out
-of the repo until the NBA's data terms are confirmed. `Project1_data_package/scripts/` rebuilds them.
+The three extended files come from free public sources (`Project1_data_package/docs/SOURCES.md`);
+`Project1_data_package/scripts/` rebuilds them.
 
 **Modeling table.** 8,509 player-seasons for target seasons 1999-00 to 2025-26 with a prior-season role
 (≥ 20 GP and ≥ 12 MPG in *t-1*); 353 in the 2025-26 test season. Rules:
