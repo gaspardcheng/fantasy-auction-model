@@ -211,12 +211,15 @@ function renderNom(){
   <div class="muted" style="margin-top:8px">z per game: ${CATS.map(c=>`${c} <span class="${p["z_"+c]>=0?"zp":"zn"}">${p["z_"+c].toFixed(1)}</span>`).join(" · ")} · past GP ${p.hist_gp||"rookie"}</div>`;
   $("soldPrice").value = isNaN(bid)? "" : bid;
 }
+// percent change, rounded first so a tiny negative shows "0%", not "−0%"
+function pctChange(ratio){ const r = Math.round(ratio*100-100) || 0; return (r>0?"+":"")+r+"%"; }
 function renderKpis(){
+  const none = !st.sales.length; // before the first sale all teams are identical, so standings mean nothing yet
   const me = M.teams[st.me];
   $("kpis").innerHTML = [
-    ["League $ left", "$"+M.money], ["Spots left", M.slots], ["Inflation", (M.inflation*100-100>=0?"+":"")+(M.inflation*100-100).toFixed(0)+"%"],
-    ["My $ left", "$"+me.left], ["My spots", me.open], ["My proj. pts", me.rp.total+" / "+(CATS.filter(c=>st.weights[c]>0).length*S.teams)],
-    ["My proj. rank", 1+M.teams.filter(t=>t.rp.total>me.rp.total).length]
+    ["League $ left", "$"+M.money], ["Spots left", M.slots], ["Inflation", pctChange(M.inflation)],
+    ["My $ left", "$"+me.left], ["My spots", me.open], ["My proj. pts", none ? "—" : me.rp.total+" / "+(CATS.filter(c=>st.weights[c]>0).length*S.teams)],
+    ["My proj. rank", none ? "—" : 1+M.teams.filter(t=>t.rp.total>me.rp.total).length]
   ].map(([k,v])=>`<div class="kpi">${k}<b>${v}</b></div>`).join("");
 }
 function renderTabs(){
